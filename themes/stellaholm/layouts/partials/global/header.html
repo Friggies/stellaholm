@@ -1,0 +1,82 @@
+<header>
+    <nav class="globalHeader">
+        <div class="globalHeader__section">
+            <button
+                class="globalHeader__action"
+                id="openGlobalMenu"
+            >
+                <img
+                    class="icon"
+                    src="/icons/menu-outline.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                />
+                Menu
+            </button>
+            <button class="globalHeader__action">
+                <img
+                    class="icon"
+                    src="/icons/search-outline.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                />
+                {{ T "search" }}
+            </button>
+        </div>
+        <a
+            href='{{ "/" | relLangURL }}'
+            class="globalHeader__title"
+        >
+            stellaholm
+            <span class="globalHeader__title--slogan">{{ T "cph" }}</span>
+        </a>
+        <div class="globalHeader__section globalHeader__section--right">
+            {{ if .IsTranslated }} {{ range .Translations }}
+            <a
+                href="{{ .Permalink }}"
+                lang="{{ .Language.Lang }}"
+                class="globalHeader__action uppercase"
+                hreflang="{{ .Language.Lang }}"
+                aria-label="{{ .Language.Params.TranslationAvailable }}"
+            >
+                <img
+                    class="icon icon--circle"
+                    src="{{ .Language.Params.Flag }}"
+                    width="25"
+                    height="25"
+                    alt=""
+                    draggable="false"
+                />
+                {{ .Language.Lang }}
+            </a>
+            {{ end}}
+            <button
+                href=""
+                class="globalHeader__action snipcart-customer-signin"
+            >
+                <img
+                    class="icon"
+                    src="/icons/person-outline.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                />
+                {{ T "profile" }}
+            </button>
+            <button class="globalHeader__action snipcart-checkout">
+                <img
+                    class="icon"
+                    src="/icons/bag-outline.svg"
+                    alt=""
+                    width="25"
+                    height="25"
+                />
+                {{ T "bag" }}
+                <span class="snipcart-items-count"></span>
+            </button>
+        </div>
+    </nav>
+    {{ end }}
+</header>

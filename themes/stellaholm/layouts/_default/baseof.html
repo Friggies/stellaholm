@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html
+    lang="{{ .Site.Language.Lang }}"
+    dir="ltr"
+>
+    <head>
+        {{- partial "head.html" . -}}
+    </head>
+    <body>
+        {{- partial "global/banner.html" . -}} {{- partial "global/header.html"
+        . -}}
+        <main>{{- block "main" . }}{{- end }}</main>
+        {{- partial "global/footer.html" . -}} {{- partial "snipcart.html" . -}}
+        {{- partial "global/menu.html" . -}}
+    </body>
+</html>

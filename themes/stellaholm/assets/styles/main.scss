@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.globalBanner {
+    background-color: black;
+    color: white;
+    padding-block: 2px;
+    text-align: center;
+    font-size: 14px;
+}
+.globalFooter {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+.globalHeader {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &__section {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        &--right {
+            justify-content: right;
+        }
+    }
+    &__title {
+        text-decoration: none;
+        font-family: Arsenal SC;
+        font-weight: 700;
+        font-size: 1.75em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+        &--slogan {
+            margin-top: -0.25rem;
+            font-family: Parisienne;
+            font-weight: 400;
+            font-size: 0.75em;
+            color: #576672;
+        }
+    }
+    &__action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.25rem;
+        text-decoration: none;
+        font-size: 14px;
+        position: relative;
+    }
+}
+
+.list {
+    list-style-type: none;
+}
+.icon {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    &--circle {
+        border-radius: 50%;
+    }
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+.globalMenu {
+    position: fixed;
+    padding: 2rem;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    min-height: 100%;
+    border: none;
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+        segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
+        arial, sans-serif;
+}
+
+a {
+    color: inherit;
+}
+button {
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+}
+strong {
+    font-weight: 400;
+}
+
+//https://gwfh.mranftl.com/fonts
+@font-face {
+    font-display: swap;
+    font-family: 'Parisienne';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/parisienne-v13-latin-regular.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Arsenal SC';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/arsenal-sc-v1-latin-regular.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Arsenal SC';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/arsenal-sc-v1-latin-700.woff2') format('woff2');
+}
+
+#snipcart::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+}
+
+html.snipcart-sidecart--opened #snipcart::before {
+    opacity: 1;
+}
+
+.snipcart-items-count {
+    width: 30px;
+    text-align: center;
+    position: absolute;
+    left: -2.5px;
+    top: 9px;
+    font-size: 10px;
+    font-weight: 600;
+}

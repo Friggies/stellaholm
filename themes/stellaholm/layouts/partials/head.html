@@ -1,0 +1,41 @@
+<meta charset="UTF-8" />
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+/>
+<title>
+    {{if .IsHome}}{{ .Site.Title }}{{else}}{{.Title}} &verbar; {{ .Site.Title
+    }}{{end}}
+</title>
+<meta
+    name="description"
+    content="{{ with .Description }}{{ . | truncate 150 }}{{ else }}{{ .Summary | truncate 150 }}{{ end }}"
+/>
+
+{{ $styles := resources.Get "styles/main.scss" | resources.ToCSS |
+resources.Minify }}
+<link
+    rel="stylesheet"
+    href="{{ $styles.Permalink }}"
+    type="text/css"
+    crossorigin="anonymous"
+/>
+
+{{ $globalMenu := resources.Get "scripts/globalMenu.js" | resources.Minify }}
+<script
+    defer
+    src="{{ $globalMenu.Permalink }}"
+></script>
+
+<link
+    rel="preconnect"
+    href="<https://app.snipcart.com>"
+/>
+<link
+    rel="preconnect"
+    href="<https://cdn.snipcart.com>"
+/>
+<link
+    rel="stylesheet"
+    href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css"
+/>

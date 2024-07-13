@@ -1,0 +1,18 @@
+baseURL = 'https://stellaholm.com/'
+title = 'Stellaholm'
+theme = 'stellaholm'
+defaultContentLanguage = "en"
+
+[languages]
+    [languages.en]
+        languageName = "English"
+        weight = 1
+        [languages.en.params]
+            translationAvailable = "English translation available"
+            flag = "/flag-english.webp"
+    [languages.da]
+        languageName = "Dansk"
+        weight = 2
+        [languages.da.params]
+            translationAvailable = "Dansk oversættelse tilgængelig"
+            flag = "/flag-danish.svg"

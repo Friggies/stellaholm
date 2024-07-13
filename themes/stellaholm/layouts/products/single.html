@@ -1,0 +1,14 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<p>{{ .Params.Price }} {{ .Params.Valuta }}</p>
+<p>{{ .Params.Description }}</p>
+<button
+    class="snipcart-add-item"
+    data-item-id="{{ .Params.Id }}"
+    data-item-price="{{ .Params.Price }}"
+    data-item-description="{{ .Params.Description }}"
+    data-item-name="{{ .Title }}"
+>
+    Køb
+</button>
+{{ end }}
