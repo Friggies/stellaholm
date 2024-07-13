@@ -4,3 +4,6 @@ cph = "Copenhagen"
 search = "Search"
 profile = "Profile"
 bag = "Bag"
+
+my_orders = "My orders"
+close_dialog = "Close menu"

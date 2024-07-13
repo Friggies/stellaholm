@@ -1,4 +1,4 @@
 ---
 menus: main
-title: Collections
+title: Vade mecum
 ---

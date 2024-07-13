@@ -1,6 +1,6 @@
 ---
-title: Butik
-url: produkter
+menus: main
+title: Boutique
 cascade:
     valuta: DKK
 ---

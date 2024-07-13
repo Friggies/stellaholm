@@ -4,3 +4,6 @@ cph = "København"
 search = "Søg"
 profile = "Profil"
 bag = "Kurv"
+
+my_orders = "Mine ordrer"
+close_dialog = "Luk menu"
