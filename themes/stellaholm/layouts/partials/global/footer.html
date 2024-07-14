@@ -1,18 +1,34 @@
 <footer>
     <nav class="globalFooter">
-        <ul class="list">
-            <li>
-                <a href="">Product Care</a>
-            </li>
-            <li>
-                <a href="">Personalization</a>
-            </li>
-            <li>
-                <a href="">The Gift</a>
-            </li>
-            <li>
-                <a href="">Instagram</a>
-            </li>
-        </ul>
+        <a
+            href='{{ "/" | relLangURL }}'
+            class="globalFooter__title"
+            >stellaholm</a
+        >
+        <div class="globalFooter__section">
+            <ul class="list">
+                {{ range .Site.Menus.main }}
+                <li>
+                    <a href="{{ .URL }}"> {{ .Name }} </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        <div class="globalFooter__section">
+            <ul class="list">
+                <li>
+                    <a href="">Product Care</a>
+                </li>
+                <li>
+                    <a href="">Personalization</a>
+                </li>
+                <li>
+                    <a href="">The Gift</a>
+                </li>
+                <li>
+                    <a href="">Instagram</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 </footer>

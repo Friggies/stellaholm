@@ -12,7 +12,7 @@
                     width="25"
                     height="25"
                 />
-                Menu
+                <span class="hideOnMobile">Menu</span>
             </button>
             <button class="globalHeader__action">
                 <img
@@ -22,7 +22,7 @@
                     width="25"
                     height="25"
                 />
-                {{ T "search" }}
+                <span class="hideOnMobile">{{ T "search" }}</span>
             </button>
         </div>
         <a
@@ -49,12 +49,12 @@
                     alt=""
                     draggable="false"
                 />
-                {{ .Language.Lang }}
+                <span class="hideOnMobile">{{ .Language.Lang }}</span>
             </a>
             {{ end}}
             <button
                 href=""
-                class="globalHeader__action snipcart-customer-signin"
+                class="globalHeader__action snipcart-customer-signin hideOnMobile"
             >
                 <img
                     class="icon"
@@ -73,7 +73,7 @@
                     width="25"
                     height="25"
                 />
-                {{ T "bag" }}
+                <span class="hideOnMobile">{{ T "bag" }}</span>
                 <span class="snipcart-items-count"></span>
             </button>
         </div>
