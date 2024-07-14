@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section>
+    <ul>
+        {{ range where .Pages "Type" "element" }}
+        <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}
