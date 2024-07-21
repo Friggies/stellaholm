@@ -1,0 +1,63 @@
+{{ define "main" }}
+
+<div class="productPage">
+    <section class="productPage__images">
+        <img
+            src="{{ .Params.ProductImage }}"
+            alt="{{ .Title }}"
+        />
+        <img
+            src="{{ .Params.ProductImage2 }}"
+            alt="{{ .Title }}"
+        />
+    </section>
+    <section class="productPage__info">
+        <h1 class="productPage__title">{{ .Title }}</h1>
+        <div class="price">{{ .Params.Price }} {{ .Params.Valuta }}</div>
+        <div class="sizeList">
+            <button
+                class="sizeList__size sizeList__size--oos"
+                disabled
+            >
+                S
+            </button>
+            <button class="sizeList__size">M</button>
+            <button class="sizeList__size sizeList__size--active">L</button>
+        </div>
+        {{ partial "snipcart/buyButton.html" . }} {{ .Content }}
+        <div class="label">
+            <img
+                class="icon icon--circle"
+                src="/flag-danish.svg"
+                alt=""
+            />
+            Designet og fremstillet i Danmark
+        </div>
+        <div class="label">
+            <img
+                class="icon"
+                src="/icons/diamond-outline.svg"
+                alt=""
+            />
+            Eksklusivt håndværk
+        </div>
+        <div class="label">
+            <img
+                class="icon"
+                src="/icons/unisex-outline.svg"
+                alt=""
+            />
+            Kønsløst smykkedesign
+        </div>
+    </section>
+    <section>
+        <h2>Produktdetaljer</h2>
+        Materialer
+        <ul>
+            <li>Asiatiske perler</li>
+            <li>Forstærket smykkesnor</li>
+        </ul>
+        Veligeholdelse
+    </section>
+</div>
+{{ end }}

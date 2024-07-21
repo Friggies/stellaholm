@@ -26,7 +26,7 @@
             </button>
         </div>
         <a
-            href='{{ "/" | relLangURL }}'
+            href=' {{ "/" | relLangURL }}'
             class="globalHeader__title"
         >
             stellaholm
@@ -35,15 +35,15 @@
         <div class="globalHeader__section globalHeader__section--right">
             {{ if .IsTranslated }} {{ range .Translations }}
             <a
-                href="{{ .Permalink }}"
-                lang="{{ .Language.Lang }}"
+                href=" {{ .Permalink }}"
+                lang=" {{ .Language.Lang }}"
                 class="globalHeader__action uppercase"
-                hreflang="{{ .Language.Lang }}"
-                aria-label="{{ .Language.Params.TranslationAvailable }}"
+                hreflang=" {{ .Language.Lang }}"
+                aria-label=" {{ .Language.Params.TranslationAvailable }}"
             >
                 <img
                     class="icon icon--circle"
-                    src="{{ .Language.Params.Flag }}"
+                    src=" {{ .Language.Params.Flag }}"
                     width="25"
                     height="25"
                     alt=""
