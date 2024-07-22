@@ -7,7 +7,7 @@
             {{ range .Site.Menus.main }}
             <li>
                 <a
-                    href=" {{ .URL }}"
+                    href="{{ .URL }}"
                     class="globalMenu__action"
                 >
                     {{ .Name }}
@@ -19,7 +19,7 @@
             {{ range .Site.Menus.faq }}
             <li>
                 <a
-                    href=" {{ .URL }}"
+                    href="{{ .URL }}"
                     class="globalMenu__action--sub"
                 >
                     {{ .Name }}

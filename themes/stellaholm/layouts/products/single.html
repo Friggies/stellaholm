@@ -1,28 +1,76 @@
 {{ define "main" }}
 
-<div class="productPage">
-    <section class="productPage__images">
+<section class="section">
+    <div class="section__content section__content--center">
         <img
+            class="productPage__productImage"
             src="{{ .Params.ProductImage }}"
             alt="{{ .Title }}"
         />
         <img
+            class="productPage__productImage"
             src="{{ .Params.ProductImage2 }}"
             alt="{{ .Title }}"
         />
-    </section>
-    <section class="productPage__info">
-        <h1 class="productPage__title">{{ .Title }}</h1>
+    </div>
+    <div class="section__content">
+        <h1 class="productPage__header">{{ .Title }}</h1>
         <div class="price">{{ .Params.Price }} {{ .Params.Valuta }}</div>
-        <div class="sizeList">
-            <button
-                class="sizeList__size sizeList__size--oos"
-                disabled
+        <div class="zodiacSelector">
+            <label
+                for="zodiacSelector__search"
+                class="zodiacSelector__label"
             >
-                S
-            </button>
-            <button class="sizeList__size">M</button>
-            <button class="sizeList__size sizeList__size--active">L</button>
+                Stjernetegn
+            </label>
+            <input
+                type="text"
+                placeholder="Søg..."
+                value="Aries"
+                id="zodiacSelector__search"
+                class="zodiacSelector__search"
+                oninput="searchDropdown(this.value)"
+            />
+            <input
+                type="text"
+                value="Aries"
+                id="zodiacSelector__value"
+                hidden
+            />
+            <div class="zodiacSelector__dropdown">
+                <button class="zodiacSelector__dropdown-item">Aries</button>
+                <button class="zodiacSelector__dropdown-item">Taurus</button>
+                <button class="zodiacSelector__dropdown-item">Gemini</button>
+                <button class="zodiacSelector__dropdown-item">Cancer</button>
+                <button class="zodiacSelector__dropdown-item">Leo</button>
+                <button class="zodiacSelector__dropdown-item">Virgo</button>
+                <button class="zodiacSelector__dropdown-item">Libra</button>
+                <button class="zodiacSelector__dropdown-item">Scorpio</button>
+                <button class="zodiacSelector__dropdown-item">
+                    Sagittarius
+                </button>
+                <button class="zodiacSelector__dropdown-item">Capricorn</button>
+                <button class="zodiacSelector__dropdown-item">Aquarius</button>
+                <button class="zodiacSelector__dropdown-item">Pisces</button>
+            </div>
+        </div>
+        <div class="circumfrenceSelector">
+            <label
+                for="circumfrenceSelector"
+                class="circumfrenceSelector__label"
+            >
+                {{ .Params.SizeSelect }}
+            </label>
+            <input
+                type="number"
+                id="circumfrenceSelector"
+                min="40"
+                max="80"
+                value="60"
+                placeholder="0"
+                class="circumfrenceSelector__input"
+                oninput="validateInput(this.value)"
+            />
         </div>
         {{ partial "snipcart/buyButton.html" . }} {{ .Content }}
         <div class="label">
@@ -31,7 +79,15 @@
                 src="/flag-danish.svg"
                 alt=""
             />
-            Designet og fremstillet i Danmark
+            Designet og kreeret i Danmark
+        </div>
+        <div class="label">
+            <img
+                class="icon"
+                src="/icons/finger-print-outline.svg"
+                alt=""
+            />
+            Specialfremstillet
         </div>
         <div class="label">
             <img
@@ -49,15 +105,125 @@
             />
             Kønsløst smykkedesign
         </div>
-    </section>
-    <section>
-        <h2>Produktdetaljer</h2>
-        Materialer
-        <ul>
-            <li>Asiatiske perler</li>
-            <li>Forstærket smykkesnor</li>
+    </div>
+</section>
+<section class="section section--green">
+    <div class="section__content">
+        <h2 class="productPage__subHeader">Matrialer</h2>
+        <ul class="list">
+            {{ range .Params.Materials }}
+            <li>{{ . }}</li>
+            {{ end }}
         </ul>
-        Veligeholdelse
-    </section>
-</div>
+        <h2 class="productPage__subHeader">Vedligeholdelse</h2>
+        <ul class="list">
+            <li>Ringen må ikke komme i kontakt med kemikalier</li>
+            <li>Opbevar ringen et sikkert sted uden direkte sollys</li>
+            <li>Fjern ringen inden du udfører fysiske aktiviteter</li>
+            <li>Ungå at udsætte ringen for unødvendigt stress</li>
+        </ul>
+        <a href="">Er der opstået et problem med varen?</a>
+    </div>
+    <div class="section__content"></div>
+</section>
+<script>
+    function validateInput(inputValue) {
+        if (inputValue.length >= 3) {
+            inputValue = inputValue.substring(0, inputValue.length - 1);
+            event.target.value = inputValue;
+        } else if (inputValue.length < 2) {
+            circumfrenceSelector.classList.add(
+                'circumfrenceSelector__input--error'
+            );
+            buyButton.querySelector('span').innerText =
+                'Størrelse skal være mellem 40mm og 80mm';
+            buyButton.disabled = true;
+        } else if (inputValue < 40) {
+            event.target.value = 40;
+            circumfrenceSelector.classList.remove(
+                'circumfrenceSelector__input--error'
+            );
+            buyButton.querySelector('span').innerText = 'Læg i din kurv';
+            buyButton.disabled = false;
+        } else if (inputValue > 80) {
+            event.target.value = 80;
+            circumfrenceSelector.classList.remove(
+                'circumfrenceSelector__input--error'
+            );
+            buyButton.querySelector('span').innerText = 'Læg i din kurv';
+            buyButton.disabled = false;
+        } else {
+            circumfrenceSelector.classList.remove(
+                'circumfrenceSelector__input--error'
+            );
+            buyButton.disabled = false;
+            buyButton.querySelector('span').innerText = 'Læg i din kurv';
+        }
+    }
+
+    const dropdown = document.querySelector('.zodiacSelector__dropdown');
+    const buttons = dropdown.querySelectorAll('button');
+
+    zodiacSelector__search.addEventListener(
+        'focus',
+        () => {
+            dropdown.classList.add('zodiacSelector__dropdown--visible');
+        },
+        { once: true }
+    );
+
+    buttons.forEach(button => {
+        button.hidden = false;
+        button.addEventListener('click', () => {
+            zodiacSelector__value.value = button.innerText;
+            zodiacSelector__search.value = button.innerText;
+            dropdown.classList.remove('zodiacSelector__dropdown--visible');
+            zodiacSelector__search.classList.remove(
+                'zodiacSelector__search--error'
+            );
+            buyButton.querySelector('span').innerText = 'Læg i din kurv';
+            buyButton.disabled = false;
+        });
+    });
+
+    const allZodiacSigns = Array.from(buttons).map(button =>
+        button.innerText.toLowerCase()
+    );
+
+    function searchDropdown(searchString) {
+        buttons.forEach(button => {
+            button.hidden = false;
+        });
+
+        if (searchString !== '') {
+            dropdown.classList.add('zodiacSelector__dropdown--visible');
+            buttons.forEach(button => {
+                if (
+                    !button.innerText
+                        .toLowerCase()
+                        .includes(searchString.toLowerCase())
+                ) {
+                    button.hidden = true;
+                }
+            });
+        }
+
+        if (allZodiacSigns.includes(searchString.toLowerCase())) {
+            dropdown.classList.remove('zodiacSelector__dropdown--visible');
+            zodiacSelector__value.value = searchString;
+            zodiacSelector__search.classList.remove(
+                'zodiacSelector__search--error'
+            );
+            buyButton.querySelector('span').innerText = 'Læg i din kurv';
+            buyButton.disabled = false;
+        } else {
+            zodiacSelector__search.classList.add(
+                'zodiacSelector__search--error'
+            );
+            buyButton.querySelector('span').innerText =
+                'Vælg eller indtast et stjernetegn';
+            buyButton.disabled = true;
+        }
+    }
+</script>
 {{ end }}

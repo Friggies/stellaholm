@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .globalBanner {
-    background-color: #1b354b;
+    background-color: black;
     color: white;
     padding-block: 2px;
     text-align: center;
@@ -284,25 +284,11 @@ html.snipcart-sidecart--opened #snipcart::before {
 }
 
 .productPage {
-    position: relative;
-    display: grid;
-    grid-template-columns:
-        'pImages pInfo'
-        'pBanner pBanner'
-        'pAlternatives pAlternatives';
-    grid-template-columns: 1fr 1fr;
-    &__images {
-        grid-area: 'pImages';
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        img {
-            width: 50%;
-            object-fit: contain;
-        }
+    &__productImage {
+        width: 50%;
+        object-fit: contain;
     }
-    &__info {
+    &__productSummary {
         grid-area: 'pInfo';
         position: sticky;
         top: 2rem;
@@ -315,9 +301,14 @@ html.snipcart-sidecart--opened #snipcart::before {
         max-width: 500px;
         margin-inline: auto;
     }
-    &__title {
+    &__header {
         font-weight: 500;
         font-size: 1.5em;
+        margin-bottom: -1rem;
+    }
+    &__subHeader {
+        font-weight: 500;
+        font-size: 1.35em;
         margin-bottom: -1rem;
     }
 }
@@ -339,7 +330,7 @@ html.snipcart-sidecart--opened #snipcart::before {
         &--oos {
             background-color: #f2f2f2;
             border-color: #dbdbdb;
-            color: #6e6e6e;
+            color: #555555;
             cursor: not-allowed;
             &:hover {
                 &::after {
@@ -352,14 +343,21 @@ html.snipcart-sidecart--opened #snipcart::before {
 .button {
     display: flex;
     background-color: #1e402f;
-    background-color: #1b354b;
     color: white;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 4rem;
+    padding: 0.5rem;
+    width: 100%;
     &:hover {
         text-decoration: underline;
+    }
+    &:disabled {
+        background-color: #555555;
+        cursor: not-allowed;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 .label {
@@ -373,6 +371,106 @@ html.snipcart-sidecart--opened #snipcart::before {
 
 .price {
     color: #576672;
-    font-size: 0.9em;
-    font-style: italic;
+}
+
+.section {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    &--green {
+        background-color: #1e402f;
+        color: white;
+    }
+    &__content {
+        flex: 1;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        &--center {
+            align-items: center;
+        }
+    }
+}
+
+.circumfrenceSelector {
+    border: 2px solid #1e402f;
+    position: relative;
+    display: flex;
+    width: 100%;
+    &__label {
+        padding: 0.5rem;
+        background-color: #1e402f;
+        color: white;
+        min-width: 60%;
+    }
+    &__input {
+        background-color: white;
+        color: #1e402f;
+        appearance: none;
+        font-size: 16px;
+        font-family: inherit;
+        font-weight: 500;
+        border: none;
+        padding: 0.5rem;
+        width: 100%;
+        &--error {
+            outline: 2px solid #dc0000;
+        }
+    }
+}
+
+.zodiacSelector {
+    border: 2px solid #1e402f;
+    position: relative;
+    display: flex;
+    width: 100%;
+    &__label {
+        padding: 0.5rem;
+        background-color: #1e402f;
+        color: white;
+        min-width: 60%;
+    }
+    &__search {
+        appearance: none;
+        border-radius: 0;
+        border: none;
+        padding: 0.5rem;
+        font-family: inherit;
+        width: 100%;
+        font-size: 16px;
+        color: #1e402f;
+        font-weight: 500;
+        &::placeholder {
+            font-weight: 400;
+            color: #576672;
+        }
+        &--error {
+            outline: 2px solid #dc0000;
+        }
+    }
+    &__dropdown {
+        display: none;
+        background-color: white;
+        padding: 0.5rem;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        position: absolute;
+        z-index: 1;
+        top: 38px;
+        right: -2px;
+        width: calc(100% + 4px);
+        border: 2px solid #1e402f;
+        &-item {
+            text-decoration: underline;
+        }
+        &--visible {
+            display: flex;
+        }
+    }
 }
