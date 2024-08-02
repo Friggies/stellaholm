@@ -402,10 +402,9 @@ html.snipcart-sidecart--opened #snipcart::before {
     display: flex;
     width: 100%;
     &__label {
-        padding: 0.5rem;
+        padding: 0.5rem 1rem;
         background-color: #1e402f;
         color: white;
-        min-width: 60%;
     }
     &__input {
         background-color: white;
@@ -415,62 +414,10 @@ html.snipcart-sidecart--opened #snipcart::before {
         font-family: inherit;
         font-weight: 500;
         border: none;
-        padding: 0.5rem;
-        width: 100%;
+        padding: 0.5rem 1rem;
+        flex: 1;
         &--error {
             outline: 2px solid #dc0000;
-        }
-    }
-}
-
-.zodiacSelector {
-    border: 2px solid #1e402f;
-    position: relative;
-    display: flex;
-    width: 100%;
-    &__label {
-        padding: 0.5rem;
-        background-color: #1e402f;
-        color: white;
-        min-width: 60%;
-    }
-    &__search {
-        appearance: none;
-        border-radius: 0;
-        border: none;
-        padding: 0.5rem;
-        font-family: inherit;
-        width: 100%;
-        font-size: 16px;
-        color: #1e402f;
-        font-weight: 500;
-        &::placeholder {
-            font-weight: 400;
-            color: #576672;
-        }
-        &--error {
-            outline: 2px solid #dc0000;
-        }
-    }
-    &__dropdown {
-        display: none;
-        background-color: white;
-        padding: 0.5rem;
-        justify-content: space-evenly;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1rem;
-        position: absolute;
-        z-index: 1;
-        top: 38px;
-        right: -2px;
-        width: calc(100% + 4px);
-        border: 2px solid #1e402f;
-        &-item {
-            text-decoration: underline;
-        }
-        &--visible {
-            display: flex;
         }
     }
 }
