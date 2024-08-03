@@ -16,6 +16,37 @@
     <div class="section__content">
         <h1 class="productPage__header">{{ .Title }}</h1>
         <div class="price">{{ .Params.Price }} {{ .Params.Valuta }}</div>
+        <div class="label label--small">
+            <img
+                class="icon"
+                src="/icons/star.svg"
+                alt=""
+            />
+            <img
+                class="icon"
+                src="/icons/star.svg"
+                alt=""
+            />
+            <img
+                class="icon"
+                src="/icons/star-half.svg"
+                alt=""
+            />
+            <img
+                class="icon"
+                src="/icons/star-outline.svg"
+                alt=""
+            />
+            <em>3 anm.</em>
+        </div>
+        <div class="label">
+            <img
+                class="icon icon--circle"
+                src="/flag-danish.svg"
+                alt=""
+            />
+            Designet og kreeret i Danmark
+        </div>
         <div class="circumfrenceSelector">
             <label
                 for="circumfrenceSelector"
@@ -37,19 +68,11 @@
         {{ partial "snipcart/buyButton.html" . }} {{ .Content }}
         <div class="label">
             <img
-                class="icon icon--circle"
-                src="/flag-danish.svg"
-                alt=""
-            />
-            Designet og kreeret i Danmark
-        </div>
-        <div class="label">
-            <img
                 class="icon"
                 src="/icons/finger-print-outline.svg"
                 alt=""
             />
-            Specialfremstillet
+            <a href="">Specialfremstillet</a>
         </div>
         <div class="label">
             <img
@@ -57,7 +80,7 @@
                 src="/icons/diamond-outline.svg"
                 alt=""
             />
-            Eksklusivt håndværk
+            <a href="">Eksklusivt håndværk</a>
         </div>
         <div class="label">
             <img
@@ -65,28 +88,123 @@
                 src="/icons/unisex-outline.svg"
                 alt=""
             />
-            Kønsløst smykkedesign
+            <a href="">Kønsløst smykkedesign</a>
         </div>
     </div>
 </section>
 <section class="section section--green">
     <div class="section__content">
-        <h2 class="productPage__subHeader">Matrialer</h2>
-        <ul class="list">
+        <h2 class="productPage__header">
+            <img
+                src="/icons/information-circle-outline.svg"
+                class="icon"
+            />
+            Informationer
+        </h2>
+        <h3 class="productPage__subHeader">
+            <img
+                src="/icons/layers-outline.svg"
+                class="icon"
+            />
+            Matrialer
+        </h3>
+        <ul class="list indented">
             {{ range .Params.Materials }}
             <li>{{ . }}</li>
             {{ end }}
         </ul>
-        <h2 class="productPage__subHeader">Vedligeholdelse</h2>
-        <ul class="list">
-            <li>Ringen må ikke komme i kontakt med kemikalier</li>
-            <li>Opbevar ringen et sikkert sted uden direkte sollys</li>
-            <li>Fjern ringen inden du udfører fysiske aktiviteter</li>
-            <li>Ungå at udsætte ringen for unødvendigt stress</li>
-        </ul>
-        <a href="">Er der opstået et problem med varen?</a>
+        <h3 class="productPage__subHeader">
+            <img
+                src="/icons/infinite-outline.svg"
+                class="icon"
+            />
+            Vedligeholdelse
+        </h3>
+        <div class="indented">{{ .Params.ProductCare }}</div>
     </div>
-    <div class="section__content"></div>
+    <div class="section__content">
+        <img
+            src="/illustrations/aries.png"
+            alt=""
+            class="illustration illustration--invert"
+            draggable="false"
+        />
+        <a
+            class="illustration"
+            href=""
+        >
+        </a>
+    </div>
+    <div class="section__content section__content--full">
+        <h2 class="productPage__header">
+            <img
+                class="icon"
+                src="/icons/star-white.svg"
+                alt=""
+            />
+            Anmeldelser
+        </h2>
+        <ul
+            class="reviews"
+            tabindex="0"
+        >
+            <li class="review">
+                <p>Super smukke smøkker der passer helt perfekt!</p>
+                <p class="review__name">Louise Andersen</p>
+            </li>
+            <li class="review">
+                <p>
+                    Dejligt med en enkel ring, der kan booste min connecntion
+                    til mit stjernetegn asdadw dawdaw
+                </p>
+                <p class="review__name">Louise Andersen</p>
+            </li>
+            <li class="review">
+                <p>Hurtig levering</p>
+                <p class="review__name">Louise Andersen</p>
+            </li>
+            <li class="review">
+                <p>Hurtig levering</p>
+                <p class="review__name">Louise Andersen</p>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="section">
+    <div class="section__content">
+        <h2 class="productPage__header">
+            Flere produkter til {{ with .GetPage "/vade-mecum/signs/aries" }}{{
+            lower .Title }}{{ end }}
+        </h2>
+        <ul class="productGrid">
+            {{ range where (where .Site.RegularPages ".Permalink" "ne"
+            $.Permalink ) ".Params.Sign" $.Params.Sign }}
+            <li>
+                <a
+                    href="{{ .RelPermalink }}"
+                    class="productTile"
+                >
+                    <img
+                        class="productTile__image"
+                        src="{{ .RelPermalink }}{{ .Params.ProductImage }}"
+                        alt="{{ .Params.ProductImage }}"
+                    />
+                    <img
+                        class="productTile__image productTile__image--hover"
+                        src="{{ .RelPermalink }}{{ .Params.ProductImage2 }}"
+                        alt="{{ .Params.ProductImage2 }}"
+                    />
+                    <span>
+                        <strong>{{ .Title }}</strong>
+                    </span>
+                    <span class="price">
+                        {{ .Params.Price }} {{ .Params.Valuta }}
+                    </span>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
 </section>
 <script>
     function validateInput(inputValue) {

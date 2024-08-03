@@ -303,13 +303,17 @@ html.snipcart-sidecart--opened #snipcart::before {
     }
     &__header {
         font-weight: 500;
-        font-size: 1.5em;
-        margin-bottom: -1rem;
+        font-size: 1.75em;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
     &__subHeader {
         font-weight: 500;
-        font-size: 1.35em;
-        margin-bottom: -1rem;
+        font-size: 1.15em;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
 }
 
@@ -367,6 +371,9 @@ html.snipcart-sidecart--opened #snipcart::before {
     align-items: center;
     gap: 0.5rem;
     color: #576672;
+    &--small {
+        gap: 0.25rem;
+    }
 }
 
 .price {
@@ -375,8 +382,9 @@ html.snipcart-sidecart--opened #snipcart::before {
 
 .section {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
-    padding: 2rem;
+    padding: 4rem;
     max-width: 1200px;
     margin: auto;
     &--green {
@@ -390,10 +398,14 @@ html.snipcart-sidecart--opened #snipcart::before {
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        &--center {
-            align-items: center;
+        &--full {
+            width: 100%;
+            min-width: 100%;
         }
     }
+}
+.indented {
+    padding-left: 2.075rem;
 }
 
 .circumfrenceSelector {
@@ -419,5 +431,55 @@ html.snipcart-sidecart--opened #snipcart::before {
         &--error {
             outline: 2px solid #dc0000;
         }
+    }
+}
+
+.illustration {
+    max-width: 200px;
+    margin: auto;
+    &--invert {
+        filter: invert(1);
+    }
+}
+
+.reviews {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+        appearance: none;
+    }
+    &::-webkit-scrollbar-track {
+        background: linear-gradient(#1e402f 80%, darken(#1e402f, 10) 80%);
+        height: 20px;
+    }
+    &::-webkit-scrollbar-thumb {
+        cursor: grab;
+        background: linear-gradient(#1e402f, 80%, white 80%);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(#1e402f, 50%, white 50%);
+    }
+    &::-webkit-scrollbar-thumb:active {
+        cursor: grabbing;
+    }
+}
+.review {
+    background-color: white;
+    color: black;
+    padding: 2.5%;
+    min-width: 30%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+    &__name {
+        font-weight: 500;
+        text-align: right;
+        margin-bottom: -0.5rem;
+    }
+    &:not(:last-of-type) {
+        margin-right: 5%;
     }
 }

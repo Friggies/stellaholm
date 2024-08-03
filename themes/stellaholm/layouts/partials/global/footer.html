@@ -16,17 +16,17 @@
         </div>
         <div class="globalFooter__section">
             <ul class="list">
+                {{ range .Site.Menus.footer }}
                 <li>
-                    <a href="">Product Care</a>
+                    <a href="{{ .URL }}">{{ .Name }}</a>
                 </li>
+                {{ end }}
                 <li>
-                    <a href="">Personalization</a>
-                </li>
-                <li>
-                    <a href="">The Gift</a>
-                </li>
-                <li>
-                    <a href="">Instagram</a>
+                    <a
+                        href="https://www.flaticon.com/free-icons/aries"
+                        title="aries icons"
+                        >Aries icons created by max.icons - Flaticon</a
+                    >
                 </li>
             </ul>
         </div>
