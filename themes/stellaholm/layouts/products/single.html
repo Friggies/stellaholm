@@ -55,12 +55,13 @@
                 {{ .Params.SizeSelect }}
             </label>
             <input
-                type="number"
+                type="text"
                 id="circumfrenceSelector"
                 min="40"
                 max="80"
                 value="60"
                 placeholder="0"
+                pattern="^[0-9]{2}$"
                 class="circumfrenceSelector__input"
                 oninput="validateInput(this.value)"
             />
@@ -208,7 +209,8 @@
 </section>
 <script>
     function validateInput(inputValue) {
-        if (inputValue.length >= 3) {
+        //input of type text to handle safari case og ignoring letters
+        if (inputValue.length >= 3 || isNaN(inputValue.slice(-1))) {
             inputValue = inputValue.substring(0, inputValue.length - 1);
             event.target.value = inputValue;
         } else if (inputValue.length < 2) {
