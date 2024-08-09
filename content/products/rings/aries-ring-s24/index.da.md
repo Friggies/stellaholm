@@ -11,6 +11,11 @@ productImage2: img2.webp
 materials:
     - Asiatiske smykkeperler af harpiks
     - Forstærket og vandfast smykkesnor
+reviews:
+    - text: Super smukke smøkker der passer helt perfekt!
+      name: Louise Andersen
+    - text: Super smukke smøkker der passer helt perfekt!
+      name: Louise Andersen
 ---
 
 En unik og kraftfuld ring til [Vædderen](/da/vademecum/stjernetegn/vaedderen).

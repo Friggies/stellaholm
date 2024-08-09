@@ -1,9 +1,24 @@
 banner = "Gratis og hurtig levering i hele Danmark"
 
+# ____________
+# global menus
 cph = "København"
 search = "Søg"
 profile = "Profil"
 bag = "Kurv"
-
 my_orders = "Mine ordrer"
 close_dialog = "Luk menu"
+
+# _____________________
+# product page specific
+reviews = "anm."
+madeInDenmark = "Designet og kreeret i Danmark"
+addToBag = "Læg i din kurv"
+customMade = "Specialfremstillet"
+craftmanship = "Eksklusivt håndværk"
+genderlessJewelry = "Kønsløst smykkedesign"
+informations = "Informationer"
+care = "Vedligeholdelse"
+materials = "Materialer"
+allReviews = "Anmeldelser"
+alternativeProductsFor = "Flere produkter til"

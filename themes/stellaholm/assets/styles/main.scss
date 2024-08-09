@@ -402,6 +402,9 @@ html.snipcart-sidecart--opened #snipcart::before {
             width: 100%;
             min-width: 100%;
         }
+        &--center {
+            align-items: center;
+        }
     }
 }
 .indented {
@@ -477,7 +480,6 @@ html.snipcart-sidecart--opened #snipcart::before {
     &__name {
         font-weight: 500;
         text-align: right;
-        margin-bottom: -0.5rem;
     }
     &:not(:last-of-type) {
         margin-right: 5%;

@@ -1,5 +1,5 @@
 ---
 menus: main
-weight: 1
+weight: 2
 title: Bracelets
 ---

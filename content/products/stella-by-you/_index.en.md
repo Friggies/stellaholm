@@ -1,5 +1,5 @@
 ---
 menus: main
 weight: 6
-title: Stella By You
+title: Stellaholm By You
 ---

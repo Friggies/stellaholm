@@ -1,6 +1,6 @@
 ---
 menus: main
-weight: 1
+weight: 2
 title: Armbånd
 url: produkter/armbaand/
 ---

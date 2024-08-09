@@ -1,4 +1,4 @@
 ---
 cascade:
-    valuta: USD
+    valuta: €
 ---

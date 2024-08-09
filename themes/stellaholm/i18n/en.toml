@@ -1,9 +1,24 @@
 banner = "Free and quick delivery anywhere in Denmark"
 
+# ____________
+# global menus
 cph = "Copenhagen"
 search = "Search"
 profile = "Profile"
 bag = "Bag"
-
 my_orders = "My orders"
 close_dialog = "Close menu"
+
+# _____________________
+# product page specific
+reviews = "reviews"
+madeInDenmark = "Designed and crafted in Denmark"
+addToBag = "Add to your bag"
+customMade = "Custom made for you"
+craftmanship = "High-end craftsmanship"
+genderlessJewelry = "Genderless jewelry design"
+informations = "Informations"
+care = "Care"
+materials = "Materials"
+allReviews = "Reviews"
+alternativeProductsFor = "More products for"

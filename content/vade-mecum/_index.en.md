@@ -1,3 +1,4 @@
 ---
-title: Vade mecum
+menus: footer
+title: Vade Mecum
 ---

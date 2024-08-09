@@ -1,6 +1,6 @@
 ---
 menus: main
-weight: 3
+weight: 1
 title: Ringe
 url: produkter/ringe
 cascade:

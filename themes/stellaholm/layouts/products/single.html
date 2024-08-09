@@ -37,7 +37,7 @@
                 src="/icons/star-outline.svg"
                 alt=""
             />
-            <em>3 anm.</em>
+            <em>3 {{ T "reviews" }}</em>
         </div>
         <div class="label">
             <img
@@ -45,7 +45,7 @@
                 src="/flag-danish.svg"
                 alt=""
             />
-            Designet og kreeret i Danmark
+            {{ T "madeInDenmark" }}
         </div>
         <div class="circumfrenceSelector">
             <label
@@ -64,6 +64,7 @@
                 pattern="^[0-9]{2}$"
                 class="circumfrenceSelector__input"
                 oninput="validateInput(this.value)"
+                onfocus="this.select()"
             />
         </div>
         {{ partial "snipcart/buyButton.html" . }} {{ .Content }}
@@ -73,7 +74,7 @@
                 src="/icons/finger-print-outline.svg"
                 alt=""
             />
-            <a href="">Specialfremstillet</a>
+            <a href="">{{ T "customMade" }}</a>
         </div>
         <div class="label">
             <img
@@ -81,7 +82,7 @@
                 src="/icons/diamond-outline.svg"
                 alt=""
             />
-            <a href="">Eksklusivt håndværk</a>
+            <a href="">{{ T "craftmanship" }}</a>
         </div>
         <div class="label">
             <img
@@ -89,7 +90,7 @@
                 src="/icons/unisex-outline.svg"
                 alt=""
             />
-            <a href="">Kønsløst smykkedesign</a>
+            <a href="">{{ T "genderlessJewelry" }}</a>
         </div>
     </div>
 </section>
@@ -100,14 +101,14 @@
                 src="/icons/information-circle-outline.svg"
                 class="icon"
             />
-            Informationer
+            {{ T "informations" }}
         </h2>
         <h3 class="productPage__subHeader">
             <img
                 src="/icons/layers-outline.svg"
                 class="icon"
             />
-            Matrialer
+            {{ T "materials" }}
         </h3>
         <ul class="list indented">
             {{ range .Params.Materials }}
@@ -119,7 +120,7 @@
                 src="/icons/infinite-outline.svg"
                 class="icon"
             />
-            Vedligeholdelse
+            {{ T "care" }}
         </h3>
         <div class="indented">{{ .Params.ProductCare }}</div>
     </div>
@@ -143,39 +144,26 @@
                 src="/icons/star-white.svg"
                 alt=""
             />
-            Anmeldelser
+            {{ T "allReviews" }}
         </h2>
         <ul
             class="reviews"
             tabindex="0"
         >
+            {{ range .Params.Reviews }}
             <li class="review">
-                <p>Super smukke smøkker der passer helt perfekt!</p>
-                <p class="review__name">Louise Andersen</p>
+                <p>{{ .text }}</p>
+                <p class="review__name">{{ .name }}</p>
             </li>
-            <li class="review">
-                <p>
-                    Dejligt med en enkel ring, der kan booste min connecntion
-                    til mit stjernetegn asdadw dawdaw
-                </p>
-                <p class="review__name">Louise Andersen</p>
-            </li>
-            <li class="review">
-                <p>Hurtig levering</p>
-                <p class="review__name">Louise Andersen</p>
-            </li>
-            <li class="review">
-                <p>Hurtig levering</p>
-                <p class="review__name">Louise Andersen</p>
-            </li>
+            {{ end }}
         </ul>
     </div>
 </section>
 <section class="section">
     <div class="section__content">
         <h2 class="productPage__header">
-            Flere produkter til {{ with .GetPage "/vade-mecum/signs/aries" }}{{
-            lower .Title }}{{ end }}
+            {{ T "alternativeProductsFor" }} {{ with .GetPage
+            "/vade-mecum/signs/aries" }}{{ lower .Title }}{{ end }}
         </h2>
         <ul class="productGrid">
             {{ range where (where .Site.RegularPages ".Permalink" "ne"

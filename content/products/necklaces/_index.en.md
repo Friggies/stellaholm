@@ -1,5 +1,5 @@
 ---
 menus: main
-weight: 2
+weight: 3
 title: Necklaces
 ---
