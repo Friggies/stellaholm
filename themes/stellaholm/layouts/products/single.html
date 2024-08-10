@@ -137,6 +137,7 @@
         >
         </a>
     </div>
+    {{ with .Params.Reviews }}
     <div class="section__content section__content--full">
         <h2 class="productPage__header">
             <img
@@ -150,7 +151,7 @@
             class="reviews"
             tabindex="0"
         >
-            {{ range .Params.Reviews }}
+            {{ range . }}
             <li class="review">
                 <p>{{ .text }}</p>
                 <p class="review__name">{{ .name }}</p>
@@ -158,6 +159,7 @@
             {{ end }}
         </ul>
     </div>
+    {{ end }}
 </section>
 <section class="section">
     <div class="section__content">

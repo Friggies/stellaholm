@@ -1,16 +1,19 @@
+<!-- prettier-ignore -->
 {{ $categories := delimit (split .Params.ID "-") "|" }}
 
+{{ $priceString := printf "{\"dkk\": %v, \"eur\": %v}" .Params.Prices.DKK .Params.Prices.EUR }}
 <button
     id="buyButton"
     class="button snipcart-add-item"
     data-item-id="{{ .Params.ID }}"
-    data-item-price="{{ .Params.Price }}"
+    data-item-price="{{ $priceString }}"
     data-item-description="{{ .Content }}"
     data-item-image="{{ .Permalink }}{{ .Params.ProductImage }}"
     data-item-name="{{ .Title }}"
     data-item-categories="{{ $categories }}"
     data-item-custom1-name="{{ .Params.SizeSelect }}"
     data-item-custom1-type="readonly"
+    data-item-custom1-required="true"
 >
     <img
         class="icon"
