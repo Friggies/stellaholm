@@ -4,6 +4,7 @@ weight: 1
 title: Ringe
 url: produkter/ringe
 cascade:
+    productType: ring
     sizeSelect: Diameter (mm)
     productCare:
         Ringen må ikke komme i kontakt med kemikalier og skal opbevares et

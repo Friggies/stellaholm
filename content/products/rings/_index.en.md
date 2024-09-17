@@ -3,6 +3,7 @@ menus: main
 weight: 1
 title: Rings
 cascade:
+    productType: ring
     sizeSelect: Circumference (mm)
     productCare:
         The ring must not come into contact with chemicals and must be stored in

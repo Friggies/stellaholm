@@ -8,7 +8,7 @@
     </head>
     <body>
         {{ partial "global/banner.html" . }} {{ partial "global/header.html" .
-        }}
+        }} {{ partial "global/search.html" . }}
         <main>{{ block "main" . }} {{ end }}</main>
         {{ partial "global/footer.html" . }} {{ partial "snipcart/snipcart.html"
         . }} {{ partial "global/menu.html" . }}

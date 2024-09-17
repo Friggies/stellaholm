@@ -2,6 +2,7 @@
 url: produkter/ringe/vaedderens-ring-s24
 id: aries-ring-s24
 title: Vædderens Ring
+lang: da
 sign: Aries
 element: Fire
 chakra: Solar Plexus

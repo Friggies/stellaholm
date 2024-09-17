@@ -16,3 +16,6 @@ defaultContentLanguage = "en"
         [languages.da.params]
             translationAvailable = "Dansk oversættelse tilgængelig"
             flag = "/flag-danish.svg"
+
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
