@@ -23,8 +23,15 @@ resources.Minify }}
 
 {{ $globalMenu := resources.Get "scripts/globalMenu.js" | resources.Minify }}
 <script
-    defer
+    type="module"
     src="{{ $globalMenu.Permalink }}"
+></script>
+
+{{ $globalSearch := resources.Get "scripts/globalSearch.js" | resources.Minify
+}}
+<script
+    type="module"
+    src="{{ $globalSearch.Permalink }}"
 ></script>
 
 <link

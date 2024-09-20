@@ -10,6 +10,11 @@ my_orders = "My orders"
 close_dialog = "Close menu"
 
 # _____________________
+# global search
+start_search="Search for products..."
+no_products_found="No products found"
+
+# _____________________
 # product page specific
 reviews = "reviews"
 madeInDenmark = "Designed and crafted in Denmark"

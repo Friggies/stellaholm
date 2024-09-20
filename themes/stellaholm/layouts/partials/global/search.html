@@ -1,21 +1,36 @@
 <dialog
     id="globalSearch"
-    open
+    class="globalSearch"
 >
-    <search>
-        <form role="search">
+    <div class="globalSearch__searchSection">
+        <form
+            id="globalSearchForm"
+            role="search"
+            class="globalSearch__form"
+        >
             <input
+                class="globalSearch__input"
                 id="search-query"
                 placeholder="Search..."
                 name="s"
                 autocomplete="off"
+                onfocus="this.select()"
                 type="search"
                 search
                 autofocus
             />
         </form>
-    </search>
+        <button class="globalSearch__closeOnClick">
+            <img
+                width="36"
+                height="36"
+                src="/icons/close-outline-white.svg"
+                alt="cross"
+            />
+        </button>
+    </div>
     <ol
+        class="productGrid"
         id="search-results"
         aria-live="polite"
     ></ol>
@@ -23,10 +38,23 @@
         id="search-result-template"
         type="text/x-js-template"
     >
-        <li class="search-results-summary" id="summary-${key}">
-            <h4><a class="search-item" href="${link}">${title}</a></h4>
-            <p>${price}</p>
-            <p>${snippet}  ... <a class="search-item-more" href="${link}">[more]</a></p>
+        <li id="result-${key}">
+            <a class="productTile" href="${link}">
+                <img
+                    class="productTile__image"
+                    src="${link}${productImage}"
+                />
+                <img
+                    class="productTile__image productTile__image--hover"
+                    src="${link}${productImage2}"
+                />
+                <span>
+                    <strong>${title}</strong>
+                </span>
+                <span class="price">
+                    ${price} ${valuta}
+                </span>
+            </a>
         </li>
     </script>
 </dialog>
@@ -52,12 +80,8 @@
         ],
     };
 
-    document
-        .querySelector('#search-results')
-        .insertAdjacentHTML(
-            'beforeend',
-            '<p class="search-results-empty">Please enter a word or phrase above</p>'
-        );
+    document.querySelector('#search-results').innerHTML =
+        '<li class="search-results-empty">{{ T "start_search" }}</li>';
 
     function debounce(func, wait) {
         let timeout;
@@ -86,14 +110,16 @@
             executeSearch(query, true);
         } else {
             document.querySelector('#search-results').innerHTML =
-                '<p class="search-results-empty">Please enter a word or phrase above.</p>';
+                '<li class="search-results-empty">{{ T "start_search" }}</li>';
         }
     }
 
-    const fetchEndpoint =
-        document.documentElement.getAttribute('lang') === 'da'
-            ? '/da/index.json'
-            : '/index.json';
+    let fetchEndpoint = '/index.json';
+    let currentValuta = '€';
+    if (document.documentElement.getAttribute('lang') === 'da') {
+        fetchEndpoint = '/da/index.json';
+        currentValuta = 'DKK';
+    }
 
     function executeSearch(searchQuery) {
         fetch(fetchEndpoint)
@@ -107,7 +133,7 @@
                     populateResults(result);
                 } else {
                     document.querySelector('#search-results').innerHTML =
-                        '<p class="search-results-empty">No matches found</p>';
+                        '<li class="search-results-empty">{{ T "no_products_found" }}</li>';
                 }
             });
     }
@@ -125,6 +151,9 @@
                 price: value.item.price,
                 link: value.item.permalink,
                 snippet: value.item.contents,
+                productImage: value.item.productImage,
+                productImage2: value.item.productImage2,
+                valuta: currentValuta,
             });
 
             document
@@ -162,4 +191,14 @@
 
         return templateString;
     }
+
+    document
+        .querySelector('#globalSearchForm')
+        .addEventListener('submit', e => {
+            e.preventDefault();
+            document
+                .querySelector('#search-results')
+                .firstElementChild.querySelector('a')
+                .focus();
+        });
 </script>
