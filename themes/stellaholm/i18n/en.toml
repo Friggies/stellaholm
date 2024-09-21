@@ -2,7 +2,6 @@ banner = "Free and quick delivery anywhere in Denmark"
 
 # ____________
 # global menus
-cph = "Copenhagen"
 search = "Search"
 profile = "Profile"
 bag = "Bag"

@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 .globalBanner {
-    background-color: black;
+    background-color: #1e402f;
     color: white;
     padding-block: 2px;
     text-align: center;
     font-size: 14px;
 }
 .globalFooter {
-    background-color: black;
+    background-color: #1e402f;
     color: white;
     padding: 1rem;
     display: flex;
@@ -47,17 +47,7 @@
         font-family: Arsenal SC;
         font-weight: 700;
         font-size: 1.75em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: black;
-        &--slogan {
-            margin-top: -0.25rem;
-            font-family: Parisienne;
-            font-weight: 400;
-            font-size: 0.75em;
-            color: #576672;
-        }
+        text-transform: uppercase;
     }
     &__action {
         display: flex;
@@ -382,33 +372,6 @@ html.snipcart-sidecart--opened #snipcart::before {
     }
 }
 
-.sizeList {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    &__size {
-        border: 2px solid #1b354b;
-        color: #1b354b;
-        font-weight: 500;
-        padding: 0.25rem 1rem;
-        &--active {
-            background-color: #1b354b;
-            color: white;
-        }
-        &--oos {
-            background-color: #f2f2f2;
-            border-color: #dbdbdb;
-            color: #555555;
-            cursor: not-allowed;
-            &:hover {
-                &::after {
-                    content: '';
-                }
-            }
-        }
-    }
-}
 .button {
     display: flex;
     background-color: #1e402f;
