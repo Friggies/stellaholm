@@ -227,6 +227,7 @@
 }
 
 body {
+    background-color: white;
     font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
         segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
         arial, sans-serif;
@@ -439,7 +440,7 @@ html.snipcart-sidecart--opened #snipcart::before {
     padding-left: 2.075rem;
 }
 
-.circumfrenceSelector {
+.sizeSelector {
     border: 2px solid #1e402f;
     position: relative;
     display: flex;

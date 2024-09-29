@@ -47,22 +47,24 @@
             />
             {{ T "madeInDenmark" }}
         </div>
-        <div class="circumfrenceSelector">
+        <div class="sizeSelector">
             <label
-                for="circumfrenceSelector"
-                class="circumfrenceSelector__label"
+                for="sizeSelector"
+                class="sizeSelector__label"
             >
                 {{ .Params.SizeSelect }}
             </label>
             <input
                 type="text"
-                id="circumfrenceSelector"
-                min="40"
-                max="80"
-                value="60"
+                id="sizeSelector"
+                min="{{ int .Params.SizeMin }}"
+                max="{{ int .Params.SizeMax }}"
+                value="{{ int .Params.SizeDefault }}"
+                data-error-message="{{ .Params.SizeError }}"
                 placeholder="0"
                 pattern="^[0-9]{2}$"
-                class="circumfrenceSelector__input"
+                class="sizeSelector__input"
+                onkeyup="validateInput(this.value)"
                 oninput="validateInput(this.value)"
                 onfocus="this.select()"
             />
@@ -199,37 +201,28 @@
 </section>
 <script>
     function validateInput(inputValue) {
-        //input of type text to handle safari case og ignoring letters
         if (inputValue.length >= 3 || isNaN(inputValue.slice(-1))) {
             inputValue = inputValue.substring(0, inputValue.length - 1);
             event.target.value = inputValue;
         } else if (inputValue.length < 2) {
-            circumfrenceSelector.classList.add(
-                'circumfrenceSelector__input--error'
-            );
+            sizeSelector.classList.add('sizeSelector__input--error');
             buyButton.querySelector('span').innerText =
-                'Størrelse skal være mellem 40mm og 80mm';
+                sizeSelector.getAttribute('data-error-message');
             buyButton.disabled = true;
-        } else if (inputValue < 40) {
-            event.target.value = 40;
-            circumfrenceSelector.classList.remove(
-                'circumfrenceSelector__input--error'
-            );
-            buyButton.querySelector('span').innerText = 'Læg i din kurv';
+        } else if (inputValue < sizeSelector.getAttribute('min')) {
+            event.target.value = sizeSelector.getAttribute('min');
+            sizeSelector.classList.remove('sizeSelector__input--error');
+            buyButton.querySelector('span').innerText = '{{ T "addToBag" }}';
             buyButton.disabled = false;
-        } else if (inputValue > 80) {
-            event.target.value = 80;
-            circumfrenceSelector.classList.remove(
-                'circumfrenceSelector__input--error'
-            );
-            buyButton.querySelector('span').innerText = 'Læg i din kurv';
+        } else if (inputValue > sizeSelector.getAttribute('max')) {
+            event.target.value = sizeSelector.getAttribute('max');
+            sizeSelector.classList.remove('sizeSelector__input--error');
+            buyButton.querySelector('span').innerText = '{{ T "addToBag" }}';
             buyButton.disabled = false;
         } else {
-            circumfrenceSelector.classList.remove(
-                'circumfrenceSelector__input--error'
-            );
+            sizeSelector.classList.remove('sizeSelector__input--error');
             buyButton.disabled = false;
-            buyButton.querySelector('span').innerText = 'Læg i din kurv';
+            buyButton.querySelector('span').innerText = '{{ T "addToBag" }}';
         }
     }
 </script>
