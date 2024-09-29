@@ -16,18 +16,28 @@
         </div>
         <div class="globalFooter__section">
             <ul class="list">
+                <li>
+                    <a
+                        href="https://www.instagram.com/stellaholmcph/"
+                        target="_blank"
+                    >
+                        Instagram
+                    </a>
+                </li>
                 {{ range .Site.Menus.footer }}
                 <li>
                     <a href="{{ .URL }}">{{ .Name }}</a>
                 </li>
                 {{ end }}
-                <li>
+                <!--
+                                <li>
                     <a
                         href="https://www.flaticon.com/free-icons/aries"
                         title="aries icons"
                         >Aries icons created by max.icons - Flaticon</a
                     >
                 </li>
+                -->
             </ul>
         </div>
     </nav>
