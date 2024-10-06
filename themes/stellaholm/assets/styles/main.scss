@@ -3,6 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.hidden {
+    display: none !important;
+}
+
 .globalBanner {
     background-color: #1e402f;
     color: white;
@@ -462,6 +467,35 @@ html.snipcart-sidecart--opened #snipcart::before {
         flex: 1;
         &--error {
             outline: 2px solid #dc0000;
+        }
+    }
+}
+.searchableSelect {
+    border: 2px solid #1e402f;
+    position: relative;
+    display: flex;
+    width: 100%;
+    &__label {
+        padding: 0.5rem 1rem;
+        background-color: #1e402f;
+        color: white;
+    }
+    .choices {
+        width: 100%;
+        &__inner {
+            background-color: white;
+            border: none;
+            border-radius: 0;
+            min-height: 0;
+            font-size: 16px;
+            color: #1e402f;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+        }
+        &__list {
+            &--single {
+                padding: 0;
+            }
         }
     }
 }

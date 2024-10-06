@@ -1,20 +1,19 @@
 ---
-url: produkter/ringe/vaedderens-ring-s24
-id: aries-ring-s24
-title: Vædderens Ring
+url: produkter/ringe/zodiac-ring
+id: zodiac-ring
+title: Zodiac Ring
 lang: da
-sign: Aries
-element: Fire
-chakra: Solar Plexus
 price: 399.95
 prices:
     dkk: 399.95
     eur: 49.95
-productImage: img.webp
-productImage2: img2.webp
+productImage: img.da.webp
+productImage2: img2.da.webp
 materials:
     - Asiatiske smykkeperler af harpiks
     - Forstærket og vandfast smykkesnor
+alternativeProducts:
+    - Zodiac Armbånd
 reviews:
     - text: Super smukke smøkker der passer helt perfekt!
       name: Louise Andersen

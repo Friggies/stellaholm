@@ -1,15 +1,12 @@
 ---
-id: aries-ring-s24
-title: Aries Ring
-sign: Aries
-element: Fire
-chakra: Solar Plexus
+id: zodiac-ring
+title: Zodiac Ring
 price: 49.95
 prices:
     dkk: 399.95
     eur: 49.95
-productImage: img.webp
-productImage2: img2.webp
+productImage: img.en.webp
+productImage2: img2.en.webp
 materials:
     - Asian resin jewelry beads
     - Reinforced jewelry cord

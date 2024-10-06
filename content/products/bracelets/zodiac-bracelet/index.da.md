@@ -1,13 +1,13 @@
 ---
-url: produkter/armbaand/vaedderens-armbaand-s24
-id: aries-bracelet-s24
-title: Vædderens Armbånd
-sign: Aries
-element: Fire
-chakra: Solar Plexus
+url: produkter/armbaand/zodiac-armbaand
+id: zodiac-bracelet
+title: Zodiac Armbånd
 price: 299.95
-productImage: img.webp
-productImage2: img2.webp
+prices:
+    dkk: 299.95
+    eur: 49.95
+productImage: img.da.webp
+productImage2: img2.da.webp
 materials:
     - Asiatiske smykkeperler af harpiks
     - Forstærket og vandfast smykkesnor

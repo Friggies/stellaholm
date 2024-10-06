@@ -47,6 +47,52 @@
             />
             {{ T "madeInDenmark" }}
         </div>
+        <div class="searchableSelect">
+            <label
+                for="searchableSelect"
+                class="searchableSelect__label"
+            >
+                Stjernetegn</label
+            >
+            <select
+                id="searchableSelect"
+                class="searchableSelect__select"
+            >
+                <option value="Apple">Apple</option>
+                <option value="Banana">Banana</option>
+                <option value="Cherry">Cherry</option>
+                <option value="Date">Date</option>
+                <option value="Elderberry">Elderberry</option>
+                <option value="Fig">Fig</option>
+                <option value="Grape">Grape</option>
+                <option value="Honeydew">Honeydew</option>
+            </select>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+        <script defer>
+            const selectElement = document.getElementById('searchableSelect');
+
+            const choices = new Choices(selectElement, {
+                searchEnabled: true,
+                shouldSort: false,
+                removeItemButton: false,
+                placeholderValue: 'Search...',
+                noResultsText: 'No results found',
+                itemSelectText: 'Press to select',
+            });
+
+            selectElement.addEventListener('hideDropdown', function () {
+                const selectedVal = selectElement.value;
+
+                if (!selectedVal) {
+                    selectElement.value = 'Apple';
+                    choices.setChoiceByValue('Apple');
+                }
+            });
+
+            selectElement.value = 'Apple';
+            choices.setChoiceByValue('Apple');
+        </script>
         <div class="sizeSelector">
             <label
                 for="sizeSelector"
@@ -66,7 +112,7 @@
                 class="sizeSelector__input"
                 onkeyup="validateInput(this.value)"
                 oninput="validateInput(this.value)"
-                onfocus="this.select()"
+                onclick="this.select()"
             />
         </div>
         {{ partial "snipcart/buyButton.html" . }} {{ .Content }}
@@ -165,13 +211,10 @@
 </section>
 <section class="section">
     <div class="section__content">
-        <h2 class="productPage__header">
-            {{ T "alternativeProductsFor" }} {{ with .GetPage
-            "/vade-mecum/signs/aries" }}{{ lower .Title }}{{ end }}
-        </h2>
+        <h2 class="productPage__header">{{ T "alternativeProducts" }}</h2>
         <ul class="productGrid">
-            {{ range where (where .Site.RegularPages ".Permalink" "ne"
-            $.Permalink ) ".Params.Sign" $.Params.Sign }}
+            {{ range where .Site.RegularPages "Title" "in"
+            .Params.AlternativeProducts }}
             <li>
                 <a
                     href="{{ .RelPermalink }}"
