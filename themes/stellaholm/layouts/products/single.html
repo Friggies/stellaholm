@@ -47,52 +47,54 @@
             />
             {{ T "madeInDenmark" }}
         </div>
+        {{ with .Params.Selectables }}
         <div class="searchableSelect">
             <label
                 for="searchableSelect"
                 class="searchableSelect__label"
             >
-                Stjernetegn</label
+                {{ $.Params.SelectablesTitle }}</label
             >
             <select
                 id="searchableSelect"
                 class="searchableSelect__select"
             >
-                <option value="Apple">Apple</option>
-                <option value="Banana">Banana</option>
-                <option value="Cherry">Cherry</option>
-                <option value="Date">Date</option>
-                <option value="Elderberry">Elderberry</option>
-                <option value="Fig">Fig</option>
-                <option value="Grape">Grape</option>
-                <option value="Honeydew">Honeydew</option>
+                {{ range . }}
+                <option value="{{ . }}">{{ . }}</option>
+                {{ end }}
             </select>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-        <script defer>
+        <script type="module">
             const selectElement = document.getElementById('searchableSelect');
 
             const choices = new Choices(selectElement, {
                 searchEnabled: true,
                 shouldSort: false,
                 removeItemButton: false,
-                placeholderValue: 'Search...',
-                noResultsText: 'No results found',
-                itemSelectText: 'Press to select',
+                noResultsText: '{{ T "searchableSelectNoResults" }}',
+                itemSelectText: '{{ T "searchableSelectItemSelect" }}',
             });
 
-            selectElement.addEventListener('hideDropdown', function () {
-                const selectedVal = selectElement.value;
-
-                if (!selectedVal) {
-                    selectElement.value = 'Apple';
-                    choices.setChoiceByValue('Apple');
-                }
+            let buyButton = document.querySelector('#buyButton');
+            buyButton.setAttribute(
+                'data-item-custom2-name',
+                '{{ $.Params.SelectablesTitle }}'
+            );
+            buyButton.setAttribute('data-item-custom2-type', 'readonly');
+            buyButton.setAttribute('data-item-custom2-required', 'true');
+            buyButton.setAttribute(
+                'data-item-custom2-value',
+                selectElement.value
+            );
+            selectElement.addEventListener('change', () => {
+                buyButton.setAttribute(
+                    'data-item-custom2-value',
+                    selectElement.value
+                );
             });
-
-            selectElement.value = 'Apple';
-            choices.setChoiceByValue('Apple');
         </script>
+        {{ end }}
         <div class="sizeSelector">
             <label
                 for="sizeSelector"

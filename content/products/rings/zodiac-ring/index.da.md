@@ -14,6 +14,20 @@ materials:
     - Forstærket og vandfast smykkesnor
 alternativeProducts:
     - Zodiac Armbånd
+selectablesTitle: Stjernetegn
+selectables:
+    - Vædderen (9 røde perler)
+    - Tyren (6 grønne perler)
+    - Tvillingerne (3 gule perler)
+    - Krebsen (2 blå perler)
+    - Løven (1 rød perle)
+    - Jomfruen (5 grønne perler)
+    - Vægten (6 gule perler)
+    - Skorpionen (8 blå perler)
+    - Skytten (3 røde perler)
+    - Stenbukken (4 grønne perler)
+    - Vandmanden (2 gule perler)
+    - Fisken (3 blå perler)
 reviews:
     - text: Super smukke smøkker der passer helt perfekt!
       name: Louise Andersen
