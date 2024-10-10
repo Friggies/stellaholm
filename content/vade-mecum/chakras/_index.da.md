@@ -1,4 +1,6 @@
 ---
-title: Chakra
-url: vademecum/chakra
+title: Chakras
+url: vademecum/chakras
 ---
+
+# Lorem

@@ -4,6 +4,14 @@
 >
     <div class="globalMenu__content">
         <ul class="globalMenu__list">
+            <li>
+                <a
+                    href=' {{ "/" | relLangURL }}'
+                    class="globalMenu__title"
+                >
+                    Stellaholm
+                </a>
+            </li>
             {{ range .Site.Menus.main }}
             <li>
                 <a

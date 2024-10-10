@@ -1,3 +1,3 @@
 ---
-title: Chakra
+title: Chakras
 ---

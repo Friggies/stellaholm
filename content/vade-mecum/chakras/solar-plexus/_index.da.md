@@ -1,4 +1,6 @@
 ---
+title: Solar Plexus
 color: Gul
-url: vademecum/chakra/solar-plexus
+hex: FFFACD
+url: vademecum/chakras/solar-plexus
 ---

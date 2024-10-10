@@ -26,14 +26,10 @@
     <span>{{ T "addToBag" }}</span>
 </button>
 <script>
-    buyButton.setAttribute(
-        'data-item-custom1-value',
-        sizeSelector.value + ' mm'
-    );
-    sizeSelector.addEventListener('change', () => {
-        buyButton.setAttribute(
-            'data-item-custom1-value',
-            sizeSelector.value + ' mm'
-        );
+    const buyButton = document.querySelector('#buyButton');
+    const sizeSelector = document.querySelector('#sizeSelector');
+    buyButton.setAttribute('data-item-custom1-value', sizeSelector.value);
+    sizeSelector.addEventListener('keyup', () => {
+        buyButton.setAttribute('data-item-custom1-value', sizeSelector.value);
     });
 </script>

@@ -19,9 +19,14 @@
     background-color: #1e402f;
     color: white;
     padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: auto;
+    }
     &__title {
         text-decoration: none;
         font-family: Arsenal SC;
@@ -38,6 +43,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    max-width: 1200px;
+    margin: auto;
     &__section {
         flex: 1;
         display: flex;
@@ -195,6 +202,17 @@
             text-decoration: underline;
         }
     }
+    &__title {
+        text-decoration: none;
+        font-family: Arsenal SC;
+        font-weight: 700;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        &:focus {
+            border-bottom: 2px solid #1e402f;
+            outline: none;
+        }
+    }
 }
 @media screen and (max-width: 550px) {
     .hideOnMobile {
@@ -313,7 +331,7 @@ html.snipcart-sidecart--opened #snipcart::before {
     &__image {
         width: 100%;
         height: 300px;
-        object-fit: contain;
+        object-fit: cover;
         display: block;
         &--hover {
             display: none;
@@ -335,12 +353,12 @@ html.snipcart-sidecart--opened #snipcart::before {
 
 .productGrid {
     list-style-type: none;
-    display: grid;
+    display: flex;
+    justify-content: center;
     gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center;
-    li:only-child {
-        grid-column: 2 / 3;
+    flex-wrap: wrap;
+    li {
+        width: calc(33% - 0.5rem);
     }
 }
 

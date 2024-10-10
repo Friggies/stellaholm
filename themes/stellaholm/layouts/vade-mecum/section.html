@@ -1,11 +1,17 @@
 {{ define "main" }}
-<section>
-    <ul>
-        {{ range where .Pages "Type" "element" }}
-        <li>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </li>
-        {{ end }}
-    </ul>
+<section class="section">
+    <div class="section__content">
+        {{ .Content }}
+        <ul>
+            {{ range .Pages }}
+            <li style="background-color: #{{ .Params.Hex }}">
+                <a href="{{ .RelPermalink}}">
+                    <h2>{{ .Title }}</h2>
+                    {{ .Content }}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
 </section>
 {{ end }}
