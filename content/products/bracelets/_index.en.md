@@ -8,6 +8,6 @@ cascade:
     sizeMin: 15
     sizeMax: 25
     SizeDefault: 20
-    sizeError: Size must be from 15cm to 25cm
+    sizeError: Length must be from 15cm to 25cm
     productCare: Lorem ipsum
 ---

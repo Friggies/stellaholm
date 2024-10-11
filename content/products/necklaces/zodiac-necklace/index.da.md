@@ -1,7 +1,7 @@
 ---
-url: produkter/ringe/zodiac-ring
-id: zodiac-ring
-title: Zodiac Ring
+url: produkter/halskaeder/zodiac-halskaede
+id: zodiac-necklace
+title: Zodiac Halskæde
 price: 399.95
 prices:
     dkk: 399.95
@@ -13,6 +13,7 @@ materials:
     - Forstærket og vandfast smykkesnor
 alternativeProducts:
     - Zodiac Armbånd
+    - Zodiac Ring
 selectablesTitle: Stjernetegn
 selectables:
     - Vædderen (9 røde perler)
