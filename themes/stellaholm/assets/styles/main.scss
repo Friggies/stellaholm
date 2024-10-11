@@ -112,6 +112,8 @@
         height: 100%;
         padding-inline: 0.75rem;
         width: 100%;
+        border-radius: 0;
+        background-color: white;
         &::placeholder {
             color: #576672;
         }
@@ -201,7 +203,7 @@
             flex-direction: row-reverse;
             justify-content: flex-end;
             gap: 0.5rem;
-            color: inherit;
+            color: black;
             &:hover {
                 text-decoration: underline;
             }
@@ -326,7 +328,7 @@ html.snipcart-sidecart--opened #snipcart::before {
     top: 9px;
     font-size: 10px;
     font-weight: 600;
-    color: inherit;
+    color: black;
 }
 
 .productTile {
