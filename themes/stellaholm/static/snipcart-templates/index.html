@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Templates</title>
+    </head>
+
+    <body>
+        <div id="snipcart-templates">
+            <payment section="top">
+                <div>
+                    <p>
+                        <snipcart-checkbox
+                            name="privacy-policy"
+                            required
+                        ></snipcart-checkbox>
+                        <snipcart-label for="privacy-policy">
+                            {{ $localize('terms.i_accept_stellaholms') }}
+                            <a
+                                href="{{  $localize('terms.terms_and_conditions_link') }}"
+                                >{{ $localize('terms.terms_and_conditions')
+                                }}</a
+                            >
+                        </snipcart-label>
+                    </p>
+                </div>
+            </payment>
+        </div>
+    </body>
+</html>
