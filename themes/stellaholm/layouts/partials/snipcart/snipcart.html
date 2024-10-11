@@ -122,18 +122,16 @@
             Snipcart.api.session.setCurrency('dkk');
             Snipcart.api.session.setLanguage('da', {
                 custom: {
-                    i_accept_stellaholms: 'Jeg accepterer Stellaholms',
-                    terms_and_conditions: 'handelsbetingelser',
-                    terms_and_conditions_link: '/da/handelsbetingelser/',
+                    i_accept_stellaholms_terms_and_conditions:
+                        'Jeg accepterer Stellaholms handelsbetingelser',
                 },
             });
         } else {
             Snipcart.api.session.setCurrency('eur');
             Snipcart.api.session.setLanguage('en', {
                 custom: {
-                    i_accept_stellaholms: "I accept Stellaholm's",
-                    terms_and_conditions: 'Terms & Conditions',
-                    terms_and_conditions_link: '/terms-and-conditions/',
+                    i_accept_stellaholms_terms_and_conditions:
+                        "I accept Stellaholm's Terms & Conditions",
                 },
             });
         }
