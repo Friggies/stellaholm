@@ -120,8 +120,22 @@
     document.addEventListener('snipcart.ready', () => {
         if (document.querySelector('html').getAttribute('lang') === 'da') {
             Snipcart.api.session.setCurrency('dkk');
+            Snipcart.api.session.setLanguage('da', {
+                custom: {
+                    i_accept_stellaholms: 'Jeg accepterer Stellaholms',
+                    terms_and_conditions: 'handelsbetingelser',
+                    terms_and_conditions_link: '/da/handelsbetingelser/',
+                },
+            });
         } else {
             Snipcart.api.session.setCurrency('eur');
+            Snipcart.api.session.setLanguage('en', {
+                custom: {
+                    i_accept_the_terms_and_conditions: "I accept Stellaholm's",
+                    terms_and_conditions: 'Terms & Conditions',
+                    terms_and_conditions_link: '/terms-and-conditions/',
+                },
+            });
         }
     });
 </script>
