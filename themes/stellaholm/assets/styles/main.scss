@@ -601,3 +601,27 @@ html.snipcart-sidecart--opened #snipcart::before {
         margin-right: 5%;
     }
 }
+
+#snipcart {
+    --bgColor-buttonPrimary: #1e402f;
+    --bgColor-buttonPrimary-hover: #34644c;
+    --bgColor-buttonPrimary-active: #34644c;
+    --bgColor-buttonPrimary-focus: #4c8669;
+
+    --color-link: #1e402f;
+    --color-link-hover: #34644c;
+    --color-link-active: #34644c;
+    --color-link-focus: #4c8669;
+
+    --borderColor-input-focus: #4c8669;
+    --borderColor-input-checked: #4c8669;
+    --borderColor-input-hover: #4c8669;
+    --bgColor-input-checked: #4c8669;
+
+    --color-icon: #1e402f;
+
+    --color-badge: white;
+    --color-badge-active: white;
+    --bgColor-badge: #1e402f;
+    --bgColor-badge-active: #34644c;
+}

@@ -7,18 +7,19 @@
     <body>
         <div id="snipcart-templates">
             <payment section="top">
-                <div>
-                    <p>
-                        <snipcart-checkbox
-                            name="privacy-policy"
-                            required
-                        ></snipcart-checkbox>
-                        <snipcart-label for="privacy-policy">
-                            {{
-                            $localize('custom.i_accept_stellaholms_terms_and_conditions')
-                            }}
-                        </snipcart-label>
-                    </p>
+                <div class="snipcart-form__field-checkbox">
+                    <snipcart-checkbox
+                        name="terms_and_conditions"
+                        required
+                    ></snipcart-checkbox>
+                    <snipcart-label
+                        class="snipcart__font--tiny"
+                        for="terms_and_conditions"
+                    >
+                        {{
+                        $localize('custom.i_accept_stellaholms_terms_and_conditions')
+                        }}
+                    </snipcart-label>
                 </div>
             </payment>
         </div>
