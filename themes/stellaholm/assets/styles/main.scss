@@ -203,7 +203,6 @@
             flex-direction: row-reverse;
             justify-content: flex-end;
             gap: 0.5rem;
-            color: black;
             &:hover {
                 text-decoration: underline;
             }
@@ -278,6 +277,7 @@ button {
     font-size: inherit;
     font-weight: inherit;
     cursor: pointer;
+    color: black;
 }
 strong {
     font-weight: 400;
@@ -328,7 +328,6 @@ html.snipcart-sidecart--opened #snipcart::before {
     top: 9px;
     font-size: 10px;
     font-weight: 600;
-    color: black;
 }
 
 .productTile {
