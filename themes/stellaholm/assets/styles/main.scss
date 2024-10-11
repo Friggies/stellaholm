@@ -74,6 +74,13 @@
         }
     }
 }
+@media screen and (max-width: 550px) {
+    .globalHeader {
+        &__title {
+            font-size: 1.5em;
+        }
+    }
+}
 .globalSearch {
     width: 100%;
     max-width: 100%;
@@ -194,6 +201,7 @@
             flex-direction: row-reverse;
             justify-content: flex-end;
             gap: 0.5rem;
+            color: inherit;
             &:hover {
                 text-decoration: underline;
             }
@@ -209,7 +217,6 @@
         font-size: 1.5em;
         text-transform: uppercase;
         &:focus {
-            border-bottom: 2px solid #1e402f;
             outline: none;
         }
     }
@@ -319,6 +326,7 @@ html.snipcart-sidecart--opened #snipcart::before {
     top: 9px;
     font-size: 10px;
     font-weight: 600;
+    color: inherit;
 }
 
 .productTile {
