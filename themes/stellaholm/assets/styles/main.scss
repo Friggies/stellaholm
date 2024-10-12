@@ -481,7 +481,7 @@ html.snipcart-sidecart--opened #snipcart::before {
 @media screen and (max-width: 550px) {
     .section {
         flex-direction: column;
-        padding: 2rem;
+        padding: 1rem;
     }
 }
 .indented {
@@ -624,4 +624,62 @@ html.snipcart-sidecart--opened #snipcart::before {
     --color-badge-active: white;
     --bgColor-badge: #1e402f;
     --bgColor-badge-active: #34644c;
+}
+
+.box {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    &__content {
+        padding: 2rem;
+        flex: 1;
+        text-decoration: none;
+        &--nopad {
+            padding: 0;
+        }
+    }
+    &:nth-of-type(even) {
+        flex-direction: row-reverse;
+    }
+    &:not(:last-of-type) {
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (max-width: 550px) {
+    .box {
+        flex-direction: column;
+        &__content {
+            padding: 1.5rem;
+            &--nopad {
+                padding: 0;
+            }
+        }
+        &:nth-of-type(even) {
+            flex-direction: column;
+        }
+    }
+}
+.img {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.markdown {
+    p {
+        margin-top: 1rem;
+    }
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arsenal SC;
+    font-weight: 700;
+    font-size: 1.75em;
+    text-transform: uppercase;
+    img {
+        transform: scale(1.25);
+        opacity: 0.5;
+    }
 }

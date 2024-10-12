@@ -1,14 +1,35 @@
 {{ define "main" }}
 <section class="section">
     <div class="section__content">
-        {{ .Content }}
-        <ul>
+        <ul class="list">
             {{ range .Pages }}
-            <li style="background-color: #{{ .Params.Hex }}">
-                <a href="{{ .RelPermalink}}">
-                    <h2>{{ .Title }}</h2>
-                    {{ .Content }}
+            <li
+                class="box"
+                style="background-color: #{{ .Params.Hex }}"
+            >
+                <a
+                    class="box__content"
+                    href="{{ .RelPermalink}}"
+                >
+                    <h2 class="title">
+                        {{ .Title }} {{ with .Params.Icon }}
+                        <img
+                            src="/icons/{{ . }}-green.svg"
+                            alt=""
+                            width="30"
+                            height="30"
+                        />
+                        {{ end }}
+                    </h2>
+                    <div class="markdown">{{ .Content }}</div>
                 </a>
+                <div class="box__content box__content--nopad">
+                    <img
+                        class="img"
+                        src="{{ .RelPermalink}}{{ .Params.Img }}"
+                        alt=""
+                    />
+                </div>
             </li>
             {{ end }}
         </ul>
