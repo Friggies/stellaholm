@@ -18,5 +18,3 @@ represents calm, emotional balance and inner depth.
 
 Our jewellery is designed with the colours of the elements to bring these
 energies into your life and create balance and style.
-
-Translated with DeepL.com (free version)
