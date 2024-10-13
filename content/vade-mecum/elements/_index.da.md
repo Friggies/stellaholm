@@ -1,7 +1,7 @@
 ---
 title: Elementer
 url: vademecum/elementer
-img: fire.da.jpg
+image: fire.da.jpg
 icon: flame-outline
 ---
 

@@ -608,6 +608,13 @@ html.snipcart-sidecart--opened #snipcart::before {
     --bgColor-buttonPrimary-active: #34644c;
     --bgColor-buttonPrimary-focus: #4c8669;
 
+    --color-buttonSecondary: white;
+    --color-buttonSecondary-hover: white;
+    --bgColor-buttonSecondary: #1e402f;
+    --bgColor-buttonSecondary-hover: #34644c;
+    --bgColor-buttonSecondary-active: #34644c;
+    --bgColor-buttonSecondary-focus: #4c8669;
+
     --color-link: #1e402f;
     --color-link-hover: #34644c;
     --color-link-active: #34644c;
@@ -631,12 +638,9 @@ html.snipcart-sidecart--opened #snipcart::before {
     display: flex;
     flex-direction: row;
     &__content {
-        padding: 2rem;
         flex: 1;
+        padding: 1.5rem;
         text-decoration: none;
-        &--nopad {
-            padding: 0;
-        }
     }
     &:nth-of-type(even) {
         flex-direction: row-reverse;
@@ -648,22 +652,16 @@ html.snipcart-sidecart--opened #snipcart::before {
 @media screen and (max-width: 550px) {
     .box {
         flex-direction: column;
-        &__content {
-            padding: 1.5rem;
-            &--nopad {
-                padding: 0;
-            }
-        }
         &:nth-of-type(even) {
             flex-direction: column;
         }
     }
 }
-.img {
-    width: 100%;
+.image {
     height: 100%;
-    min-height: 100%;
-    object-fit: cover;
+    width: 50%;
+    display: block;
+    margin: auto;
 }
 .markdown {
     p {
@@ -674,7 +672,7 @@ html.snipcart-sidecart--opened #snipcart::before {
 .title {
     display: flex;
     justify-content: space-between;
-    font-size: 2.5em;
+    font-size: 2.25em;
     img {
         transform: scale(1.25);
         opacity: 0.5;
@@ -689,5 +687,13 @@ html.snipcart-sidecart--opened #snipcart::before {
         font-family: Arsenal SC;
         font-weight: 700;
         text-transform: uppercase;
+    }
+}
+@media screen and (max-width: 550px) {
+    .title {
+        font-size: 1.75em;
+        &--small {
+            font-size: 1.5em;
+        }
     }
 }

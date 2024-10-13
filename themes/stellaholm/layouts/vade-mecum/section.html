@@ -4,10 +4,7 @@
         <h1 class="title title--center">{{ .Title }}</h1>
         <ul class="list">
             {{ range .Pages }}
-            <li
-                class="box"
-                style="background-color: #{{ .Params.Hex }}"
-            >
+            <li class="box">
                 <a
                     class="box__content"
                     href="{{ .RelPermalink}}"
@@ -24,10 +21,10 @@
                     </h2>
                     <div class="markdown">{{ .Content }}</div>
                 </a>
-                <div class="box__content box__content--nopad">
+                <div class="box__content">
                     <img
-                        class="img"
-                        src="{{ .RelPermalink}}{{ .Params.Img }}"
+                        class="image"
+                        src="{{ .RelPermalink}}{{ .Params.Image }}"
                         alt=""
                     />
                 </div>

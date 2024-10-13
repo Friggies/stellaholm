@@ -1,6 +1,6 @@
 ---
 title: Chakras
-img: chakras.en.jpg
+image: chakras.en.jpg
 icon: diamond-outline
 ---
 

@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="section">
+    <div class="section__content">
+        <a href="../">READ</a>
+        <h1 class="title">{{ .Title }}</h1>
+        {{ with .Params.Image }} {{ end }}
+        <div class="markdown">{{ .Content }}</div>
+    </div>
+    <div class="section__content">
+        {{ with .Params.Image }}
+        <img
+            class="image"
+            src="{{ . }}"
+            alt=""
+        />
+        {{ end }}
+    </div>
+</section>
+{{ end }}

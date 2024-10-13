@@ -1,6 +1,6 @@
 ---
 title: Elements
-img: fire.en.jpg
+image: fire.en.jpg
 icon: flame-outline
 ---
 
