@@ -674,12 +674,20 @@ html.snipcart-sidecart--opened #snipcart::before {
 .title {
     display: flex;
     justify-content: space-between;
-    font-family: Arsenal SC;
-    font-weight: 700;
-    font-size: 1.75em;
-    text-transform: uppercase;
+    font-size: 2.5em;
     img {
         transform: scale(1.25);
         opacity: 0.5;
+    }
+    &--center {
+        margin: auto;
+    }
+    &--small {
+        font-size: 1.75em;
+    }
+    &--arsenal {
+        font-family: Arsenal SC;
+        font-weight: 700;
+        text-transform: uppercase;
     }
 }
