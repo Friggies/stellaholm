@@ -7,14 +7,14 @@
         class="section__content"
         open
     >
-        <summary>Indholdsoversigt</summary>
+        <summary>{{ T "toc" }}</summary>
         {{ .TableOfContents }}
     </details>
     <div class="section__content">
         {{ with .PublishDate }}
-        <p>Udgivet {{ . | time.Format ":date_long" }}</p>
+        <p>{{ T "published" }} {{ . | time.Format ":date_long" }}</p>
         {{ end }} {{ if ne .Lastmod .PublishDate }}
-        <p>Sidst opdateret {{ .Lastmod | time.Format ":date_long" }}</p>
+        <p>{{ T "lastUpdated" }} {{ .Lastmod | time.Format ":date_long" }}</p>
         {{ end }}
         <h1 class="title title--arsenal">{{ .Title }}</h1>
         <div class="markdown">{{ .Content }}</div>

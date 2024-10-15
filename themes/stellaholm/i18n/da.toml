@@ -28,3 +28,9 @@ allReviews = "Anmeldelser"
 alternativeProducts = "Anbefalede Produkter"
 searchableSelectNoResults = "Ingen resultater"
 searchableSelectItemSelect = "Tryk for at vælge"
+
+# _____________________
+# single page specific
+toc = "Indholdsfortegnelse"
+published = "Udgivet"
+lastUpdated = "Sidst opdateret"

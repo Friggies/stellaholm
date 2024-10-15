@@ -28,3 +28,9 @@ allReviews = "Reviews"
 alternativeProducts = "Recommended Products"
 searchableSelectNoResults = "No results found"
 searchableSelectItemSelect = "Press to select"
+
+# _____________________
+# single page specific
+toc = "Table Of Contents"
+published = "Published"
+lastUpdated = "Last updated"
