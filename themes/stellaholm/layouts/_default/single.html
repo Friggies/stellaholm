@@ -1,3 +1,23 @@
 {{ define "main" }}
-<p>Single.html</p>
+<section
+    class="section section--reverse"
+    aria-label="{{ .Title }}"
+>
+    <details
+        class="section__content"
+        open
+    >
+        <summary>Indholdsoversigt</summary>
+        {{ .TableOfContents }}
+    </details>
+    <div class="section__content">
+        {{ with .PublishDate }}
+        <p>Udgivet {{ . | time.Format ":date_long" }}</p>
+        {{ end }} {{ if ne .Lastmod .PublishDate }}
+        <p>Sidst opdateret {{ .Lastmod | time.Format ":date_long" }}</p>
+        {{ end }}
+        <h1 class="title title--arsenal">{{ .Title }}</h1>
+        <div class="markdown">{{ .Content }}</div>
+    </div>
+</section>
 {{ end }}

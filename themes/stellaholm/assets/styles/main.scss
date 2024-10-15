@@ -477,11 +477,17 @@ html.snipcart-sidecart--opened #snipcart::before {
             align-items: center;
         }
     }
+    &--reverse {
+        flex-direction: row-reverse;
+    }
 }
 @media screen and (max-width: 550px) {
     .section {
         flex-direction: column;
         padding: 1rem;
+        &--reverse {
+            flex-direction: reverse;
+        }
     }
 }
 .indented {
