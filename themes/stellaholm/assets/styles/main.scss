@@ -481,6 +481,10 @@ html.snipcart-sidecart--opened #snipcart::before {
         flex-direction: row-reverse;
     }
 }
+.article {
+    max-width: 500px;
+    margin: auto;
+}
 @media screen and (max-width: 550px) {
     .section {
         flex-direction: column;
@@ -671,7 +675,8 @@ html.snipcart-sidecart--opened #snipcart::before {
 }
 .markdown {
     p {
-        margin-top: 1rem;
+        margin-top: 0.25rem;
+        margin-bottom: 0.75rem;
     }
 }
 

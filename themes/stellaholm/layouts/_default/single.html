@@ -1,16 +1,9 @@
 {{ define "main" }}
 <section
-    class="section section--reverse"
+    class="section"
     aria-label="{{ .Title }}"
 >
-    <details
-        class="section__content"
-        open
-    >
-        <summary>{{ T "toc" }}</summary>
-        {{ .TableOfContents }}
-    </details>
-    <div class="section__content">
+    <div class="section__content article">
         {{ if eq .Lastmod .PublishDate }}
         <p>
             {{ T "published" }}
@@ -27,6 +20,10 @@
         </p>
         {{ end }}
         <h1 class="title title--arsenal">{{ .Title }}</h1>
+        <details open>
+            <summary>{{ T "toc" }}</summary>
+            {{ .TableOfContents }}
+        </details>
         <div class="markdown">{{ .Content }}</div>
     </div>
 </section>
