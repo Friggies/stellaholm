@@ -4,24 +4,25 @@
     aria-label="{{ .Title }}"
 >
     <div class="section__content article">
-        {{ if eq .Lastmod .PublishDate }}
+        {{ with .PublishDate }} {{ if eq $.Lastmod . }}
         <p>
             {{ T "published" }}
-            <time datetime="{{ .PublishDate }}"
-                >{{ .PublishDate | time.Format ":date_long" }}</time
-            >
+            <time datetime="{{ . }}">{{ . | time.Format ":date_long" }}</time>
         </p>
         {{ else }}
         <p>
             {{ T "lastUpdated" }}
-            <time datetime="{{ .Lastmod }}"
-                >{{ .Lastmod | time.Format ":date_long" }}</time
+            <time datetime="{{ $.Lastmod }}"
+                >{{ $.Lastmod | time.Format ":date_long" }}</time
             >
         </p>
-        {{ end }}
+        {{ end }} {{end}}
         <h1 class="title title--arsenal">{{ .Title }}</h1>
-        <details open>
-            <summary>{{ T "toc" }}</summary>
+        <details
+            class="toc"
+            open
+        >
+            <summary class="toc__title">{{ T "toc" }}</summary>
             {{ .TableOfContents }}
         </details>
         <div class="markdown">{{ .Content }}</div>

@@ -1,9 +1,9 @@
 ---
-menus: footer
-weight: 4
-title: Handelsbetingelser
-url: handelsbetingelser
-publishdate: 2024-04-01
+menus: productLabels
+weight: 1
+title: Custom jewellery made just for you
+label: Custom made for you
+icon: finger-print-outline
 ---
 
 ## Lorem ipsum dolor sit amet

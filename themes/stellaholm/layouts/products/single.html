@@ -118,15 +118,18 @@
                 onclick="this.select()"
             />
         </div>
-        {{ partial "snipcart/buyButton.html" . }} {{ .Content }}
+        {{ partial "snipcart/buyButton.html" . }} {{ .Content }} {{ range
+        .Site.Menus.productLabels}}
         <div class="label">
             <img
                 class="icon"
-                src="/icons/finger-print-outline.svg"
+                src="/icons/{{ .Page.Params.Icon }}.svg"
                 alt=""
             />
-            <a href="">{{ T "customMade" }}</a>
+            <a href="{{ .URL }}">{{ .Page.Params.Label }}</a>
         </div>
+        {{ end }}
+
         <div class="label">
             <img
                 class="icon"

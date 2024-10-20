@@ -1,9 +1,10 @@
 ---
-menus: footer
-weight: 4
-title: Handelsbetingelser
-url: handelsbetingelser
-publishdate: 2024-04-01
+menus: productLabels
+weight: 1
+title: Specialfremstillede smykker lavet til dig
+label: Specialfremstillet til dig
+icon: finger-print-outline
+url: artikler/specialfremstillede-smykker
 ---
 
 ## Lorem ipsum dolor sit amet

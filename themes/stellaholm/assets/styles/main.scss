@@ -114,16 +114,20 @@
     &__searchSection {
         width: 100%;
         display: flex;
+        border: 2px solid #1e402f;
+        background-color: #1e402f;
+        border-radius: 4px;
     }
     &__input {
-        border: 2px solid #1e402f;
+        border: none;
         font-size: 16px;
         font-family: inherit;
         height: 100%;
         padding-inline: 0.75rem;
         width: 100%;
-        border-radius: 0;
         background-color: white;
+        appearance: none;
+        border-radius: 2px;
         &::placeholder {
             color: #576672;
         }
@@ -424,6 +428,7 @@ html.snipcart-sidecart--opened #snipcart::before {
     gap: 0.5rem;
     padding: 0.5rem;
     width: 100%;
+    border-radius: 4px;
     &:hover {
         text-decoration: underline;
     }
@@ -500,18 +505,20 @@ html.snipcart-sidecart--opened #snipcart::before {
 
 .sizeSelector {
     border: 2px solid #1e402f;
+    background-color: #1e402f;
     position: relative;
     display: flex;
     width: 100%;
+    border-radius: 4px;
     &__label {
         padding: 0.5rem 1rem;
-        background-color: #1e402f;
         color: white;
         white-space: nowrap;
     }
     &__input {
         background-color: white;
         color: #1e402f;
+        border-radius: 2px;
         appearance: none;
         font-size: 16px;
         font-family: inherit;
@@ -526,12 +533,13 @@ html.snipcart-sidecart--opened #snipcart::before {
 }
 .searchableSelect {
     border: 2px solid #1e402f;
+    background-color: #1e402f;
     position: relative;
     display: flex;
     width: 100%;
+    border-radius: 4px;
     &__label {
         padding: 0.5rem 1rem;
-        background-color: #1e402f;
         color: white;
         white-space: nowrap;
     }
@@ -540,7 +548,7 @@ html.snipcart-sidecart--opened #snipcart::before {
         &__inner {
             background-color: white;
             border: none;
-            border-radius: 0;
+            border-radius: 2px;
             min-height: 0;
             font-size: 16px;
             color: #1e402f;
@@ -603,6 +611,7 @@ html.snipcart-sidecart--opened #snipcart::before {
     flex-direction: column;
     justify-content: space-between;
     gap: 0.5rem;
+    border-radius: 4px;
     &__name {
         font-weight: 500;
         text-align: right;
@@ -684,6 +693,7 @@ html.snipcart-sidecart--opened #snipcart::before {
     display: flex;
     justify-content: space-between;
     font-size: 2.25em;
+    text-wrap: balance;
     img {
         transform: scale(1.25);
         opacity: 0.5;
@@ -705,6 +715,34 @@ html.snipcart-sidecart--opened #snipcart::before {
         font-size: 1.75em;
         &--small {
             font-size: 1.5em;
+        }
+    }
+}
+
+.toc {
+    border: 2px solid #1e402f;
+    background-color: #1e402f;
+    width: 100%;
+    border-radius: 4px;
+    &__title {
+        padding: 0.5rem 1rem;
+        color: white;
+        white-space: nowrap;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    #TableOfContents {
+        padding: 0.5rem 1rem;
+        background-color: white;
+        border-radius: 2px;
+        > ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
         }
     }
 }
