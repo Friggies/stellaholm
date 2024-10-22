@@ -1,10 +1,10 @@
 ---
 menus: productLabels
-weight: 1
-title: Specialfremstillede smykker til dig
-label: Specialfremstillet til dig
-icon: finger-print-outline
-url: artikler/specialfremstillede-smykker
+weight: 3
+title: Kønsløst smykkedesign til alle
+label: Kønsløst smykkedesign
+icon: unisex-outline
+url: artikler/koensloest--smykkedesign-til-alle
 ---
 
 ## Lorem ipsum dolor sit amet

@@ -6,59 +6,77 @@ url: handelsbetingelser
 publishdate: 2024-04-01
 ---
 
-## Lorem ipsum dolor sit amet
+Velkommen til Stellaholm. Ved at bruge denne hjemmeside og afgive en ordre
+accepterer du følgende vilkår og betingelser. Læs dem omhyggeligt, før du
+foretager et køb.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque nec
-sapien ac gravida. Aenean ac risus pulvinar, vulputate nunc porta, blandit
-neque. Vestibulum quam dui, sollicitudin eu aliquam quis, gravida nec dui.
-Quisque dignissim, libero et varius pharetra, nisi ipsum bibendum tortor, eu
-convallis dui ipsum mollis ligula. Sed ultricies enim sed eros dapibus egestas.
+## Generel information
 
-## Lorem ipsum dolor sit amet
+Ved at gå ind på eller bruge dette websted accepterer du at overholde disse
+vilkår og betingelser. betingelser. Hvis du ikke er enig i disse vilkår, bør du
+ikke bruge denne hjemmeside eller foretage køb.
 
-Pellentesque efficitur maximus urna, at lobortis nisl interdum ut. Morbi
-molestie, ligula quis placerat dapibus, erat arcu sodales mi, non scelerisque
-dolor ante ut nibh. Sed commodo metus eget faucibus luctus. Integer accumsan
-magna sed nibh varius molestie. Lorem ipsum dolor sit amet, consectetur
-adipiscing elit. Aliquam eget sollicitudin metus. Donec sed dolor in ligula
-finibus iaculis ac in orci. Integer commodo bibendum eleifend. Nunc ligula
-libero, efficitur eget interdum sit amet, iaculis et eros. Donec dui urna,
-elementum sed sapien nec, sodales tempor augue. Sed ac libero diam.
+## Produkter og ordrer
 
-## Lorem ipsum dolor sit amet
+-   **Specialfremstillede produkter**: Alle specialfremstillede produkter er
+    endelige salg og **kan ikke returneres**. På grund af disse varers
+    personlige karakter kan de kan de ikke returneres eller refunderes,
+    medmindre de er defekte eller beskadiget under forsendelsen.
+-   **Ikke-brugerdefinerede produkter**: For ikke-tilpassede produkter
+    accepterer vi returnering og refusioner inden for 14 dage efter levering,
+    forudsat at varerne er ubrugte og i deres originale emballage.
 
-Etiam pretium congue auctor. Morbi congue elementum turpis vel vestibulum. Duis
-efficitur velit odio, quis venenatis enim fermentum at. In id blandit augue,
-eget molestie ipsum. Duis vestibulum ante laoreet augue bibendum, vitae tempor
-ex malesuada. Nunc auctor nec massa sed viverra. Integer in est quis odio mattis
-rutrum eget sed purus.
+## Betaling og behandling
 
-## Lorem ipsum dolor sit amet
+-   **Betalingsudbydere**: Vi bruger **Stripe** og **Snipcart** til at behandle
+    betalinger. Ved at købe på dette websted giver du samtykke til deling af
+    dine oplysninger (såsom navn, kontaktoplysninger og betalingsoplysninger)
+    med disse tredjeparter for at lette transaktionen. Både Stripe og Snipcart
+    er ansvarlige for håndtering og beskyttelse af dine betalingsoplysninger.
 
-Vivamus in massa sagittis sapien sodales lobortis sit amet bibendum purus. Cras
-urna ex, tincidunt ac molestie eu, laoreet a urna. Donec id venenatis lorem.
-Pellentesque vel odio et orci pulvinar suscipit quis ut tortor. Fusce
-consectetur mollis diam, id interdum libero eleifend non. Maecenas scelerisque
-consectetur consequat. Praesent risus enim, porta in tortor nec, sagittis
-pharetra mi. Pellentesque habitant morbi tristique senectus et netus et
-malesuada fames ac turpis egestas. Morbi faucibus sem sem, eu sagittis quam
-pellentesque at. Curabitur luctus sodales ultrices. Phasellus feugiat mollis
-condimentum. Nullam vitae est elit.
+-   **Ordrebekræftelse**: Når din betaling er behandlet, vil du modtage en
+    e-mailbekræftelse med dine ordreoplysninger.
 
-In ut viverra enim. Quisque mattis dapibus est vitae gravida. Suspendisse
-scelerisque orci dolor, ut iaculis justo vulputate in. Vivamus eget ultrices
-elit. Suspendisse quam purus, rhoncus vitae pellentesque non, dictum at arcu.
-Aliquam egestas erat ac magna feugiat elementum. Nulla pharetra sit amet diam a
-blandit. Etiam bibendum condimentum nunc, in tristique metus imperdiet a.
-Aliquam vel arcu sit amet elit hendrerit molestie.
+## Forsendelse
 
-Cras feugiat aliquam ante ut imperdiet. Suspendisse turpis neque, rutrum at
-sollicitudin sit amet, scelerisque tristique odio. Sed quis volutpat est.
-Integer eleifend imperdiet nibh et convallis. Morbi scelerisque quam sed arcu
-imperdiet rhoncus. Pellentesque auctor, erat accumsan mollis tristique, mauris
-lectus venenatis dolor, sed elementum elit erat vitae felis. Sed id magna ut
-ipsum accumsan volutpat eu vitae lorem. Maecenas pretium vestibulum sapien ac
-ultricies. Maecenas consectetur lorem ante, aliquam egestas ante tincidunt sed.
-Suspendisse consequat at leo ac viverra. Vivamus ullamcorper accumsan tortor, ac
-vehicula sem tincidunt gravida. Aliquam efficitur tempor leo, sit amet vulputate
-elit hendrerit non. Nunc lobortis eget tellus et mattis.
+-   Vi bruger **DAO** til forsendelse. Dine personlige oplysninger, der er
+    nødvendige for (såsom navn, adresse og kontaktoplysninger) vil blive delt
+    med DAO for at sikre med DAO for at sikre, at din ordre bliver leveret
+    korrekt.
+
+-   Vi er ikke ansvarlige for forsinkelser i forsendelsen på grund af
+    tredjeparts transportører. Vi vil dog give sporingsoplysninger, hvor det er
+    muligt, for at holde dig opdateret.
+
+## Fortrolighedspolitik
+
+-   **Brug af data**: Vi indsamler og gemmer kun de oplysninger, der er
+    nødvendige for at behandle din ordre (navn, adresse, e-mail,
+    betalingsoplysninger osv.). Dine oplysninger vil ikke blive delt med
+    tredjeparter undtagen for betaling behandling (via Stripe og Snipcart) og
+    forsendelse (via DAO).
+
+-   **Cookies**: Dette websted indsamler eller gemmer **ikke** cookies.
+
+## Ansvar
+
+-   Vi gør vores bedste for at sikre nøjagtigheden af produktbeskrivelser og
+    billeder. Der kan dog forekomme små variationer i farve, størrelse eller
+    design, især med specialfremstillede produkter.
+-   Vi er ikke ansvarlige for eventuelle problemer i forbindelse med
+    betalingsbehandling eller forsendelsesforsinkelser forårsaget af
+    tredjepartstjenester (Stripe, Snipcart, DAO).
+
+## Ændringer af vilkår
+
+Vi forbeholder os ret til at opdatere eller ændre disse vilkår og betingelser
+til enhver tid uden forudgående varsel. Eventuelle ændringer vil blive
+offentliggjort på denne side, og din din fortsatte brug af hjemmesiden vil
+udgøre en accept af de opdaterede vilkår.
+
+## Kontaktoplysninger
+
+Hvis du har spørgsmål eller bekymringer om disse vilkår, bedes du kontakte os
+på:
+
+[contact@stellaholm.com](mailto:contact@stellaholm.com)

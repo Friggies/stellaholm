@@ -129,23 +129,6 @@
             <a href="{{ .URL }}">{{ .Page.Params.Label }}</a>
         </div>
         {{ end }}
-
-        <div class="label">
-            <img
-                class="icon"
-                src="/icons/diamond-outline.svg"
-                alt=""
-            />
-            <a href="">{{ T "craftmanship" }}</a>
-        </div>
-        <div class="label">
-            <img
-                class="icon"
-                src="/icons/unisex-outline.svg"
-                alt=""
-            />
-            <a href="">{{ T "genderlessJewelry" }}</a>
-        </div>
     </div>
 </section>
 <section class="section section--green">
@@ -236,9 +219,7 @@
                         src="{{ .RelPermalink }}{{ .Params.ProductImage2 }}"
                         alt="{{ .Params.ProductImage2 }}"
                     />
-                    <span>
-                        <strong>{{ .Title }}</strong>
-                    </span>
+                    <span> {{ .Title }} </span>
                     <span class="price">
                         {{ .Params.Price }} {{ .Params.Valuta }}
                     </span>

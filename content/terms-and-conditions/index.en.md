@@ -6,59 +6,72 @@ publishdate: 2024-04-01
 lastmod: 2024-04-05
 ---
 
-## Lorem ipsum dolor sit amet
+Welcome to Stellaholm. By using this website and placing an order, you agree to
+the following terms and conditions. Please read them carefully before making any
+purchase.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque nec
-sapien ac gravida. Aenean ac risus pulvinar, vulputate nunc porta, blandit
-neque. Vestibulum quam dui, sollicitudin eu aliquam quis, gravida nec dui.
-Quisque dignissim, libero et varius pharetra, nisi ipsum bibendum tortor, eu
-convallis dui ipsum mollis ligula. Sed ultricies enim sed eros dapibus egestas.
+## General Information
 
-## Lorem ipsum dolor sit amet
+By accessing or using this website, you agree to abide by these Terms and
+Conditions. If you do not agree with these terms, you should not use this
+website or make any purchases.
 
-Pellentesque efficitur maximus urna, at lobortis nisl interdum ut. Morbi
-molestie, ligula quis placerat dapibus, erat arcu sodales mi, non scelerisque
-dolor ante ut nibh. Sed commodo metus eget faucibus luctus. Integer accumsan
-magna sed nibh varius molestie. Lorem ipsum dolor sit amet, consectetur
-adipiscing elit. Aliquam eget sollicitudin metus. Donec sed dolor in ligula
-finibus iaculis ac in orci. Integer commodo bibendum eleifend. Nunc ligula
-libero, efficitur eget interdum sit amet, iaculis et eros. Donec dui urna,
-elementum sed sapien nec, sodales tempor augue. Sed ac libero diam.
+## Products and Orders
 
-## Lorem ipsum dolor sit amet
+-   **Custom-Made Products**: All custom-made products are final sale and
+    **non-returnable**. Due to the personalized nature of these items, they
+    cannot be returned or refunded unless they are defective or damaged during
+    shipping.
+-   **Non-Custom Products**: For non-custom products, we accept returns and
+    refunds within 14 days of delivery, provided the items are unused and in
+    their original packaging.
 
-Etiam pretium congue auctor. Morbi congue elementum turpis vel vestibulum. Duis
-efficitur velit odio, quis venenatis enim fermentum at. In id blandit augue,
-eget molestie ipsum. Duis vestibulum ante laoreet augue bibendum, vitae tempor
-ex malesuada. Nunc auctor nec massa sed viverra. Integer in est quis odio mattis
-rutrum eget sed purus.
+## Payment and Processing
 
-## Lorem ipsum dolor sit amet
+-   **Payment Providers**: We use **Stripe** and **Snipcart** to process
+    payments. By purchasing on this site, you consent to the sharing of your
+    information (such as name, contact details, and payment details) with these
+    third parties to facilitate the transaction. Both Stripe and Snipcart are
+    responsible for the handling and protection of your payment information.
 
-Vivamus in massa sagittis sapien sodales lobortis sit amet bibendum purus. Cras
-urna ex, tincidunt ac molestie eu, laoreet a urna. Donec id venenatis lorem.
-Pellentesque vel odio et orci pulvinar suscipit quis ut tortor. Fusce
-consectetur mollis diam, id interdum libero eleifend non. Maecenas scelerisque
-consectetur consequat. Praesent risus enim, porta in tortor nec, sagittis
-pharetra mi. Pellentesque habitant morbi tristique senectus et netus et
-malesuada fames ac turpis egestas. Morbi faucibus sem sem, eu sagittis quam
-pellentesque at. Curabitur luctus sodales ultrices. Phasellus feugiat mollis
-condimentum. Nullam vitae est elit.
+-   **Order Confirmation**: Once your payment is processed, you will receive an
+    email confirmation with your order details.
 
-In ut viverra enim. Quisque mattis dapibus est vitae gravida. Suspendisse
-scelerisque orci dolor, ut iaculis justo vulputate in. Vivamus eget ultrices
-elit. Suspendisse quam purus, rhoncus vitae pellentesque non, dictum at arcu.
-Aliquam egestas erat ac magna feugiat elementum. Nulla pharetra sit amet diam a
-blandit. Etiam bibendum condimentum nunc, in tristique metus imperdiet a.
-Aliquam vel arcu sit amet elit hendrerit molestie.
+## Shipping
 
-Cras feugiat aliquam ante ut imperdiet. Suspendisse turpis neque, rutrum at
-sollicitudin sit amet, scelerisque tristique odio. Sed quis volutpat est.
-Integer eleifend imperdiet nibh et convallis. Morbi scelerisque quam sed arcu
-imperdiet rhoncus. Pellentesque auctor, erat accumsan mollis tristique, mauris
-lectus venenatis dolor, sed elementum elit erat vitae felis. Sed id magna ut
-ipsum accumsan volutpat eu vitae lorem. Maecenas pretium vestibulum sapien ac
-ultricies. Maecenas consectetur lorem ante, aliquam egestas ante tincidunt sed.
-Suspendisse consequat at leo ac viverra. Vivamus ullamcorper accumsan tortor, ac
-vehicula sem tincidunt gravida. Aliquam efficitur tempor leo, sit amet vulputate
-elit hendrerit non. Nunc lobortis eget tellus et mattis.
+-   We use **DAO** for shipping. Your personal information necessary for
+    shipping (such as name, address, and contact information) will be shared
+    with DAO to ensure your order is delivered correctly.
+
+-   We are not responsible for delays in shipping due to third-party carriers.
+    However, we will provide tracking information where possible to keep you
+    updated.
+
+## Privacy Policy
+
+-   **Data Usage**: We collect and store only the information necessary to
+    process your order (name, address, email, payment details, etc.). Your
+    information will not be shared with third parties except for payment
+    processing (via Stripe and Snipcart) and shipping (via DAO).
+
+-   **Cookies**: This website does **not** collect or store cookies.
+
+## Liability
+
+-   We do our best to ensure the accuracy of product descriptions and images.
+    However, slight variations in color, size, or design may occur, especially
+    with custom-made products.
+-   We are not responsible for any issues related to payment processing or
+    shipping delays caused by third-party services (Stripe, Snipcart, DAO).
+
+## Changes to Terms
+
+We reserve the right to update or modify these terms and conditions at any time
+without prior notice. Any changes will be posted on this page, and your
+continued use of the website will constitute acceptance of the updated terms.
+
+## Contact Information
+
+If you have any questions or concerns about these terms, please contact us at:
+
+[contact@stellaholm.com](mailto:contact@stellaholm.com)

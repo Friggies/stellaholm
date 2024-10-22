@@ -1,10 +1,10 @@
 ---
 menus: productLabels
-weight: 1
-title: Specialfremstillede smykker til dig
-label: Specialfremstillet til dig
-icon: finger-print-outline
-url: artikler/specialfremstillede-smykker
+weight: 2
+title: Eksklusive & håndlavede smykker
+label: Eksklusivt håndværk
+icon: diamond-outline
+url: artikler/eksklusive-haandlavede-smykker
 ---
 
 ## Lorem ipsum dolor sit amet

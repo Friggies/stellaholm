@@ -8,6 +8,6 @@ prices:
 productImage: img.en.webp
 productImage2: img2.en.webp
 materials:
-    - Asian resin jewelry beads
-    - Reinforced jewelry cord
+    - Asian resin jewellery beads
+    - Reinforced jewellery cord
 ---

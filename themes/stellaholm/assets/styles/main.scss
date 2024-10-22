@@ -293,9 +293,6 @@ button {
     cursor: pointer;
     color: black;
 }
-strong {
-    font-weight: 400;
-}
 
 //https://gwfh.mranftl.com/fonts
 @font-face {
@@ -656,6 +653,7 @@ html.snipcart-sidecart--opened #snipcart::before {
     background-color: #f2f2f2;
     display: flex;
     flex-direction: row;
+    border-radius: 4px;
     &__content {
         flex: 1;
         padding: 1.5rem;
@@ -683,7 +681,22 @@ html.snipcart-sidecart--opened #snipcart::before {
     margin: auto;
 }
 .markdown {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
     p {
+        margin-top: 0.25rem;
+        margin-bottom: 0.75rem;
+    }
+    ul,
+    ol {
+        padding-left: 1em;
         margin-top: 0.25rem;
         margin-bottom: 0.75rem;
     }
@@ -700,6 +713,7 @@ html.snipcart-sidecart--opened #snipcart::before {
     }
     &--center {
         margin: auto;
+        text-align: center;
     }
     &--small {
         font-size: 1.75em;

@@ -1,10 +1,9 @@
 ---
 menus: productLabels
-weight: 1
-title: Specialfremstillede smykker til dig
-label: Specialfremstillet til dig
-icon: finger-print-outline
-url: artikler/specialfremstillede-smykker
+weight: 3
+title: Unisex jewellery design for anyone
+label: Unisex jewellery design
+icon: unisex-outline
 ---
 
 ## Lorem ipsum dolor sit amet
