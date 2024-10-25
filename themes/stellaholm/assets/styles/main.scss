@@ -18,8 +18,7 @@
 .globalFooter {
     background-color: #1e402f;
     color: white;
-    padding: 1rem;
-
+    padding: 2rem 1rem;
     &__nav {
         display: flex;
         flex-direction: row;
@@ -150,9 +149,6 @@
             outline: none;
         }
     }
-}
-.search-results-empty {
-    width: auto !important;
 }
 
 .list {
@@ -351,11 +347,14 @@ html.snipcart-sidecart--opened #snipcart::before {
     align-items: center;
     text-decoration: none;
     text-align: center;
+    gap: 0.25rem;
     &__image {
         width: 100%;
-        height: 300px;
+        height: 200px;
         object-fit: cover;
         display: block;
+        border-radius: 4px;
+        margin-bottom: 1rem;
         &--hover {
             display: none;
         }
@@ -380,28 +379,14 @@ html.snipcart-sidecart--opened #snipcart::before {
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
-    li {
-        width: calc(33% - 0.5rem);
-    }
+    width: 100%;
 }
 
 .productPage {
     &__productImage {
         width: 50%;
         object-fit: contain;
-    }
-    &__productSummary {
-        grid-area: 'pInfo';
-        position: sticky;
-        top: 2rem;
-        padding-block: 2rem;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 1rem;
-        width: 80%;
-        max-width: 500px;
-        margin-inline: auto;
+        border-radius: 4px;
     }
     &__header {
         font-weight: 500;
@@ -416,6 +401,13 @@ html.snipcart-sidecart--opened #snipcart::before {
         display: flex;
         align-items: center;
         gap: 0.5rem;
+    }
+}
+@media screen and (max-width: 550px) {
+    .productPage {
+        &__productImage {
+            width: calc(50% - 0.5rem);
+        }
     }
 }
 
@@ -493,9 +485,15 @@ html.snipcart-sidecart--opened #snipcart::before {
 @media screen and (max-width: 550px) {
     .section {
         flex-direction: column;
-        padding: 1rem;
+        padding: 2rem 1rem;
         &--reverse {
             flex-direction: reverse;
+        }
+        &__content {
+            &--toRow {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
         }
     }
 }

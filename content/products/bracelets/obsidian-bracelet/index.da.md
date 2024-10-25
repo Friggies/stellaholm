@@ -1,7 +1,7 @@
 ---
-url: produkter/armbaand/zodiac-armbaand
-id: zodiac-bracelet
-title: Zodiac Armbånd
+url: produkter/armbaand/obsidian-armbaand
+id: obsidian-bracelet
+title: Obsidian Armbånd
 price: 299.95
 prices:
     dkk: 299.95
@@ -9,6 +9,6 @@ prices:
 productImage: img.da.webp
 productImage2: img2.da.webp
 materials:
-    - Perler af glas
+    - Glasperler
     - Nylonsnor
 ---

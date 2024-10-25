@@ -9,8 +9,8 @@ prices:
 productImage: img.da.webp
 productImage2: img2.da.webp
 materials:
-    - Asiatiske smykkeperler af harpiks
-    - Forstærket og vandfast smykkesnor
+    - Harpiksperler
+    - Nylonsnor
 alternativeProducts:
     - Zodiac Armbånd
 selectablesTitle: Stjernetegn

@@ -8,8 +8,8 @@ prices:
 productImage: img.en.webp
 productImage2: img2.en.webp
 materials:
-    - Asian resin jewellery beads
-    - Reinforced jewellery cord
+    - Resin beads
+    - Nylon cord
 selectablesTitle: Zodiac Sign
 selectables:
     - Aries (9 red beads)
