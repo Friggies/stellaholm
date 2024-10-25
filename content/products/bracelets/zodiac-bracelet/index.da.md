@@ -9,6 +9,6 @@ prices:
 productImage: img.da.webp
 productImage2: img2.da.webp
 materials:
-    - Perler af glas
+    - Glasperler
     - Nylonsnor
 ---

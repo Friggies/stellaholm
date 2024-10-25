@@ -2,11 +2,16 @@
 
 <section class="section">
     <div
-        class="section__content section__content--center section__content--toRow"
+        class="section__content section__content--center section__content--row"
     >
         <img
-            class="productPage__productImage"
+            class="productPage__productImage productPage__productImage--primary"
             src="{{ .Params.ProductImage }}"
+            alt="{{ .Title }}"
+        />
+        <img
+            class="productPage__productImage"
+            src="{{ .Params.ProductImage2 }}"
             alt="{{ .Title }}"
         />
         <img

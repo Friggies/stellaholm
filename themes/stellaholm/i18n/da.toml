@@ -15,6 +15,10 @@ no_products_found="Ingen produkter fundet"
 
 # _____________________
 # product page specific
+our = "Vores"
+
+# _____________________
+# product page specific
 reviews = "anm."
 madeInDenmark = "Designet og håndlavet i Danmark"
 addToBag = "Læg i din kurv"

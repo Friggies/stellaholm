@@ -347,10 +347,12 @@ html.snipcart-sidecart--opened #snipcart::before {
     align-items: center;
     text-decoration: none;
     text-align: center;
-    gap: 0.25rem;
+    border-radius: 2px;
+    padding-bottom: 0.25rem;
     &__image {
         width: 100%;
         height: 200px;
+        max-width: 200px;
         object-fit: cover;
         display: block;
         border-radius: 4px;
@@ -384,9 +386,12 @@ html.snipcart-sidecart--opened #snipcart::before {
 
 .productPage {
     &__productImage {
-        width: 50%;
+        width: calc(50% - 0.5rem);
         object-fit: contain;
         border-radius: 4px;
+        &--primary {
+            min-width: 75%;
+        }
     }
     &__header {
         font-weight: 500;
@@ -406,7 +411,9 @@ html.snipcart-sidecart--opened #snipcart::before {
 @media screen and (max-width: 550px) {
     .productPage {
         &__productImage {
-            width: calc(50% - 0.5rem);
+            &--primary {
+                min-width: 100%;
+            }
         }
     }
 }
@@ -472,6 +479,11 @@ html.snipcart-sidecart--opened #snipcart::before {
         }
         &--center {
             align-items: center;
+        }
+        &--row {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
         }
     }
     &--reverse {
