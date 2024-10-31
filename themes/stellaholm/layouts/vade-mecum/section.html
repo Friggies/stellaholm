@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section class="section">
     <div class="section__content">
-        <h1 class="title title--center">{{ .Title }}</h1>
+        <h1 class="title title--center title--arsenal">{{ .Title }}</h1>
         <ul class="list">
             {{ range .Pages }}
             <li class="box">
@@ -9,7 +9,7 @@
                     class="box__content"
                     href="{{ .RelPermalink}}"
                 >
-                    <h2 class="title title--small title--arsenal">
+                    <h2 class="title title--small">
                         {{ .Title }} {{ with .Params.Icon }}
                         <img
                             src="/icons/{{ . }}-green.svg"
@@ -19,11 +19,11 @@
                         />
                         {{ end }}
                     </h2>
-                    <div class="markdown">{{ .Content }}</div>
+                    <div class="markdown">{{ .Summary }}</div>
                 </a>
                 <div class="box__content">
                     <img
-                        class="image"
+                        class="image image--sticky"
                         src="{{ .RelPermalink}}{{ .Params.Image }}"
                         alt=""
                     />

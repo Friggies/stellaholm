@@ -382,7 +382,7 @@ html.snipcart-sidecart--opened #snipcart::before {
     flex-wrap: wrap;
     width: 100%;
     li {
-        width: 25%;
+        width: calc(25% - 0.75rem);
     }
 }
 @media screen and (max-width: 550px) {
@@ -700,10 +700,14 @@ html.snipcart-sidecart--opened #snipcart::before {
     }
 }
 .image {
-    height: 100%;
     width: 50%;
     display: block;
-    margin: auto;
+    margin-inline: auto;
+    object-fit: contain;
+    &--sticky {
+        position: sticky;
+        top: 2rem;
+    }
 }
 .markdown {
     h1,
