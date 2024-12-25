@@ -1,0 +1,21 @@
+body {
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+        segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
+        arial, sans-serif;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Arsenal SC';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/arsenal-sc-v1-latin-regular.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Arsenal SC';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/arsenal-sc-v1-latin-700.woff2') format('woff2');
+}

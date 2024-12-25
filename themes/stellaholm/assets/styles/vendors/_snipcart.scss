@@ -1,0 +1,53 @@
+#snipcart::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+}
+#snipcart {
+    --bgColor-buttonPrimary: #242f28;
+    --bgColor-buttonPrimary-hover: #34644c;
+    --bgColor-buttonPrimary-active: #34644c;
+    --bgColor-buttonPrimary-focus: #4c8669;
+
+    --color-buttonSecondary: white;
+    --color-buttonSecondary-hover: white;
+    --bgColor-buttonSecondary: #242f28;
+    --bgColor-buttonSecondary-hover: #34644c;
+    --bgColor-buttonSecondary-active: #34644c;
+    --bgColor-buttonSecondary-focus: #4c8669;
+
+    --color-link: #242f28;
+    --color-link-hover: #34644c;
+    --color-link-active: #34644c;
+    --color-link-focus: #4c8669;
+
+    --borderColor-input-focus: #4c8669;
+    --borderColor-input-checked: #4c8669;
+    --borderColor-input-hover: #4c8669;
+    --bgColor-input-checked: #4c8669;
+
+    --color-icon: #242f28;
+
+    --color-badge: white;
+    --color-badge-active: white;
+    --bgColor-badge: #242f28;
+    --bgColor-badge-active: #34644c;
+}
+
+html.snipcart-sidecart--opened #snipcart::before {
+    opacity: 1;
+}
+
+.snipcart-items-count {
+    width: 20px;
+    text-align: center;
+    position: absolute;
+    left: 2.5px;
+    top: 9px;
+    font-size: 10px;
+    font-weight: 600;
+}

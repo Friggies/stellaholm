@@ -1,0 +1,22 @@
+:root {
+    --color_green: #242f28;
+    --color_green--50: #242f2880;
+    --color_gold: #c7a128;
+    --color_gray: #6e6e6e;
+    --color_black: #090909;
+    --color_white: #fafafa;
+
+    --effect_shadow--drop: 0 0 4px #242f28;
+    --effect_shadow--inset: inset 0 0 30px -10px #242f28;
+
+    font-size: 10px;
+    --size_small: 1rem;
+    --size_medium: 1.5rem;
+    --size_large: 2rem;
+
+    --font_small: 14px;
+    --font_medium: 16px;
+    --font_large: 20px;
+    --font_x-large: 28px;
+    --font_xx-large: 48px;
+}
