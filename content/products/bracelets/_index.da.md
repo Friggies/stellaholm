@@ -4,6 +4,7 @@ weight: 2
 title: Armbånd
 url: produkter/armbaand/
 cascade:
+    breadcrumb: Armbånd
     productType: bracelet
     sizeSelect: Længde (cm)
     sizeMin: 15

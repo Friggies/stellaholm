@@ -19,6 +19,7 @@ our = "Vores"
 
 # _____________________
 # product page specific
+frontPage = "Forside"
 reviews = "anm."
 madeInDenmark = "Designet og håndlavet i Danmark"
 addToBag = "Læg i din kurv"

@@ -4,6 +4,7 @@ weight: 1
 title: Ringe
 url: produkter/ringe
 cascade:
+    breadcrumb: Ringe
     productType: ring
     sizeSelect: Diameter (mm)
     sizeMin: 40

@@ -3,6 +3,7 @@ menus: main
 weight: 1
 title: Rings
 cascade:
+    breadcrumb: Rings
     productType: ring
     sizeSelect: Circumference (mm)
     sizeMin: 40

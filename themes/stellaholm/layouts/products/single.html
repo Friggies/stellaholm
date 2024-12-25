@@ -1,6 +1,34 @@
 {{ define "main" }}
 
 <section class="section">
+    <div class="section__content section__content--full">
+        <ol class="breadcrumb__list">
+            <li>
+                <a
+                    class="breadcrumb__item"
+                    href='{{ "/" | relLangURL }}'
+                >
+                    {{ T "frontPage" }}
+                </a>
+            </li>
+            <li>
+                <a
+                    class="breadcrumb__item"
+                    href='{{ replaceRE "[^/]+/$" "" .Permalink }}'
+                >
+                    {{ .Params.Breadcrumb }}
+                </a>
+            </li>
+            <li>
+                <a
+                    class="breadcrumb__item breadcrumb__item--last"
+                    href="{{ .Permalink  }}"
+                >
+                    {{ .Title }}
+                </a>
+            </li>
+        </ol>
+    </div>
     <div
         class="section__content section__content--center section__content--row"
     >

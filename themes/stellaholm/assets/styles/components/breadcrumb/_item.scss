@@ -1,0 +1,11 @@
+.breadcrumb__item {
+    text-decoration: none;
+    &::after {
+        content: '>';
+    }
+    &--last {
+        &::after {
+            content: '';
+        }
+    }
+}

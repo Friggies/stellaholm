@@ -3,6 +3,7 @@ menus: main
 weight: 2
 title: Bracelets
 cascade:
+    breadcrumb: Bracelets
     productType: bracelet
     sizeSelect: Length (cm)
     sizeMin: 15

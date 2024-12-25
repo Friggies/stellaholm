@@ -19,6 +19,7 @@ our = "Our"
 
 # _____________________
 # product page specific
+frontPage = "Front page"
 reviews = "reviews"
 madeInDenmark = "Designed and handcrafted in Denmark"
 addToBag = "Add to your bag"

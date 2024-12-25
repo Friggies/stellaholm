@@ -3,6 +3,9 @@
 @import './base/_reset.scss';
 @import './base/_typography.scss';
 
+@import './components/breadcrumb/_list.scss';
+@import './components/breadcrumb/_item.scss';
+
 @import './layout/_banner.scss';
 @import './layout/_header.scss';
 @import './layout/_footer.scss';
@@ -56,13 +59,6 @@
     }
     100% {
         background-color: rgba(0, 0, 0, 0.5);
-    }
-}
-
-body {
-    background-color: white;
-    &:has(.globalSearch[open]) {
-        overflow-y: hidden;
     }
 }
 
@@ -382,31 +378,6 @@ button {
     }
 }
 
-.box {
-    background-color: #f2f2f2;
-    display: flex;
-    flex-direction: row;
-    border-radius: 4px;
-    &__content {
-        flex: 1;
-        padding: 1.5rem;
-        text-decoration: none;
-    }
-    &:nth-of-type(even) {
-        flex-direction: row-reverse;
-    }
-    &:not(:last-of-type) {
-        margin-bottom: 2rem;
-    }
-}
-@media screen and (max-width: 550px) {
-    .box {
-        flex-direction: column;
-        &:nth-of-type(even) {
-            flex-direction: column;
-        }
-    }
-}
 .image {
     width: 50%;
     display: block;

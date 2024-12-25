@@ -58,3 +58,8 @@
         }
     }
 }
+body {
+    &:has(.globalSearch[open]) {
+        overflow-y: hidden;
+    }
+}
