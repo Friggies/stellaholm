@@ -21,6 +21,8 @@ our = "Our"
 # product page specific
 frontPage = "Front page"
 reviews = "reviews"
+marketing = "For every item you buy, DKK 50 will be donated to Psykiatrifonden to support their work for mental health and well-being."
+readAboutTheVision = "Find out more about our vision here"
 madeInDenmark = "Designed and handcrafted in Denmark"
 addToBag = "Add to your bag"
 informations = "Informations"

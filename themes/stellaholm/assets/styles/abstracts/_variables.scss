@@ -25,8 +25,6 @@
     border-radius: var(--size_medium);
     overflow: hidden;
     box-shadow: var(--effect_shadow--inset);
-    flex: 0 0 auto; /* Prevent resizing of child elements */
-    scroll-snap-align: start; /* Snap images to the start when scrolling */
     > img {
         z-index: -1;
     }

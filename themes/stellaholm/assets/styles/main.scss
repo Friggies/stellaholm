@@ -158,14 +158,13 @@ button {
 
 .button {
     display: flex;
-    background-color: #242f28;
-    color: white;
+    color: var(--color_white);
+    background-color: var(--color_green);
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    width: 100%;
-    border-radius: 4px;
+    border-radius: var(--size_medium);
+    padding: var(--size_small);
+    gap: var(--size_small);
     &:hover {
         text-decoration: underline;
     }
@@ -251,27 +250,28 @@ button {
 }
 
 .sizeSelector {
-    border: 2px solid #242f28;
-    background-color: #242f28;
+    outline: 1px solid #242f28;
     position: relative;
     display: flex;
     width: 100%;
-    border-radius: 4px;
+    border-radius: var(--size_medium);
     &__label {
-        padding: 0.5rem 1rem;
-        color: white;
+        padding: 0.5rem 2.5rem;
         white-space: nowrap;
+        color: var(--color_black);
+        background-color: var(--color_white);
+        border-right: 1px solid var(--color_green);
     }
     &__input {
-        background-color: white;
-        color: #242f28;
-        border-radius: 2px;
+        text-align: right;
+        color: var(--color_black);
+        background-color: var(--color_white);
+        border-radius: 0 var(--size_medium) var(--size_medium) 0;
         appearance: none;
         font-size: 16px;
         font-family: inherit;
-        font-weight: 500;
         border: none;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 2.5rem;
         flex: 1;
         &--error {
             outline: 2px solid #dc0000;
@@ -279,28 +279,31 @@ button {
     }
 }
 .searchableSelect {
-    border: 2px solid #242f28;
-    background-color: #242f28;
+    outline: 1px solid #242f28;
     position: relative;
     display: flex;
     width: 100%;
-    border-radius: 4px;
+    border-radius: var(--size_medium);
     &__label {
-        padding: 0.5rem 1rem;
-        color: white;
+        padding: 0.5rem 2.5rem;
         white-space: nowrap;
+        color: var(--color_black);
+        background-color: var(--color_white);
+        border-right: 1px solid var(--color_green);
     }
     .choices {
         width: 100%;
+        border-radius: 0 var(--size_medium) var(--size_medium) 0;
+        background-color: var(--color_white);
         &__inner {
-            background-color: white;
+            background-color: transparent;
             border: none;
-            border-radius: 2px;
-            min-height: 0;
+            min-height: 0px;
             font-size: 16px;
             color: #242f28;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
+            padding-bottom: 0;
+            padding: 0.5rem 2.5rem;
+            text-align: right;
         }
         &__list {
             &--single {

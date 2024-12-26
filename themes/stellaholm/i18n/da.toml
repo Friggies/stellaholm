@@ -20,7 +20,9 @@ our = "Vores"
 # _____________________
 # product page specific
 frontPage = "Forside"
-reviews = "anm."
+reviews = "anmeldelser"
+marketing = "For hver vare du køber, doneres 50 DKK til Psykiatrifonden som støtte til deres arbejde for mental sundhed og trivsel."
+readAboutTheVision = "Læs mere om vores vision her"
 madeInDenmark = "Designet og håndlavet i Danmark"
 addToBag = "Læg i din kurv"
 informations = "Informationer"

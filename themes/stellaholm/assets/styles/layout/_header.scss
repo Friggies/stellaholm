@@ -1,5 +1,5 @@
 .globalHeader {
-    padding: 1rem;
+    padding: 1rem 4rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -35,12 +35,16 @@
     }
 }
 @media screen and (max-width: 550px) {
+    .hideOnMobile {
+        display: none;
+    }
     .globalHeader {
+        padding: 1rem;
         &__title {
             font-size: 1.5em;
         }
         &__section {
-            gap: 0.5rem;
+            gap: var(--size_large);
         }
     }
 }

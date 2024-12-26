@@ -7,6 +7,10 @@ prices:
     eur: 49.95
 productImage: img.en.webp
 productImage2: img2.en.webp
+selectablesTitle: Lock type
+selectables:
+    - Lobster clasp
+    - Magnetic star
 materials:
     - Resin beads
     - Nylon cord

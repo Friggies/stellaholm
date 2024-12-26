@@ -5,13 +5,10 @@ body {
         arial, sans-serif;
 }
 
-@font-face {
-    font-display: swap;
-    font-family: 'Arsenal SC';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/arsenal-sc-v1-latin-regular.woff2') format('woff2');
+.bold {
+    font-weight: 600;
 }
+
 @font-face {
     font-display: swap;
     font-family: 'Arsenal SC';

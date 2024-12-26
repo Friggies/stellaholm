@@ -90,41 +90,41 @@
                     class="icon"
                     src="/icons/heart-outline.svg"
                     alt=""
+                    width="25"
+                    height="25"
                 />
             </button>
         </div>
         <div class="productContent">
-            <div class="price">{{ .Params.Price }} {{ .Params.Valuta }}</div>
-            <div class="label label--small">
-                <img
-                    class="icon"
-                    src="/icons/star.svg"
-                    alt=""
-                />
-                <img
-                    class="icon"
-                    src="/icons/star.svg"
-                    alt=""
-                />
-                <img
-                    class="icon"
-                    src="/icons/star-half.svg"
-                    alt=""
-                />
-                <img
-                    class="icon"
-                    src="/icons/star-outline.svg"
-                    alt=""
-                />
-                <em>3 {{ T "reviews" }}</em>
-            </div>
-            <div class="label">
-                <img
-                    class="icon icon--circle"
-                    src="/flag-danish.svg"
-                    alt=""
-                />
-                {{ T "madeInDenmark" }}
+            <div class="productInfobar">
+                <div class="productRating">
+                    <div class="productRating__stars">
+                        <img
+                            class="icon"
+                            src="/icons/star.svg"
+                            alt=""
+                        />
+                        <img
+                            class="icon"
+                            src="/icons/star.svg"
+                            alt=""
+                        />
+                        <img
+                            class="icon"
+                            src="/icons/star-half.svg"
+                            alt=""
+                        />
+                        <img
+                            class="icon"
+                            src="/icons/star-outline.svg"
+                            alt=""
+                        />
+                    </div>
+                    <span>3 {{ T "reviews" }}</span>
+                </div>
+                <div class="productPrice bold">
+                    {{ .Params.Price }} {{ .Params.Valuta }}
+                </div>
             </div>
             {{ with .Params.Selectables }}
             <div class="searchableSelect">
@@ -198,8 +198,22 @@
                     onclick="this.select()"
                 />
             </div>
-            {{ partial "snipcart/buyButton.html" . }} {{ .Content }} {{ range
-            .Site.Menus.productLabels}}
+            {{ partial "snipcart/buyButton.html" . }}
+            <p class="bold">
+                {{ T "marketing" }}
+
+                <a href="#">{{ T "readAboutTheVision" }}</a>.
+            </p>
+            {{ .Content }}
+            <div class="label">
+                <img
+                    class="icon icon--circle"
+                    src="/flag-danish.svg"
+                    alt=""
+                />
+                {{ T "madeInDenmark" }}
+            </div>
+            {{ range .Site.Menus.productLabels}}
             <div class="label">
                 <img
                     class="icon"

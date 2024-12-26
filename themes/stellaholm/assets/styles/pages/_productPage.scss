@@ -19,14 +19,13 @@
     flex-wrap: wrap;
     gap: var(--size_medium);
     overflow: hidden;
-    max-width: 100%;
-    position: relative;
 }
 .productImage {
-    height: 200px;
-    aspect-ratio: 3 / 4;
     object-fit: cover;
+    width: 100%;
     &--active {
+        height: auto;
+        width: 100%;
     }
 }
 .productImageCarousel {
@@ -36,11 +35,33 @@
     max-width: 100%;
     gap: var(--size_medium);
     scroll-snap-type: x mandatory;
+    padding-bottom: var(--size_medium);
+    > * {
+        width: 28%;
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        aspect-ratio: 3 / 4;
+    }
+
+    &::-webkit-scrollbar {
+        height: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: var(--color_white);
+        border-radius: var(--size_medium);
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--color_green);
+        border-radius: var(--size_medium);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: var(--color_black);
+    }
 }
 .productTitle {
     grid-area: productTitle;
     display: flex;
-    align-items: baseline;
+    align-items: flex-end;
     justify-content: space-between;
     font-family: Arsenal SC;
     font-weight: 700;
@@ -49,6 +70,22 @@
 }
 .productContent {
     grid-area: productContent;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size_medium);
+}
+.productInfobar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.productRating {
+    &__stars {
+        display: flex;
+    }
+}
+.productPrice {
+    font-size: var(--font_large);
 }
 
 @media screen and (max-width: 550px) {
