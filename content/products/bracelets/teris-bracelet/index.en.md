@@ -1,6 +1,6 @@
 ---
 id: teris-bracelet
-title: Teris Bracelet
+title: Teris
 price: 49.95
 prices:
     dkk: 399.95

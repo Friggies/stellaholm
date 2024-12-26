@@ -1,10 +1,18 @@
 .breadcrumb__item {
     text-decoration: none;
-    &::after {
-        content: '>';
+    position: relative;
+    &:hover {
+        text-decoration: underline;
     }
-    &--last {
-        &::after {
+    &::before {
+        content: '>';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-150%, -50%);
+    }
+    &--first {
+        &::before {
             content: '';
         }
     }

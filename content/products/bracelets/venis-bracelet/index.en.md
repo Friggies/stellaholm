@@ -1,6 +1,6 @@
 ---
 id: venis-bracelet
-title: Venis Bracelet
+title: Venis
 price: 49.95
 prices:
     dkk: 399.95

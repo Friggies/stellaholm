@@ -1,6 +1,6 @@
 ---
 id: humis-bracelet
-title: Humis Bracelet
+title: Humis
 price: 49.95
 prices:
     dkk: 399.95

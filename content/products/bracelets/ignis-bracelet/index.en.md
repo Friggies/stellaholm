@@ -1,6 +1,6 @@
 ---
 id: ignis-bracelet
-title: Ignis Bracelet
+title: Ignis
 price: 49.95
 prices:
     dkk: 399.95

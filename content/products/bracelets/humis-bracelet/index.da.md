@@ -1,7 +1,7 @@
 ---
-url: produkter/armbaand/humis-armbaand
+url: produkter/armbaand/humis
 id: humis-bracelet
-title: Humis Armbånd
+title: Humis
 price: 299.95
 prices:
     dkk: 299.95

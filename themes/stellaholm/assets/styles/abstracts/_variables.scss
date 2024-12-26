@@ -7,7 +7,7 @@
     --color_white: #fafafa;
 
     --effect_shadow--drop: 0 0 4px #242f28;
-    --effect_shadow--inset: inset 0 0 30px -10px #242f28;
+    --effect_shadow--inset: inset 0 0 40px -30px #242f28;
 
     font-size: 10px;
     --size_small: 1rem;
@@ -18,5 +18,16 @@
     --font_medium: 16px;
     --font_large: 20px;
     --font_x-large: 28px;
-    --font_xx-large: 48px;
+}
+
+.imageWrapper {
+    display: flex;
+    border-radius: var(--size_medium);
+    overflow: hidden;
+    box-shadow: var(--effect_shadow--inset);
+    flex: 0 0 auto; /* Prevent resizing of child elements */
+    scroll-snap-align: start; /* Snap images to the start when scrolling */
+    > img {
+        z-index: -1;
+    }
 }

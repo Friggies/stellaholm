@@ -1,7 +1,7 @@
 ---
-url: produkter/armbaand/ignis-armbaand
+url: produkter/armbaand/ignis
 id: ignis-bracelet
-title: Ignis Armbånd
+title: Ignis
 price: 299.95
 prices:
     dkk: 299.95

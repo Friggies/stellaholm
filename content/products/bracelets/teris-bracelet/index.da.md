@@ -1,7 +1,7 @@
 ---
-url: produkter/armbaand/teris-armbaand
+url: produkter/armbaand/teris
 id: teris-bracelet
-title: Teris Armbånd
+title: Teris
 price: 299.95
 prices:
     dkk: 299.95

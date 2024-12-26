@@ -1,169 +1,215 @@
 {{ define "main" }}
 
 <section class="section">
-    <div class="section__content section__content--full">
-        <ol class="breadcrumb__list">
-            <li>
-                <a
-                    class="breadcrumb__item"
-                    href='{{ "/" | relLangURL }}'
-                >
-                    {{ T "frontPage" }}
-                </a>
-            </li>
-            <li>
-                <a
-                    class="breadcrumb__item"
-                    href='{{ replaceRE "[^/]+/$" "" .Permalink }}'
-                >
-                    {{ .Params.Breadcrumb }}
-                </a>
-            </li>
-            <li>
-                <a
-                    class="breadcrumb__item breadcrumb__item--last"
-                    href="{{ .Permalink  }}"
-                >
-                    {{ .Title }}
-                </a>
-            </li>
-        </ol>
-    </div>
-    <div
-        class="section__content section__content--center section__content--row"
-    >
-        <img
-            class="productPage__productImage productPage__productImage--primary"
-            src="{{ .Params.ProductImage }}"
-            alt="{{ .Title }}"
-        />
-        <img
-            class="productPage__productImage"
-            src="{{ .Params.ProductImage2 }}"
-            alt="{{ .Title }}"
-        />
-        <img
-            class="productPage__productImage"
-            src="{{ .Params.ProductImage2 }}"
-            alt="{{ .Title }}"
-        />
-    </div>
-    <div class="section__content">
-        <h1 class="productPage__header">{{ .Title }}</h1>
-        <div class="price">{{ .Params.Price }} {{ .Params.Valuta }}</div>
-        <div class="label label--small">
-            <img
-                class="icon"
-                src="/icons/star.svg"
-                alt=""
-            />
-            <img
-                class="icon"
-                src="/icons/star.svg"
-                alt=""
-            />
-            <img
-                class="icon"
-                src="/icons/star-half.svg"
-                alt=""
-            />
-            <img
-                class="icon"
-                src="/icons/star-outline.svg"
-                alt=""
-            />
-            <em>3 {{ T "reviews" }}</em>
+    <div class="productSection">
+        <div class="productBreadcrumbs">
+            <ol class="breadcrumb__list">
+                <li>
+                    <a
+                        class="breadcrumb__item breadcrumb__item--first"
+                        href='{{ "/" | relLangURL }}'
+                    >
+                        {{ T "frontPage" }}
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="breadcrumb__item"
+                        href='{{ replaceRE "[^/]+/$" "" .Permalink }}'
+                    >
+                        {{ .Params.Breadcrumb }}
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="breadcrumb__item"
+                        href="{{ .Permalink  }}"
+                    >
+                        {{ .Title }}
+                    </a>
+                </li>
+            </ol>
         </div>
-        <div class="label">
-            <img
-                class="icon icon--circle"
-                src="/flag-danish.svg"
-                alt=""
-            />
-            {{ T "madeInDenmark" }}
+        <div class="productGallery">
+            <div class="imageWrapper">
+                <img
+                    class="productImage productImage--active"
+                    src="{{ .Params.ProductImage }}"
+                    alt="{{ .Title }}"
+                />
+            </div>
+            <div class="productImageCarousel">
+                <div class="imageWrapper">
+                    <img
+                        class="productImage"
+                        src="{{ .Params.ProductImage2 }}"
+                        alt="{{ .Title }}"
+                    />
+                </div>
+                <div class="imageWrapper">
+                    <img
+                        class="productImage"
+                        src="{{ .Params.ProductImage2 }}"
+                        alt="{{ .Title }}"
+                    />
+                </div>
+                <div class="imageWrapper">
+                    <img
+                        class="productImage"
+                        src="{{ .Params.ProductImage2 }}"
+                        alt="{{ .Title }}"
+                    />
+                </div>
+                <div class="imageWrapper">
+                    <img
+                        class="productImage"
+                        src="{{ .Params.ProductImage2 }}"
+                        alt="{{ .Title }}"
+                    />
+                </div>
+                <div class="imageWrapper">
+                    <img
+                        class="productImage"
+                        src="{{ .Params.ProductImage2 }}"
+                        alt="{{ .Title }}"
+                    />
+                </div>
+                <div class="imageWrapper">
+                    <img
+                        class="productImage"
+                        src="{{ .Params.ProductImage2 }}"
+                        alt="{{ .Title }}"
+                    />
+                </div>
+            </div>
         </div>
-        {{ with .Params.Selectables }}
-        <div class="searchableSelect">
-            <label
-                for="searchableSelect"
-                class="searchableSelect__label"
-            >
-                {{ $.Params.SelectablesTitle }}</label
-            >
-            <select
-                id="searchableSelect"
-                class="searchableSelect__select"
-            >
-                {{ range . }}
-                <option value="{{ . }}">{{ . }}</option>
-                {{ end }}
-            </select>
+        <div class="productTitle">
+            <h1>{{ .Title }}</h1>
+            <button>
+                <img
+                    class="icon"
+                    src="/icons/heart-outline.svg"
+                    alt=""
+                />
+            </button>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-        <script type="module">
-            const selectElement = document.getElementById('searchableSelect');
+        <div class="productContent">
+            <div class="price">{{ .Params.Price }} {{ .Params.Valuta }}</div>
+            <div class="label label--small">
+                <img
+                    class="icon"
+                    src="/icons/star.svg"
+                    alt=""
+                />
+                <img
+                    class="icon"
+                    src="/icons/star.svg"
+                    alt=""
+                />
+                <img
+                    class="icon"
+                    src="/icons/star-half.svg"
+                    alt=""
+                />
+                <img
+                    class="icon"
+                    src="/icons/star-outline.svg"
+                    alt=""
+                />
+                <em>3 {{ T "reviews" }}</em>
+            </div>
+            <div class="label">
+                <img
+                    class="icon icon--circle"
+                    src="/flag-danish.svg"
+                    alt=""
+                />
+                {{ T "madeInDenmark" }}
+            </div>
+            {{ with .Params.Selectables }}
+            <div class="searchableSelect">
+                <label
+                    for="searchableSelect"
+                    class="searchableSelect__label"
+                >
+                    {{ $.Params.SelectablesTitle }}</label
+                >
+                <select
+                    id="searchableSelect"
+                    class="searchableSelect__select"
+                >
+                    {{ range . }}
+                    <option value="{{ . }}">{{ . }}</option>
+                    {{ end }}
+                </select>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+            <script type="module">
+                const selectElement =
+                    document.getElementById('searchableSelect');
 
-            const choices = new Choices(selectElement, {
-                searchEnabled: true,
-                shouldSort: false,
-                removeItemButton: false,
-                noResultsText: '{{ T "searchableSelectNoResults" }}',
-                itemSelectText: '{{ T "searchableSelectItemSelect" }}',
-            });
+                const choices = new Choices(selectElement, {
+                    searchEnabled: true,
+                    shouldSort: false,
+                    removeItemButton: false,
+                    noResultsText: '{{ T "searchableSelectNoResults" }}',
+                    itemSelectText: '{{ T "searchableSelectItemSelect" }}',
+                });
 
-            let buyButton = document.querySelector('#buyButton');
-            buyButton.setAttribute(
-                'data-item-custom2-name',
-                '{{ $.Params.SelectablesTitle }}'
-            );
-            buyButton.setAttribute('data-item-custom2-type', 'readonly');
-            buyButton.setAttribute('data-item-custom2-required', 'true');
-            buyButton.setAttribute(
-                'data-item-custom2-value',
-                selectElement.value
-            );
-            selectElement.addEventListener('change', () => {
+                let buyButton = document.querySelector('#buyButton');
+                buyButton.setAttribute(
+                    'data-item-custom2-name',
+                    '{{ $.Params.SelectablesTitle }}'
+                );
+                buyButton.setAttribute('data-item-custom2-type', 'readonly');
+                buyButton.setAttribute('data-item-custom2-required', 'true');
                 buyButton.setAttribute(
                     'data-item-custom2-value',
                     selectElement.value
                 );
-            });
-        </script>
-        {{ end }}
-        <div class="sizeSelector">
-            <label
-                for="sizeSelector"
-                class="sizeSelector__label"
-            >
-                {{ .Params.SizeSelect }}
-            </label>
-            <input
-                type="text"
-                id="sizeSelector"
-                min="{{ int .Params.SizeMin }}"
-                max="{{ int .Params.SizeMax }}"
-                value="{{ int .Params.SizeDefault }}"
-                data-error-message="{{ .Params.SizeError }}"
-                placeholder="0"
-                pattern="^[0-9]{2}$"
-                inputmode="numeric"
-                class="sizeSelector__input"
-                onkeyup="validateInput(this.value)"
-                oninput="validateInput(this.value)"
-                onclick="this.select()"
-            />
+                selectElement.addEventListener('change', () => {
+                    buyButton.setAttribute(
+                        'data-item-custom2-value',
+                        selectElement.value
+                    );
+                });
+            </script>
+            {{ end }}
+            <div class="sizeSelector">
+                <label
+                    for="sizeSelector"
+                    class="sizeSelector__label"
+                >
+                    {{ .Params.SizeSelect }}
+                </label>
+                <input
+                    type="text"
+                    id="sizeSelector"
+                    min="{{ int .Params.SizeMin }}"
+                    max="{{ int .Params.SizeMax }}"
+                    value="{{ int .Params.SizeDefault }}"
+                    data-error-message="{{ .Params.SizeError }}"
+                    placeholder="0"
+                    pattern="^[0-9]{2}$"
+                    inputmode="numeric"
+                    class="sizeSelector__input"
+                    onkeyup="validateInput(this.value)"
+                    oninput="validateInput(this.value)"
+                    onclick="this.select()"
+                />
+            </div>
+            {{ partial "snipcart/buyButton.html" . }} {{ .Content }} {{ range
+            .Site.Menus.productLabels}}
+            <div class="label">
+                <img
+                    class="icon"
+                    src="/icons/{{ .Page.Params.Icon }}.svg"
+                    alt=""
+                />
+                <a href="{{ .URL }}">{{ .Page.Params.Label }}</a>
+            </div>
+            {{ end }}
         </div>
-        {{ partial "snipcart/buyButton.html" . }} {{ .Content }} {{ range
-        .Site.Menus.productLabels}}
-        <div class="label">
-            <img
-                class="icon"
-                src="/icons/{{ .Page.Params.Icon }}.svg"
-                alt=""
-            />
-            <a href="{{ .URL }}">{{ .Page.Params.Label }}</a>
-        </div>
-        {{ end }}
     </div>
 </section>
 <section class="section section--green">

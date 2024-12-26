@@ -1,7 +1,7 @@
 ---
-url: produkter/armbaand/venis-armbaand
+url: produkter/armbaand/venis
 id: venis-bracelet
-title: Venis Armbånd
+title: Venis
 price: 299.95
 prices:
     dkk: 299.95
