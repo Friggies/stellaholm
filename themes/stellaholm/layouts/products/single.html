@@ -33,7 +33,7 @@
         <div class="productGallery">
             <div class="imageWrapper">
                 <img
-                    class="productImage productImage--active"
+                    class="productImage"
                     src="{{ .Params.ProductImage }}"
                     alt="{{ .Title }}"
                 />
@@ -85,7 +85,7 @@
         </div>
         <div class="productTitle">
             <h1>{{ .Title }}</h1>
-            <button>
+            <button id="wishlistButton">
                 <img
                     class="icon"
                     src="/icons/heart-outline.svg"

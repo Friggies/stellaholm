@@ -23,8 +23,8 @@
 .imageWrapper {
     display: flex;
     border-radius: var(--size_medium);
-    overflow: hidden;
     box-shadow: var(--effect_shadow--inset);
+    overflow: hidden;
     > img {
         z-index: -1;
     }

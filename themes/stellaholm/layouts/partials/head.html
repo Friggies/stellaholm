@@ -58,3 +58,12 @@ resources.Minify }}
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
 />
+
+{{ if (and (eq .Type "products") (eq .Kind "page") ) }} {{ $wishlist :=
+resources.Get "scripts/wishlist.js" | resources.Minify }}
+<script
+    type="module"
+    src="{{ $wishlist.Permalink }}"
+></script>
+
+{{ end }}

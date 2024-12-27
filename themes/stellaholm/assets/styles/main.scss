@@ -273,6 +273,7 @@ button {
         border: none;
         padding: 0.5rem 2.5rem;
         flex: 1;
+        min-width: 0px;
         &--error {
             outline: 2px solid #dc0000;
         }
@@ -310,14 +311,6 @@ button {
                 padding: 0;
             }
         }
-    }
-}
-@media screen and (max-width: 550px) {
-    .sizeSelector {
-        flex-direction: column;
-    }
-    .searchableSelect {
-        flex-direction: column;
     }
 }
 
