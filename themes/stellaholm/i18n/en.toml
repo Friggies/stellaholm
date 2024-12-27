@@ -19,6 +19,7 @@ our = "Our"
 
 # _____________________
 # product page specific
+nonActiveProduct = "This product is currently not available for purchase"
 frontPage = "Front page"
 reviews = "reviews"
 marketing = "For every item you buy, DKK 50 will be donated to Psykiatrifonden to support their work for mental health and well-being."

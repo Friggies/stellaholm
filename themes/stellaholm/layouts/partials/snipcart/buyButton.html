@@ -2,6 +2,7 @@
 {{ $categories := delimit (split .Params.ID "-") "|" }}
 
 {{ $priceString := printf "{\"dkk\": %v, \"eur\": %v}" .Params.Prices.DKK .Params.Prices.EUR }}
+{{ if .Params.Active }}
 <button
     id="buyButton"
     class="button snipcart-add-item"
@@ -11,7 +12,7 @@
     data-item-description="{{ .Content }}"
     data-item-image="{{ .Permalink }}{{ .Params.ProductImage }}"
     data-item-name="{{ .Title }}"
-    data-item-categories="{{ $categories }}"
+    data-item-categories="{{ $categories }}{{ with .Params.Collection }}|{{ lower . }}{{ end }}"
     data-item-custom1-name="{{ .Params.SizeSelect }}"
     data-item-custom1-type="readonly"
     data-item-custom1-required="true"
@@ -33,3 +34,6 @@
         buyButton.setAttribute('data-item-custom1-value', sizeSelector.value);
     });
 </script>
+{{ else }}
+<p class="bold">{{ T "nonActiveProduct" }}</p>
+{{ end }}

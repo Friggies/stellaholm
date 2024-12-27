@@ -1,12 +1,18 @@
 ---
+active: true
 id: venis-bracelet
 title: Venis
-price: 49.95
+price: 29.95
 prices:
-    dkk: 399.95
-    eur: 49.95
+    dkk: 199.95
+    eur: 29.95
 productImage: img.en.webp
 productImage2: img2.en.webp
+selectablesTitle: Lock type
+collection: Astra
+selectables:
+    - Lobster clasp
+    - Magnetic star
 materials:
     - Resin beads
     - Nylon cord

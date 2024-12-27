@@ -80,18 +80,36 @@ button {
 .productTile {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     text-decoration: none;
-    text-align: center;
-    border-radius: 2px;
-    padding-bottom: 0.25rem;
-    &__image {
+    border-radius: var(--size_medium);
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    position: relative;
+    padding: var(--size_medium);
+    box-shadow: var(--effect_shadow--inset);
+    &__title {
+        bottom: var(--size_medium);
+        background-color: var(--color_green--50);
+        z-index: 1;
+        padding: var(--size_small);
+        border-radius: var(--size_small);
         width: 100%;
-        aspect-ratio: 1;
-        display: block;
-        border-radius: 4px;
-        margin-bottom: 1rem;
+        text-align: center;
+        font-family: Arsenal SC;
+        font-weight: 700;
+        font-size: var(--font_large);
+        color: white;
+        text-shadow: var(--effect_shadow--drop);
+        text-transform: uppercase;
+    }
+    &__image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         &--hover {
             display: none;
         }
@@ -103,10 +121,6 @@ button {
                 display: block;
             }
         }
-    }
-    &:focus {
-        outline: 2px solid #242f28;
-        outline-offset: calc(0.5rem - 0.5px);
     }
 }
 
@@ -188,10 +202,6 @@ button {
     }
 }
 
-.price {
-    color: #576672;
-}
-
 .section {
     display: flex;
     flex-wrap: wrap;
@@ -200,8 +210,10 @@ button {
     max-width: 1200px;
     margin: auto;
     &--green {
-        background-color: #242f28;
-        color: white;
+        background-color: var(--color_green);
+        color: var(--color_white);
+        box-shadow: 0 0 0 100vmax var(--color_green);
+        clip-path: inset(0 -100vmax);
     }
     &__content {
         flex: 1;
@@ -302,7 +314,7 @@ button {
             min-height: 0px;
             font-size: 16px;
             color: #242f28;
-            padding-bottom: 0;
+            padding-bottom: 0px !important;
             padding: 0.5rem 2.5rem;
             text-align: right;
         }
