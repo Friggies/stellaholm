@@ -1,5 +1,8 @@
 {{ define "main" }}
-<section class="section">
+<section
+    class="section"
+    aria-labelledby="primaryHeading"
+>
     <div class="section__content">
         <ol class="breadcrumb__list">
             <li>
@@ -19,7 +22,10 @@
                 </a>
             </li>
         </ol>
-        <h1 class="productCategory__title">
+        <h1
+            class="productCategory__title"
+            id="primaryHeading"
+        >
             {{ T "allOur" }} {{ lower .Title }}
         </h1>
         <ol class="productGrid">

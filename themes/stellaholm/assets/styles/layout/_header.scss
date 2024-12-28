@@ -1,5 +1,5 @@
 .globalHeader {
-    padding: 1rem 4rem;
+    padding: var(--size_small) calc(2 * var(--size_large));
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -18,7 +18,7 @@
         text-decoration: none;
         font-family: Arsenal SC;
         font-weight: 700;
-        font-size: 1.75em;
+        font-size: var(--font_x-large);
         text-transform: uppercase;
     }
     &__action {
@@ -27,7 +27,7 @@
         align-items: center;
         gap: 0.25rem;
         text-decoration: none;
-        font-size: 14px;
+        font-size: var(--font_small);
         position: relative;
         &:hover {
             text-decoration: underline;
@@ -39,10 +39,7 @@
         display: none;
     }
     .globalHeader {
-        padding: 1rem;
-        &__title {
-            font-size: 1.5em;
-        }
+        padding: var(--size_small);
         &__section {
             gap: var(--size_large);
         }
@@ -51,7 +48,7 @@
 @media screen and (max-width: 350px) {
     .globalHeader {
         &__title {
-            font-size: 1.25em;
+            font-size: var(--font_large);
         }
     }
 }

@@ -1,6 +1,9 @@
 {{ define "main" }}
 
-<section class="section">
+<section
+    class="section"
+    aria-labelledby="primaryHeading"
+>
     <div class="productSection">
         <div class="productBreadcrumbs">
             <ol class="breadcrumb__list">
@@ -84,7 +87,12 @@
             </div>
         </div>
         <div class="productTitle">
-            <h1 class="productTitle__title">{{ .Title }}</h1>
+            <h1
+                class="productTitle__title"
+                id="primaryHeading"
+            >
+                {{ .Title }}
+            </h1>
             <button id="wishlistButton">
                 <img
                     class="icon"
@@ -226,9 +234,15 @@
         </div>
     </div>
 </section>
-<section class="section section--green">
+<section
+    class="section section--green"
+    aria-labelledby="headingInformation"
+>
     <div class="section__content">
-        <h2 class="productPage__header">
+        <h2
+            class="productPage__header"
+            id="headingInformation"
+        >
             <img
                 src="/icons/information-circle-outline.svg"
                 class="icon"
@@ -281,9 +295,17 @@
     </div>
     {{ end }}
 </section>
-<section class="section">
+<section
+    class="section"
+    aria-labelledby="headingAlternativeProducts"
+>
     <div class="section__content">
-        <h2 class="productPage__header">{{ T "alternativeProducts" }}</h2>
+        <h2
+            class="productPage__header"
+            id="headingAlternativeProducts"
+        >
+            {{ T "alternativeProducts" }}
+        </h2>
         <ul class="productGrid">
             {{ range where .Site.RegularPages "Title" "in"
             .Params.AlternativeProducts }}

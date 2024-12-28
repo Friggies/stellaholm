@@ -1,13 +1,13 @@
 .globalFooter {
-    background-color: #242f28;
-    color: white;
-    padding: 2rem 1rem;
+    background-color: var(--color_green);
+    color: var(--color_white);
     &__nav {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         max-width: 1200px;
         margin: auto;
+        padding: var(--size_large) calc(2 * var(--size_large));
     }
     &__title {
         text-decoration: none;
@@ -18,5 +18,13 @@
     }
     &__section {
         flex: 1;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .globalFooter {
+        &__nav {
+            padding: var(--size_large) var(--size_small);
+        }
     }
 }
