@@ -1,5 +1,7 @@
 ---
-menus: main
+menus:
+    - main
+    - category
 weight: 1
 title: Rings
 cascade:

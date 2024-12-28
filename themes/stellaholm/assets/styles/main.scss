@@ -13,7 +13,7 @@
 @import './layout/_search.scss';
 
 @import './pages/_productPage.scss';
-@import './pages/_productCategory.scss';
+@import './pages/_frontPage.scss';
 
 @import './vendors/_snipcart.scss';
 
@@ -205,9 +205,9 @@ button {
 
 .section {
     display: flex;
-    flex-wrap: wrap;
     gap: var(--size_medium);
-    padding: 4rem;
+    padding: 0 4rem;
+    padding-bottom: 4rem;
     max-width: 1200px;
     margin: auto;
     &--green {
@@ -215,6 +215,8 @@ button {
         color: var(--color_white);
         box-shadow: 0 0 0 100vmax var(--color_green);
         clip-path: inset(0 -100vmax);
+        padding-block: 4rem;
+        margin-block: 4rem;
     }
     &__content {
         flex: 1;
@@ -243,9 +245,11 @@ button {
 @media screen and (max-width: 550px) {
     .section {
         flex-direction: column;
-        padding: 2rem 1rem;
-        &:first-of-type {
-            padding: 0 1rem 2rem 1rem;
+        padding: 0rem 1rem;
+        padding-bottom: 1rem;
+        &--green {
+            padding-block: 1rem;
+            margin-block: 1rem;
         }
         &--reverse {
             flex-direction: reverse;

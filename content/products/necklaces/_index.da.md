@@ -1,5 +1,7 @@
 ---
-menus: main
+menus:
+    - main
+    - category
 weight: 3
 title: Halskæder
 url: produkter/halskaeder/

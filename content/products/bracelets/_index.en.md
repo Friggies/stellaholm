@@ -1,5 +1,7 @@
 ---
-menus: main
+menus:
+    - main
+    - category
 weight: 2
 title: Bracelets
 cascade:

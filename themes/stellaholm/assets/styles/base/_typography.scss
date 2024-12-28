@@ -8,6 +8,15 @@ body {
 .bold {
     font-weight: 600;
 }
+.title {
+    font-family: Arsenal SC;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: var(--font_x-large);
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
 
 @font-face {
     font-display: swap;
