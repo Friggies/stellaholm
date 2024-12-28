@@ -60,10 +60,12 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    font-family: Arsenal SC;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: var(--font_x-large);
+    &__title {
+        font-family: Arsenal SC;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: var(--font_xx-large);
+    }
 }
 .productContent {
     grid-area: productContent;

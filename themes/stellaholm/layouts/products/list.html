@@ -1,8 +1,26 @@
 {{ define "main" }}
 <section class="section">
     <div class="section__content">
-        <h1 class="title title--center title--arsenal">
-            {{ T "our" }} {{ lower .Title }}
+        <ol class="breadcrumb__list">
+            <li>
+                <a
+                    class="breadcrumb__item breadcrumb__item--first"
+                    href='{{ "/" | relLangURL }}'
+                >
+                    {{ T "frontPage" }}
+                </a>
+            </li>
+            <li>
+                <a
+                    class="breadcrumb__item"
+                    href="{{ .Permalink }}"
+                >
+                    {{ .Title }}
+                </a>
+            </li>
+        </ol>
+        <h1 class="productCategory__title">
+            {{ T "allOur" }} {{ lower .Title }}
         </h1>
         <ol class="productGrid">
             {{ range .Pages }}

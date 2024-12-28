@@ -13,6 +13,7 @@
 @import './layout/_search.scss';
 
 @import './pages/_productPage.scss';
+@import './pages/_productCategory.scss';
 
 @import './vendors/_snipcart.scss';
 
@@ -205,7 +206,7 @@ button {
 .section {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: var(--size_medium);
     padding: 4rem;
     max-width: 1200px;
     margin: auto;
@@ -218,7 +219,7 @@ button {
     &__content {
         flex: 1;
         display: flex;
-        gap: 1rem;
+        gap: var(--size_medium);
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
