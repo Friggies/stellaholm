@@ -40,19 +40,18 @@
     >
         <li id="result-${key}">
             <a class="productTile" href="${link}">
-                <img
-                    class="productTile__image"
-                    src="${link}${productImage}"
-                />
-                <img
-                    class="productTile__image productTile__image--hover"
-                    src="${link}${productImage2}"
-                />
-                <span>
+                <div class="imageWrapper">
+                    <img
+                        class="productTile__image"
+                        src="${link}${productImage}"
+                    />
+                    <img
+                        class="productTile__image productTile__image--hover"
+                        src="${link}${productImage2}"
+                    />
+                </div>
+                <span class="productTile__title">
                     ${title}
-                </span>
-                <span class="price">
-                    ${price} ${valuta}
                 </span>
             </a>
         </li>
