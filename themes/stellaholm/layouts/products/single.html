@@ -49,38 +49,19 @@
                         alt="{{ .Title }}"
                     />
                 </div>
+                {{ with .Params.ProductImage3}}
                 <div class="imageWrapper">
                     <img
                         class="productImage"
-                        src="{{ .Params.ProductImage2 }}"
-                        alt="{{ .Title }}"
+                        src="{{ . }}"
+                        alt="{{ $.Title }}"
                     />
                 </div>
+                {{ end }}
                 <div class="imageWrapper">
                     <img
                         class="productImage"
-                        src="{{ .Params.ProductImage2 }}"
-                        alt="{{ .Title }}"
-                    />
-                </div>
-                <div class="imageWrapper">
-                    <img
-                        class="productImage"
-                        src="{{ .Params.ProductImage2 }}"
-                        alt="{{ .Title }}"
-                    />
-                </div>
-                <div class="imageWrapper">
-                    <img
-                        class="productImage"
-                        src="{{ .Params.ProductImage2 }}"
-                        alt="{{ .Title }}"
-                    />
-                </div>
-                <div class="imageWrapper">
-                    <img
-                        class="productImage"
-                        src="{{ .Params.ProductImage2 }}"
+                        src="{{ .Params.ProductImage }}"
                         alt="{{ .Title }}"
                     />
                 </div>
@@ -235,65 +216,69 @@
     </div>
 </section>
 <section
-    class="section section--green"
+    class="section--green"
     aria-labelledby="headingInformation"
 >
-    <div class="section__content">
-        <h2
-            class="productPage__header"
-            id="headingInformation"
-        >
-            <img
-                src="/icons/information-circle-outline.svg"
-                class="icon"
-            />
-            {{ T "informations" }}
-        </h2>
-        <h3 class="productPage__subHeader">
-            <img
-                src="/icons/layers-outline.svg"
-                class="icon"
-            />
-            {{ T "materials" }}
-        </h3>
-        <ul class="list indented">
-            {{ range .Params.Materials }}
-            <li>{{ . }}</li>
-            {{ end }}
-        </ul>
-        <h3 class="productPage__subHeader">
-            <img
-                src="/icons/infinite-outline.svg"
-                class="icon"
-            />
-            {{ T "care" }}
-        </h3>
-        <div class="indented">{{ .Params.ProductCare }}</div>
+    <div class="section">
+        <div class="section__content">
+            <h2
+                class="productPage__header"
+                id="headingInformation"
+            >
+                <img
+                    src="/icons/information-circle-outline.svg"
+                    class="icon"
+                />
+                {{ T "informations" }}
+            </h2>
+            <h3 class="productPage__subHeader">
+                <img
+                    src="/icons/layers-outline.svg"
+                    class="icon"
+                />
+                {{ T "materials" }}
+            </h3>
+            <ul class="list indented">
+                {{ range .Params.Materials }}
+                <li>{{ . }}</li>
+                {{ end }}
+            </ul>
+            <h3 class="productPage__subHeader">
+                <img
+                    src="/icons/infinite-outline.svg"
+                    class="icon"
+                />
+                {{ T "care" }}
+            </h3>
+            <div class="indented">{{ .Params.ProductCare }}</div>
+        </div>
+        <div class="section__content"></div>
     </div>
-    <div class="section__content"></div>
-    {{ with .Params.Reviews }}
-    <div class="section__content section__content--full">
-        <h2 class="productPage__header">
-            <img
-                class="icon"
-                src="/icons/star-white.svg"
-                alt=""
-            />
-            {{ T "allReviews" }}
-        </h2>
-        <ul
-            class="reviews"
-            tabindex="0"
-        >
-            {{ range . }}
-            <li class="review">
-                <p>{{ .text }}</p>
-                <p class="review__name">{{ .name }}</p>
-            </li>
-            {{ end }}
-        </ul>
+    <div class="section">
+        {{ with .Params.Reviews }}
+        <div class="section__content section__content--full">
+            <h2 class="productPage__header">
+                <img
+                    class="icon"
+                    src="/icons/star-white.svg"
+                    alt=""
+                />
+                {{ T "allReviews" }}
+            </h2>
+            <ul
+                class="reviews"
+                tabindex="0"
+            >
+                {{ range . }}
+                <li class="review">
+                    <p>{{ .text }}</p>
+                    <p class="review__name">{{ .name }}</p>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
     </div>
-    {{ end }}
 </section>
 <section
     class="section"
@@ -308,29 +293,24 @@
         </h2>
         <ul class="productGrid">
             {{ range where .Site.RegularPages "Title" "in"
-            .Params.AlternativeProducts }}
+            .Params.AlternativeProducts }} {{ if eq .Permalink $.Permalink }} {{
+            else }}
             <li>
                 <a
                     href="{{ .RelPermalink }}"
                     class="productTile"
                 >
-                    <img
-                        class="productTile__image"
-                        src="{{ .RelPermalink }}{{ .Params.ProductImage }}"
-                        alt="{{ .Params.ProductImage }}"
-                    />
-                    <img
-                        class="productTile__image productTile__image--hover"
-                        src="{{ .RelPermalink }}{{ .Params.ProductImage2 }}"
-                        alt="{{ .Params.ProductImage2 }}"
-                    />
-                    <span> {{ .Title }} </span>
-                    <span class="price">
-                        {{ .Params.Price }} {{ .Params.Valuta }}
-                    </span>
+                    <div class="imageWrapper">
+                        <img
+                            class="productTile__image"
+                            src="{{ .RelPermalink }}{{ .Params.ProductImage }}"
+                            alt="{{ .Params.ProductImage }}"
+                        />
+                    </div>
+                    <span class="productTile__title"> {{ .Title }} </span>
                 </a>
             </li>
-            {{ end }}
+            {{ end }} {{ end }}
         </ul>
     </div>
 </section>

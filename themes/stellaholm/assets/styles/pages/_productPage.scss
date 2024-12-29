@@ -30,12 +30,12 @@
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    max-width: 100%;
+    width: 100%;
     gap: var(--size_medium);
     scroll-snap-type: x mandatory;
     padding-bottom: var(--size_medium);
     > * {
-        width: 40%;
+        width: calc(50% - 0.5 * var(--size_medium));
         flex: 0 0 auto;
         scroll-snap-align: start;
     }

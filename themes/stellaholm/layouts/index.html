@@ -15,6 +15,11 @@
         <ul class="frontPageCategories">
             {{ range .Site.Menus.category }}
             <li class="frontPageCategories__category">
+                <img
+                    class="frontPageCategories__image"
+                    src="{{ .Page.RelPermalink }}{{ .Page.Params.Img }}"
+                    alt="{{ .Title }}"
+                />
                 <a
                     class="frontPageCategories__link title"
                     href="{{ .URL }}"
@@ -43,11 +48,6 @@
                             src="{{ .RelPermalink }}{{ .Params.ProductImage }}"
                             alt="{{ .Params.ProductImage }}"
                         />
-                        <img
-                            class="productTile__image productTile__image--hover"
-                            src="{{ .RelPermalink }}{{ .Params.ProductImage2 }}"
-                            alt="{{ .Params.ProductImage2 }}"
-                        />
                     </div>
                     <span class="productTile__title"> {{ .Title }} </span>
                 </a>
@@ -72,11 +72,6 @@
                             src="{{ .RelPermalink }}{{ .Params.ProductImage }}"
                             alt="{{ .Params.ProductImage }}"
                         />
-                        <img
-                            class="productTile__image productTile__image--hover"
-                            src="{{ .RelPermalink }}{{ .Params.ProductImage2 }}"
-                            alt="{{ .Params.ProductImage2 }}"
-                        />
                     </div>
                     <span class="productTile__title"> {{ .Title }} </span>
                 </a>
@@ -100,11 +95,6 @@
                             class="productTile__image"
                             src="{{ .RelPermalink }}{{ .Params.ProductImage }}"
                             alt="{{ .Params.ProductImage }}"
-                        />
-                        <img
-                            class="productTile__image productTile__image--hover"
-                            src="{{ .RelPermalink }}{{ .Params.ProductImage2 }}"
-                            alt="{{ .Params.ProductImage2 }}"
                         />
                     </div>
                     <span class="productTile__title"> {{ .Title }} </span>

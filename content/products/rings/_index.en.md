@@ -4,6 +4,7 @@ menus:
     - category
 weight: 1
 title: Rings
+img: img.en.jpg
 cascade:
     breadcrumb: Rings
     productType: ring

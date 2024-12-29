@@ -6,8 +6,7 @@ price: 399.95
 prices:
     dkk: 399.95
     eur: 49.95
-productImage: img.da.webp
-productImage2: img2.da.webp
+productImage: img.da.jpeg
 materials:
     - Harpiksperler
     - Nylonsnor

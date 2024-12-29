@@ -4,6 +4,7 @@ menus:
     - category
 weight: 2
 title: Bracelets
+img: img.en.jpg
 cascade:
     breadcrumb: Bracelets
     productType: bracelet

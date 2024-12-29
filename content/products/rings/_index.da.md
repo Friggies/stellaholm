@@ -4,6 +4,7 @@ menus:
     - category
 weight: 1
 title: Ringe
+img: img.da.jpg
 url: produkter/ringe
 cascade:
     breadcrumb: Ringe

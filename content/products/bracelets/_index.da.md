@@ -4,6 +4,7 @@ menus:
     - category
 weight: 2
 title: Armbånd
+img: img.da.jpg
 url: produkter/armbaand/
 cascade:
     breadcrumb: Armbånd
