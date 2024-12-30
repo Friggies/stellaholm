@@ -41,7 +41,7 @@
     }
 
     &::-webkit-scrollbar {
-        height: 10px;
+        height: var(--size_medium);
     }
     &::-webkit-scrollbar-track {
         background-color: var(--color_white);

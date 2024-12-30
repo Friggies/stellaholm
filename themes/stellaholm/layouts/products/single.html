@@ -42,13 +42,6 @@
                 />
             </div>
             <div class="productImageCarousel">
-                <div class="imageWrapper">
-                    <img
-                        class="productImage"
-                        src="{{ .Params.ProductImage2 }}"
-                        alt="{{ .Title }}"
-                    />
-                </div>
                 {{ with .Params.ProductImage3}}
                 <div class="imageWrapper">
                     <img
@@ -57,7 +50,22 @@
                         alt="{{ $.Title }}"
                     />
                 </div>
+                {{ end }} {{ with .Params.ProductImage4}}
+                <div class="imageWrapper">
+                    <img
+                        class="productImage"
+                        src="{{ . }}"
+                        alt="{{ $.Title }}"
+                    />
+                </div>
                 {{ end }}
+                <div class="imageWrapper">
+                    <img
+                        class="productImage"
+                        src="{{ .Params.ProductImage2 }}"
+                        alt="{{ .Title }}"
+                    />
+                </div>
                 <div class="imageWrapper">
                     <img
                         class="productImage"
@@ -292,25 +300,15 @@
             {{ T "alternativeProducts" }}
         </h2>
         <ul class="productGrid">
-            {{ range where .Site.RegularPages "Title" "in"
-            .Params.AlternativeProducts }} {{ if eq .Permalink $.Permalink }} {{
-            else }}
-            <li>
-                <a
-                    href="{{ .RelPermalink }}"
-                    class="productTile"
-                >
-                    <div class="imageWrapper">
-                        <img
-                            class="productTile__image"
-                            src="{{ .RelPermalink }}{{ .Params.ProductImage }}"
-                            alt="{{ .Params.ProductImage }}"
-                        />
-                    </div>
-                    <span class="productTile__title"> {{ .Title }} </span>
-                </a>
-            </li>
-            {{ end }} {{ end }}
+            <!-- prettier-ignore -->
+            {{ range where .Site.RegularPages "Title" "in" .Params.AlternativeProducts }}
+                {{ if eq .Permalink $.Permalink }}
+                {{ else }}
+                    {{ range .Pages }}
+                        {{ partial "productTile.html" . }}
+                    {{ end}}
+                {{ end }}
+            {{ end }}
         </ul>
     </div>
 </section>

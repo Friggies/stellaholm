@@ -7,8 +7,10 @@ price: 199.95
 prices:
     dkk: 199.95
     eur: 29.95
-productImage: img.da.jpg
-productImage2: img2.da.jpg
+productImage: image1.jpeg
+productImage2: image2.jpeg
+productImage3: image3.jpeg
+productImage4: image4.jpeg
 collection: Astra
 selectablesTitle: Låsetype
 selectables:

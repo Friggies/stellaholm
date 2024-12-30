@@ -36,23 +36,7 @@
         <h2 class="title">Nyeste armbånd</h2>
         <ol class="productGrid">
             {{ range where .Site.RegularPages ".Params.ProductType" "bracelet"
-            }}
-            <li>
-                <a
-                    href="{{ .RelPermalink }}"
-                    class="productTile"
-                >
-                    <div class="imageWrapper">
-                        <img
-                            class="productTile__image"
-                            src="{{ .RelPermalink }}{{ .Params.ProductImage }}"
-                            alt="{{ .Params.ProductImage }}"
-                        />
-                    </div>
-                    <span class="productTile__title"> {{ .Title }} </span>
-                </a>
-            </li>
-            {{ end }}
+            }} {{ partial "productTile.html" . }} {{ end }}
         </ol>
     </div>
 </section>
@@ -60,48 +44,14 @@
     <div class="section__content">
         <h2 class="title">Nyeste ringe</h2>
         <ol class="productGrid">
-            {{ range where .Site.RegularPages ".Params.ProductType" "ring" }}
-            <li>
-                <a
-                    href="{{ .RelPermalink }}"
-                    class="productTile"
-                >
-                    <div class="imageWrapper">
-                        <img
-                            class="productTile__image"
-                            src="{{ .RelPermalink }}{{ .Params.ProductImage }}"
-                            alt="{{ .Params.ProductImage }}"
-                        />
-                    </div>
-                    <span class="productTile__title"> {{ .Title }} </span>
-                </a>
-            </li>
-            {{ end }}
+            {{ range where .Site.RegularPages ".Params.ProductType" "ring" }} {{
+            partial "productTile.html" . }} {{ end }}
         </ol>
     </div>
 </section>
 <section class="section">
     <div class="section__content">
         <h2 class="title">Nyeste artikler</h2>
-        <ol class="productGrid">
-            {{ range where .Site.RegularPages ".Params.ProductType" "ring" }}
-            <li>
-                <a
-                    href="{{ .RelPermalink }}"
-                    class="productTile"
-                >
-                    <div class="imageWrapper">
-                        <img
-                            class="productTile__image"
-                            src="{{ .RelPermalink }}{{ .Params.ProductImage }}"
-                            alt="{{ .Params.ProductImage }}"
-                        />
-                    </div>
-                    <span class="productTile__title"> {{ .Title }} </span>
-                </a>
-            </li>
-            {{ end }}
-        </ol>
     </div>
 </section>
 {{ end }}

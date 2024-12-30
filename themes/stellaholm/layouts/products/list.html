@@ -29,23 +29,7 @@
             {{ T "allOur" }} {{ lower .Title }}
         </h1>
         <ol class="productGrid">
-            {{ range .Pages }}
-            <li>
-                <a
-                    href="{{ .RelPermalink }}"
-                    class="productTile"
-                >
-                    <div class="imageWrapper">
-                        <img
-                            class="productTile__image"
-                            src="{{ .RelPermalink }}{{ .Params.ProductImage }}"
-                            alt="{{ .Params.ProductImage }}"
-                        />
-                    </div>
-                    <span class="productTile__title"> {{ .Title }} </span>
-                </a>
-            </li>
-            {{ end }}
+            {{ range .Pages }} {{ partial "productTile.html" .}} {{ end }}
         </ol>
         <div class="markdown">{{ .Content }}</div>
     </div>

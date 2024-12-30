@@ -1,0 +1,20 @@
+<li>
+    <a
+        href="{{ .RelPermalink }}"
+        class="productTile"
+    >
+        <div class="imageWrapper">
+            <img
+                class="productTile__image"
+                src="{{ .RelPermalink }}{{ .Params.ProductImage }}"
+                alt="{{ .Params.ProductImage }}"
+            />
+            <img
+                class="productTile__image productTile__image--hover"
+                src="{{ .RelPermalink }}{{ .Params.ProductImage2 }}"
+                alt="{{ .Params.ProductImage }}"
+            />
+        </div>
+        <span class="productTile__title"> {{ .Title }} </span>
+    </a>
+</li>
