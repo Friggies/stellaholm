@@ -1,5 +1,5 @@
 .globalHeader {
-    padding: var(--size_small) calc(2 * var(--size_large));
+    padding: var(--size_large) calc(2 * var(--size_large));
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -9,7 +9,7 @@
         flex: 1;
         display: flex;
         align-items: center;
-        gap: 0.75rem;
+        gap: var(--size_large);
         &--right {
             justify-content: right;
         }
@@ -39,16 +39,16 @@
         display: none;
     }
     .globalHeader {
-        padding: var(--size_small);
+        padding: var(--size_medium) var(--size_small);
         &__section {
-            gap: var(--size_large);
+            gap: var(--size_small);
         }
     }
 }
 @media screen and (max-width: 350px) {
     .globalHeader {
         &__title {
-            font-size: var(--font_large);
+            font-size: 1.5em;
         }
     }
 }

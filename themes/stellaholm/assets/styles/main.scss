@@ -203,9 +203,9 @@ button {
 
 .section {
     display: flex;
-    gap: var(--size_medium);
-    padding: 0 4rem;
-    padding-bottom: 4rem;
+    gap: var(--size_large);
+    padding: 4rem;
+    padding-bottom: 6rem;
     max-width: 1200px;
     margin: auto;
     &--green {
@@ -213,13 +213,11 @@ button {
         color: var(--color_white);
         box-shadow: 0 0 0 100vmax var(--color_green);
         clip-path: inset(0 -100vmax);
-        padding-block: 4rem;
-        margin-block: 4rem;
     }
     &__content {
         flex: 1;
         display: flex;
-        gap: var(--size_medium);
+        gap: var(--size_large);
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
@@ -244,11 +242,7 @@ button {
     .section {
         flex-direction: column;
         padding: 0rem 1rem;
-        padding-bottom: 1rem;
-        &--green {
-            padding-block: 1rem;
-            margin-block: 1rem;
-        }
+        padding-bottom: 2rem;
         &--reverse {
             flex-direction: reverse;
         }
