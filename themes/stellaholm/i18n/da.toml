@@ -16,10 +16,6 @@ no_products_found="Ingen produkter fundet"
 
 # _____________________
 # product page specific
-allOur = "Alle vores"
-
-# _____________________
-# product page specific
 nonActiveProduct = "Dette produkt kan på nuværende tidspunkt ikke købes"
 frontPage = "Forside"
 reviews = "anmeldelser"
@@ -34,6 +30,7 @@ allReviews = "Anmeldelser"
 alternativeProducts = "Anbefalede Produkter"
 searchableSelectNoResults = "Ingen resultater"
 searchableSelectItemSelect = "Tryk for at vælge"
+searchPlaceholder = "Søg..."
 
 # _____________________
 # single page specific

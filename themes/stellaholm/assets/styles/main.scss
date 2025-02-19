@@ -35,6 +35,10 @@
         height: 18px;
         width: 18px;
     }
+    &--big {
+        height: 35px;
+        width: 35px;
+    }
 }
 .uppercase {
     text-transform: uppercase;
@@ -84,18 +88,18 @@ button {
     justify-content: flex-end;
     align-items: center;
     text-decoration: none;
-    border-radius: var(--size_medium);
+    border-radius: var(--size_small);
     overflow: hidden;
     aspect-ratio: 3 / 4;
     position: relative;
-    padding: var(--size_medium);
+    padding: var(--size_small);
     box-shadow: var(--effect_shadow--inset);
     &__title {
         bottom: var(--size_medium);
         background-color: var(--color_green--50);
         z-index: 1;
         padding: var(--size_small);
-        border-radius: var(--size_small);
+        border-radius: var(--size_x-small);
         width: 100%;
         text-align: center;
         font-family: Arsenal SC;
@@ -127,8 +131,7 @@ button {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    column-gap: 1rem;
-    row-gap: 2rem;
+    gap: 1rem;
     flex-wrap: wrap;
     width: 100%;
     li {
@@ -175,7 +178,7 @@ button {
     background-color: var(--color_green);
     justify-content: center;
     align-items: center;
-    border-radius: var(--size_medium);
+    border-radius: var(--size_small);
     padding: var(--size_small);
     gap: var(--size_small);
     &:hover {
@@ -263,9 +266,9 @@ button {
     position: relative;
     display: flex;
     width: 100%;
-    border-radius: var(--size_medium);
+    border-radius: var(--size_small);
     &__label {
-        padding: 0.5rem 2.5rem;
+        padding: 0.5rem 1rem;
         white-space: nowrap;
         color: var(--color_black);
         background-color: var(--color_white);
@@ -293,9 +296,9 @@ button {
     position: relative;
     display: flex;
     width: 100%;
-    border-radius: var(--size_medium);
+    border-radius: var(--size_small);
     &__label {
-        padding: 0.5rem 2.5rem;
+        padding: 0.5rem 1rem;
         white-space: nowrap;
         color: var(--color_black);
         background-color: var(--color_white);
@@ -321,6 +324,9 @@ button {
             }
         }
     }
+}
+.choices__input {
+    font-size: 16px !important;
 }
 
 .reviews {
@@ -355,7 +361,7 @@ button {
     flex-direction: column;
     justify-content: space-between;
     gap: 0.5rem;
-    border-radius: 4px;
+    border-radius: var(--size_small);
     &__name {
         font-weight: 500;
         text-align: right;

@@ -23,10 +23,10 @@
             </li>
         </ol>
         <h1
-            class="title"
+            class="title title--big"
             id="primaryHeading"
         >
-            {{ T "allOur" }} {{ lower .Title }}
+            {{ .Title }}
         </h1>
         <ol class="productGrid">
             {{ range .Pages }} {{ partial "productTile.html" .}} {{ end }}

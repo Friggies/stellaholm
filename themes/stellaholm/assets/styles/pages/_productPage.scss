@@ -18,7 +18,7 @@
     grid-area: productGallery;
     display: flex;
     flex-wrap: wrap;
-    gap: var(--size_medium);
+    gap: var(--size_small);
     overflow: hidden;
 }
 .productImage {
@@ -31,7 +31,7 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     width: 100%;
-    gap: var(--size_medium);
+    gap: var(--size_small);
     scroll-snap-type: x mandatory;
     padding-bottom: var(--size_medium);
     > * {
@@ -45,11 +45,11 @@
     }
     &::-webkit-scrollbar-track {
         background-color: var(--color_white);
-        border-radius: var(--size_medium);
+        border-radius: var(--size_small);
     }
     &::-webkit-scrollbar-thumb {
         background-color: var(--color_green);
-        border-radius: var(--size_medium);
+        border-radius: var(--size_small);
     }
     &::-webkit-scrollbar-thumb:hover {
         background-color: var(--color_black);
@@ -60,12 +60,6 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    &__title {
-        font-family: Arsenal SC;
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: var(--font_xx-large);
-    }
 }
 .productContent {
     grid-area: productContent;

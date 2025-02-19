@@ -77,14 +77,14 @@
         </div>
         <div class="productTitle">
             <h1
-                class="productTitle__title"
+                class="title title--big"
                 id="primaryHeading"
             >
                 {{ .Title }}
             </h1>
             <button id="wishlistButton">
                 <img
-                    class="icon"
+                    class="icon icon--big"
                     src="/icons/heart-outline.svg"
                     alt=""
                     width="25"
@@ -151,6 +151,7 @@
                     removeItemButton: false,
                     noResultsText: '{{ T "searchableSelectNoResults" }}',
                     itemSelectText: '{{ T "searchableSelectItemSelect" }}',
+                    searchPlaceholderValue: '{{T "searchPlaceholder"}}',
                 });
 
                 let buyButton = document.querySelector('#buyButton');

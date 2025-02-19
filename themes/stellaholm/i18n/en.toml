@@ -16,10 +16,6 @@ no_products_found="No products found"
 
 # _____________________
 # product page specific
-allOur = "All our"
-
-# _____________________
-# product page specific
 nonActiveProduct = "This product is currently not available for purchase"
 frontPage = "Front page"
 reviews = "reviews"
@@ -34,6 +30,7 @@ allReviews = "Reviews"
 alternativeProducts = "Recommended Products"
 searchableSelectNoResults = "No results found"
 searchableSelectItemSelect = "Press to select"
+searchPlaceholder = "Search..."
 
 # _____________________
 # single page specific

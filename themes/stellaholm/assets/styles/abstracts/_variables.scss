@@ -2,7 +2,7 @@
     --color_green: #242f28;
     --color_green--50: #242f2880;
     --color_gold: #c7a128;
-    --color_gray: #6e6e6e;
+    --color_gray: #576672;
     --color_black: #090909;
     --color_white: #fafafa;
 
@@ -10,6 +10,7 @@
     --effect_shadow--inset: inset 0 0 50px -25px #242f28;
 
     font-size: 10px;
+    --size_x-small: 0.5rem;
     --size_small: 1rem;
     --size_medium: 1.5rem;
     --size_large: 2rem;
@@ -23,7 +24,7 @@
 
 .imageWrapper {
     display: flex;
-    border-radius: var(--size_medium);
+    border-radius: var(--size_small);
     box-shadow: var(--effect_shadow--inset);
     overflow: hidden;
     > img {

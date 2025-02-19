@@ -1,6 +1,7 @@
 .breadcrumb__item {
     text-decoration: none;
     position: relative;
+    color: var(--color_gray);
     &:hover {
         text-decoration: underline;
     }

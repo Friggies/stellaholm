@@ -13,7 +13,7 @@ body {
     color: white;
     text-align: center;
     padding: 0.5rem 1rem;
-    border-radius: 1rem;
+    border-radius: var(--size_small);
 }
 .title {
     font-family: Arsenal SC;
@@ -21,8 +21,9 @@ body {
     text-transform: uppercase;
     font-size: var(--font_x-large);
     text-decoration: none;
-    text-align: center;
-    width: 100%;
+    &--big {
+        font-size: var(--font_xx-large);
+    }
 }
 
 @font-face {
