@@ -5,7 +5,9 @@
     justify-content: flex-end;
     max-width: 1200px;
     margin: auto;
-    background-color: var(--color_white);
+    background-color: var(--color_white--80);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     &__section {
         flex: 1;
         display: flex;

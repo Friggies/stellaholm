@@ -15,6 +15,11 @@
                 alt="{{ .Params.ProductImage }}"
             />
         </div>
-        <span class="productTile__title"> {{ .Title }} </span>
+        <div class="productTile__informations">
+            <span class="productTile__title"> {{ .Title }} </span>
+            <span class="productTile__price">
+                {{ .Params.Price }} {{.Params.Valuta }}
+            </span>
+        </div>
     </a>
 </li>

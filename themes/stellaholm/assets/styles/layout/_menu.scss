@@ -56,7 +56,7 @@
         text-decoration: none;
         font-family: Arsenal SC;
         font-weight: 700;
-        font-size: 1.5em;
+        font-size: var(--font_x-large);
         text-transform: uppercase;
         &:focus {
             outline: none;

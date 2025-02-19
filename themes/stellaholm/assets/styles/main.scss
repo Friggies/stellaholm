@@ -88,26 +88,24 @@ button {
     justify-content: flex-end;
     align-items: center;
     text-decoration: none;
-    border-radius: var(--size_small);
-    overflow: hidden;
     aspect-ratio: 3 / 4;
     position: relative;
-    padding: var(--size_small);
     box-shadow: var(--effect_shadow--inset);
-    &__title {
-        bottom: var(--size_medium);
-        background-color: var(--color_green--50);
-        z-index: 1;
-        padding: var(--size_small);
-        border-radius: var(--size_x-small);
+    &__informations {
+        background-color: var(--color_white--80);
         width: 100%;
-        text-align: center;
-        font-family: Arsenal SC;
-        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        padding: var(--size_small) var(--size_small);
+    }
+    &__title {
         font-size: var(--font_large);
-        color: white;
-        text-shadow: var(--effect_shadow--drop);
         text-transform: uppercase;
+        font-weight: 500;
+    }
+    &__price {
+        font-size: 0.9em;
+        color: var(--color_gray);
     }
     &__image {
         position: absolute;
