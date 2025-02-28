@@ -247,7 +247,7 @@ button {
         flex-direction: row-reverse;
     }
     &--first {
-        padding-top: 0;
+        padding-top: 0 !important;
     }
 }
 @media screen and (max-width: 550px) {
