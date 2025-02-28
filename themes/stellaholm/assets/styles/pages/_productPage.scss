@@ -33,23 +33,30 @@
     width: 100%;
     gap: var(--size_small);
     scroll-snap-type: x mandatory;
-    padding-bottom: var(--size_medium);
+    padding-bottom: var(--size_small);
     > * {
-        width: calc(50% - 0.5 * var(--size_medium));
+        width: calc(50% - 0.5 * var(--size_small));
         flex: 0 0 auto;
         scroll-snap-align: start;
     }
 
     &::-webkit-scrollbar {
-        height: var(--size_medium);
+        height: 6px;
     }
     &::-webkit-scrollbar-track {
         background-color: var(--color_white);
-        border-radius: var(--size_small);
     }
     &::-webkit-scrollbar-thumb {
+        cursor: grab;
+        cursor: -moz-grab;
+        cursor: -webkit-grab;
         background-color: var(--color_green);
-        border-radius: var(--size_small);
+        border-radius: 2px;
+    }
+    &::-webkit-scrollbar-thumb:active {
+        cursor: grabbing;
+        cursor: -moz-grabbing;
+        cursor: -webkit-grabbing;
     }
     &::-webkit-scrollbar-thumb:hover {
         background-color: var(--color_black);

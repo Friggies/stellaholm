@@ -100,13 +100,12 @@ button {
         padding: var(--size_small) var(--size_small);
     }
     &__title {
-        font-size: var(--font_large);
         text-transform: uppercase;
         font-weight: 500;
         color: var(--color_black);
     }
     &__price {
-        font-size: 0.9em;
+        font-size: var(--font_small);
         color: var(--color_gray);
     }
     &__image {
@@ -185,7 +184,7 @@ button {
     background-color: var(--color_green);
     justify-content: center;
     align-items: center;
-    border-radius: var(--size_small);
+    border-radius: var(--size_x-small);
     padding: var(--size_small);
     gap: var(--size_small);
     &:hover {
@@ -278,7 +277,7 @@ button {
     position: relative;
     display: flex;
     width: 100%;
-    border-radius: var(--size_small);
+    border-radius: var(--size_x-small);
     &__label {
         padding: 0.5rem 1rem;
         white-space: nowrap;
@@ -290,7 +289,7 @@ button {
         text-align: right;
         color: var(--color_black);
         background-color: var(--color_white);
-        border-radius: 0 var(--size_medium) var(--size_medium) 0;
+        border-radius: 0 var(--size_x-small) var(--size_x-small) 0;
         appearance: none;
         font-size: 16px;
         font-family: inherit;
@@ -308,7 +307,7 @@ button {
     position: relative;
     display: flex;
     width: 100%;
-    border-radius: var(--size_small);
+    border-radius: var(--size_x-small);
     &__label {
         padding: 0.5rem 1rem;
         white-space: nowrap;
@@ -318,7 +317,7 @@ button {
     }
     .choices {
         width: 100%;
-        border-radius: 0 var(--size_medium) var(--size_medium) 0;
+        border-radius: 0 var(--size_x-small) var(--size_x-small) 0;
         background-color: var(--color_white);
         &__inner {
             background-color: transparent;
