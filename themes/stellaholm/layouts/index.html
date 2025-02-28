@@ -1,5 +1,5 @@
 {{ define "main" }}
-<section class="section">
+<section class="section section--first">
     <div class="section__content">
         <div class="frontPageHero">
             <div class="frontPageHero__content">
@@ -33,16 +33,16 @@
 </section>
 <section class="section">
     <div class="section__content">
-        <h2 class="title">Nyeste armbånd</h2>
+        <h2 class="title title--center">Nyeste armbånd</h2>
         <ol class="productGrid">
             {{ range where .Site.RegularPages ".Params.ProductType" "bracelet"
             }} {{ partial "productTile.html" . }} {{ end }}
         </ol>
     </div>
 </section>
-<section class="section section--green">
+<section class="section">
     <div class="section__content">
-        <h2 class="title">Nyeste ringe</h2>
+        <h2 class="title title--center">Nyeste ringe</h2>
         <ol class="productGrid">
             {{ range where .Site.RegularPages ".Params.ProductType" "ring" }} {{
             partial "productTile.html" . }} {{ end }}
@@ -51,7 +51,7 @@
 </section>
 <section class="section">
     <div class="section__content">
-        <h2 class="title">Nyeste artikler</h2>
+        <h2 class="title title--center">Nyeste artikler</h2>
     </div>
 </section>
 {{ end }}

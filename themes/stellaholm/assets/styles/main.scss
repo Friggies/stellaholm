@@ -91,7 +91,7 @@ button {
     aspect-ratio: 3 / 4;
     position: relative;
     &__informations {
-        background-color: var(--color_white--90);
+        background-color: var(--color_white--80);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         width: 100%;
@@ -103,6 +103,7 @@ button {
         font-size: var(--font_large);
         text-transform: uppercase;
         font-weight: 500;
+        color: var(--color_black);
     }
     &__price {
         font-size: 0.9em;
@@ -246,12 +247,14 @@ button {
     &--reverse {
         flex-direction: row-reverse;
     }
+    &--first {
+        padding-top: 0;
+    }
 }
 @media screen and (max-width: 550px) {
     .section {
         flex-direction: column;
-        padding: 0rem 1rem;
-        padding-bottom: 2rem;
+        padding: 2rem 1rem;
         &--reverse {
             flex-direction: reverse;
         }
@@ -260,6 +263,9 @@ button {
                 flex-direction: row;
                 flex-wrap: wrap;
             }
+        }
+        &--green {
+            padding: 4rem 1rem;
         }
     }
 }

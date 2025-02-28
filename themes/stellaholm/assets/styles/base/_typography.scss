@@ -23,6 +23,10 @@ body {
     &--big {
         font-size: var(--font_xx-large);
     }
+    &--center {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 @font-face {
