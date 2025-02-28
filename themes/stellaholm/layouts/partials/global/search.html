@@ -38,17 +38,27 @@
         id="search-result-template"
         type="text/x-js-template"
     >
-        <li id="result-${key}">
-            <a class="productTile" href="${link}">
+            <li id="result-${key}">
+            <a
+                href="${link}"
+                class="productTile"
+            >
                 <div class="imageWrapper">
                     <img
                         class="productTile__image"
                         src="${link}${productImage}"
                     />
+                    <img
+                        class="productTile__image productTile__image--hover"
+                        src="${link}${productImage2}"
+                    />
                 </div>
-                <span class="productTile__title">
-                    ${title}
-                </span>
+                <div class="productTile__informations">
+                    <span class="productTile__title">  ${title} </span>
+                    <span class="productTile__price">
+                        ${price} ${valuta}
+                    </span>
+                </div>
             </a>
         </li>
     </script>

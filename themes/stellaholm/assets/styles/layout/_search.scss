@@ -58,6 +58,10 @@
         }
     }
 }
+.search-results-empty {
+    width: 100% !important;
+    text-align: center;
+}
 body {
     &:has(.globalSearch[open]) {
         overflow-y: hidden;
