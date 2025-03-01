@@ -4,7 +4,7 @@ menus:
     - category
 weight: 2
 title: Armbånd
-img: img.da.jpg
+img: /elementa/3-bracelets-on-arm.JPG
 url: produkter/armbaand/
 cascade:
     breadcrumb: Armbånd

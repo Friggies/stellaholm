@@ -4,7 +4,7 @@ menus:
     - category
 weight: 2
 title: Bracelets
-img: img.en.jpg
+img: /elementa/3-bracelets-on-arm.JPG
 cascade:
     breadcrumb: Bracelets
     productType: bracelet

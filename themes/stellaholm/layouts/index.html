@@ -1,7 +1,14 @@
 {{ define "main" }}
 <section class="section section--first">
     <div class="section__content">
-        <div class="frontPageHero">
+        <a
+            href="#"
+            class="frontPageHero"
+        >
+            <img
+                class="frontPageHero__image"
+                src="/images/elementa/rings-on-shell.JPG"
+            />
             <div class="frontPageHero__content">
                 <h1 class="title">
                     Strål som en stjerne, og gør verden lysere
@@ -11,13 +18,13 @@
                     det psykisk svært.
                 </p>
             </div>
-        </div>
+        </a>
         <ul class="frontPageCategories">
             {{ range .Site.Menus.category }}
             <li class="frontPageCategories__category">
                 <img
                     class="frontPageCategories__image"
-                    src="{{ .Page.RelPermalink }}{{ .Page.Params.Img }}"
+                    src="/images/{{ .Page.Params.Img }}"
                     alt="{{ .Title }}"
                 />
                 <a
