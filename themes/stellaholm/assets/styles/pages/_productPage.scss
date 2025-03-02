@@ -33,7 +33,7 @@
     width: 100%;
     gap: var(--size_small);
     scroll-snap-type: x mandatory;
-    padding-bottom: var(--size_small);
+    padding-bottom: var(--size_x-small);
     > * {
         width: calc(50% - 0.5 * var(--size_small));
         flex: 0 0 auto;

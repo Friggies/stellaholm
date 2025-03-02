@@ -7,12 +7,10 @@
         >
             <img
                 class="frontPageHero__image"
-                src="/images/elementa/rings-on-shell.JPG"
+                src="/images/elementa/bracelets-merging.JPG"
             />
             <div class="frontPageHero__content">
-                <h1 class="title">
-                    Strål som en stjerne, og gør verden lysere
-                </h1>
+                <h1 class="title">Strål som en stjerne og gør verden lysere</h1>
                 <p>
                     Dit køb bidrager til en lysere fremtid for personer, som har
                     det psykisk svært.
@@ -22,16 +20,18 @@
         <ul class="frontPageCategories">
             {{ range .Site.Menus.category }}
             <li class="frontPageCategories__category">
-                <img
-                    class="frontPageCategories__image"
-                    src="/images/{{ .Page.Params.Img }}"
-                    alt="{{ .Title }}"
-                />
                 <a
-                    class="frontPageCategories__link title"
                     href="{{ .URL }}"
+                    class="frontPageCategories__link"
                 >
-                    {{ .Title }}
+                    <img
+                        class="frontPageCategories__image"
+                        src="/images/{{ .Page.Params.Img }}"
+                        alt="{{ .Title }}"
+                    />
+                    <div class="frontPageCategories__text title">
+                        {{ .Title }}
+                    </div>
                 </a>
             </li>
             {{ end }}
@@ -48,6 +48,15 @@
     </div>
 </section>
 <section class="section section--green">
+    <div class="section__content">
+        <h2 class="title title--center">Nyeste armbånd</h2>
+        <ol class="productGrid">
+            {{ range where .Site.RegularPages ".Params.ProductType" "bracelet"
+            }} {{ partial "productTile.html" . }} {{ end }}
+        </ol>
+    </div>
+</section>
+<section class="section">
     <div class="section__content">
         <h2 class="title title--center">Nyeste ringe</h2>
         <ol class="productGrid">

@@ -11,7 +11,7 @@ productImage: IMG_5604.JPG
 productImage2: image2.jpeg
 productImage3: image3.jpeg
 productImage4: image4.jpeg
-selectablesTitle: Låsetype
+selectablesTitle: Lås
 collection: Astra
 selectables:
     - Standard hummerlås

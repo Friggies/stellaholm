@@ -4,7 +4,7 @@ menus:
     - category
 weight: 1
 title: Rings
-img: /elementa/rings-on-finger.JPG
+img: /elementa/4-rings-on-fingers.JPG
 cascade:
     breadcrumb: Rings
     productType: ring

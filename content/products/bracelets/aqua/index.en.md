@@ -11,7 +11,7 @@ productImage2: image2.jpeg
 productImage3: image3.jpeg
 productImage4: image4.jpeg
 collection: Astra
-selectablesTitle: Lock type
+selectablesTitle: Lock
 selectables:
     - Lobster clasp
     - Magnetic star

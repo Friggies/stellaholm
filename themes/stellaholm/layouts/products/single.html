@@ -34,13 +34,11 @@
             </ol>
         </div>
         <div class="productGallery">
-            <div class="imageWrapper">
-                <img
-                    class="productImage"
-                    src="{{ .Params.ProductImage }}"
-                    alt="{{ .Title }}"
-                />
-            </div>
+            <img
+                class="productImage"
+                src="{{ .Params.ProductImage }}"
+                alt="{{ .Title }}"
+            />
             <div class="productImageCarousel">
                 {{ with .Params.ProductImage3}}
                 <div class="imageWrapper">

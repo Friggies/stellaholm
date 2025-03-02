@@ -14,8 +14,9 @@ body {
     border-radius: var(--size_small);
 }
 .title {
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
+    text-wrap: balance;
     font-size: var(--font_x-large);
     text-decoration: none;
     &--big {

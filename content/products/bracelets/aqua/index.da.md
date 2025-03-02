@@ -12,7 +12,7 @@ productImage2: image2.jpeg
 productImage3: image3.jpeg
 productImage4: image4.jpeg
 collection: Astra
-selectablesTitle: Låsetype
+selectablesTitle: Lås
 selectables:
     - Standard hummerlås
     - Magnetisk stjernelås

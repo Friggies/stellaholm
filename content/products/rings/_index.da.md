@@ -4,7 +4,7 @@ menus:
     - category
 weight: 1
 title: Ringe
-img: /elementa/rings-on-finger.JPG
+img: /elementa/4-rings-on-fingers.JPG
 url: produkter/ringe
 cascade:
     breadcrumb: Ringe
