@@ -19,8 +19,7 @@
     content="{{ with .Description }} {{ . | truncate 150 }} {{ else }} {{ .Summary | truncate 150 }} {{ end }}"
 />
 
-{{ $styles := resources.Get "styles/main.scss" | resources.ToCSS |
-resources.Minify }}
+{{ $styles := resources.Get "styles/main.scss" | css.Sass | resources.Minify }}
 <link
     rel="stylesheet"
     href="{{ $styles.Permalink }}"
